@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/teiSlides.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>L’édition critique avec la TEI</title>
+        <author>Emmanuel Château-Dutier</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>École nationale des chartes</publisher>
+        <date when="2017">2014-2017</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Fichier nativement numérique</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2017-02-18">Relecture du fichier</change>
+      <change when="2015-11-17">conversion du fichier en TEI</change>
+      <change when="2014-05">première rédaction</change>
+    </revisionDesc>
+  </teiHeader>
+  <!--
+           <p>title: 01-editionNumerique</p>
+           <p>description: emchateau, ENC 27-30 octobre 2014</p>
+           <p>theme: theme/remark-dark.css</p>
+           <p>name: inverse</p>
+           <p>layout: true</p>
+           <p>class: inverse</p>
+           <p>-\-\-</p>
+           <p>name: index</p>
+           <p>class: center middle</p>-->
+  <text>
+    <front>
+      <titlePage xml:lang="fr">
+        <titlePart>02 – teiGénéralités : La TEI comme cadre de travail pour l’édition des textes</titlePart>
+        <docImprint>Formation TEI | ENC 27 fév au 2 mars 2017</docImprint>
+        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
+      </titlePage>
+      <div rend="slide" xml:lang="fr">
+        <div>
+          <head>Pourquoi la Text Encoding Initiative ?</head>
+          <list>
+            <item>adaptation aux objectifs scientifiques</item>
+            <item>interopérabilité</item>
+            <item>pérennisation</item>
+          </list>
+          <p><ref target="http://references.modernisation.gouv.fr/rgi-interoperabilite">Référentiel Général d’Interopérabilité</ref></p>
+          <p>Large adoption (standard de fait)</p>
+        </div>
+        <div rend="notes">
+          <head>Pourquoi la TEI ?</head>
+          <p>La production d’une édition électronique exige la mobilisation de techniques spécifiques pour l’établissement des textes, l’enregistrement des annotations scientifiques et la publication.</p>
+          <p>Deux considérations doivent principalement guider les choix en la matière :<list>
+              <item>d’une part l’adaptation aux objectifs scientifiques du projet,</item>
+              <item>d’autre part l’interopérabilité et la pérennisation.</item>
+            </list></p>
+          <p>Sur ces derniers points, le Référentiel général d’interopérabilité publié en 2009 par la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (eXtensible Markup Language)</p>
+          <p>cf. Ministre du Budget, des Comptes publics, <ref target="http://references.modernisation.gouv.fr/rgi-interoperabilite">Référentiel Général d’Interopérabilité (RGI)</ref>, 2009.</p>
+          <p>En outre, le dialecte XML de la Text Encoding Initiative (TEI) s’est très largement imposé ces dernières années comme <hi rend="bold">standard de fait</hi> dans le domaine de l’édition numérique à caractère scientifique.</p>
+          <p>Telle que la définie Laurent Romary, la TEI est une « Norme de balisage, de notation et d’échanges de corpus des documents électroniques. Elle s’est élaborée à partir des besoins de structuration, de conceptualisation et de mise en réseau des textes »</p>
+          <p>Sa large adoption, les possibilités de personnalisation, ainsi que l’expérience acquise en matière de traitement des sources primaires à caractère textuel en histoire ou en littérature ces dernières années permet de juger que son utilisation est le plus souvent tout fait adaptée.</p>
+          <p>Nous verrons cependant que certains aspects propres à un projet peuvent nécessiter des adaptations dans l’utilisation de ce dialecte, ou qu’il faut parfois conjointement confier à d’autres modèles documentaires la prise en charge de l’enregistrement du travail.</p>
+        </div>
+      </div>
+      <div rend="slide" xml:lang="fr">
+        <div>
+          <head>La Text Encoding Initiative</head>
+          <list>
+            <item>Un effort international pour unifier les pratiques d’encodage de textes dans le domaine académique</item>
+            <item>Un vocabulaire XML qui permet de produire des modèles de textes</item>
+            <item>Un cadre de travail</item>
+            <item>Un ensemble de recommandations ([_Guidelines_](http://www.tei-c.org/Guidelines/))</item>
+          </list>
+        </div>
+        <div rend="notes">
+          <p>La Text Encoding Initiative (TEI) est un effort international pour <hi rend="bold">unifier les pratiques d’encodage de textes</hi> dans le domaine académique.</p>
+          <p>Elle fournit <hi rend="bold">un vocabulaire XML</hi> qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires. </p>
+          <p>Plus qu’un schéma générique, elle offre en fait **un cadre de travail** qui permet de traiter différents cas de figure.</p>
+          <p>Ce cadre de travail se compose <list>
+              <item>d’un vocabulaire,</item>
+              <item>d’une documentation qui en fournit la sémantique en langage naturel,</item>
+              <item>et d’un ensemble de recommandations rassemblées sous l’intitulé de <title>Guidelines</title>.</item>
+            </list></p>
+          <p>En ce sens, comme le relève Florence Clavaud dans son cours à l’École nationale des chartes, il s’agit plutôt d’une sorte d’« ontologie générique du texte ».</p>
+        </div>
+      </div>
+      <div rend="slide">
+        <div>
+          <head>La Text Encoding Initiative comme cadre de travail pour l’édition des textes</head>
+          <list type="ordered">
+            <item><ref target="#part1">Historique de la TEI</ref></item>
+            <item><ref target="#part2">Objectifs et principes</ref></item>
+            <item><ref target="#part3">Fonctionnement de la TEI</ref></item>
+          </list>
+        </div>
+      </div>
+    </front>
+    <body>
+      <div type="part">
+        <div rend="title" xml:lang="fr" xml:id="part1">
+          <div>
+            <head>Historique de la TEI</head>
+          </div>
+        </div>
+        <div rend="slide" xml:lang="fr">
+          <div>
+            <div>
+              <head>Un projet collectif</head>
+              <list>
+                <item><ref target="http://ach.org">Association for Computers in the Humanities</ref></item>
+                <item><ref target="http://eadh.org">Association for Literary and Linguistic Computing</ref></item>
+                <item><ref target="http://www.aclweb.org">Association for Computational Linguistics</ref></item>
+              </list>
+              <p>Recherche d’un modèle commun pour encoder &amp; partager des textes</p>
+            </div>
+            <div>
+              <head><hi>novembre 1987</hi> – Première réunion au Vassar College à Poughkeepsie</head>
+              <head>Création de la Texte Encoding Initiative</head>
+              <head><hi>juin 1990</hi> – Premier brouillon (P1)</head>
+              <head><hi>mai 1994</hi> – Première publication des <title>Guidelines</title> (P3)</head>
+            </div>
+          </div>
+          <div rend="notes" xml:lang="fr">
+            <div>
+              <head>Un projet collectif</head>
+              <p>La Text Encoding Initiative est née d’un constat partagé, au sein d’une communauté de chercheurs déjà engagés dans la production de textes numériques, du manque de solutions pour faciliter l’échange de textes et d’information sur leur travail.</p>
+              <list>
+                <item><ref target="http://ach.org">Association for Computers in the Humanities</ref></item>
+                <item><ref target="http://eadh.org">Association for Literary and Linguistic Computing</ref></item>
+                <item><ref target="http://www.aclweb.org">Association for Computational Linguistics</ref></item>
+              </list>
+              <p>Recherche d’un modèle commun pour encoder &amp; partager des textes</p>
+            </div>
+            <div>
+              <head><hi>novembre 1987</hi> – Première réunion au Vassar College à Poughkeepsie</head>
+              <p>En novembre 1987, une première rencontre fut organisée sous l’égide de l’<name>Association for Computers and the Humanities (ACH)</name> au Vassar College à Poughkeepsie avec une trentaine de représentants issus du monde des archives, des centres d’informatique appliquée aux sciences humaines, ou d’organisations professionnelles pour examiner à nouveau la question de la standardisation.</p>
+              <p>S’accordant tous sur le besoin de pratiques communes, ces participants formulèrent une dizaine de principes directeurs.</p>
+              <bibl>- cf. Ide, Nancy M., et Sperberg-McQueen, C. Michael, <ref target="http://www.cs.vassar.edu/~ide/papers/teiHistory.pdf">« The Text Encoding Initiative: Its History, Goals, and Future Development »</ref>, dans Computers and the Humanities, editor. Nancy M. Ide et Jean Véronis vol. 29, 1995, p. 5-15.</bibl>
+              <p>Ceux-ci mettaient notamment l’accent sur la conversion de formats et la nécessité de développer un métalangage pour des schémas d’encodage descriptifs.</p>
+            </div>
+            <div>
+              <head>Création de la <name>Text Encoding Initiative</name></head>
+              <p>L’ACH, rapidement suivie dans son effort de standardisation par l’<name>Association for Literary and Linguistic Computing</name> et l’<name>Association for Computational Linguistics</name> formèrent ensemble la <name rend="bold">Text Encoding Initiative (TEI)</name> afin de conduire le projet sous une forme internationale et multilingue et <hi rend="bold">développer des recommandations pour la préparation et l’échange de textes électroniques dans le domaine universitaire</hi>.</p>
+              <p>Plus de 50 chercheurs contribuent déjà à la TEI P1 (juin 1990)</p>
+              <p>15 groupes de travail collaborent de 1990-93 à la P2</p>
+            </div>
+            <div>
+              <head><hi>juin 1990</hi> – Premier brouillon (P1)</head>
+              <head><hi>mai 1994</hi> – Première publication des <title>Guidelines</title> (P3)</head>
+              <p>Dès 1994, la TEI publiait une <hi rend="bold">première version officielle de ses <title>Guidelines for the Encoding and Interchange of Machine-Readable Texts</title></hi>.</p>
+              <p>Ce rapport proposait un ensemble de conventions pour l’encodage de différents types de textes pour servir dans le domaine des sciences du langage ou des sciences humaines. Cette première publication constitue un jalon important car jamais auparavant les chercheurs n’avaient été capables de formuler un consensus sur les pratiques d’encodage.</p>
+            </div>
+          </div>
+        </div>
+        <div rend="slide" xml:lang="fr">
+          <div>
+            <head>Développements du projet</head>
+            <list>
+              <item>Création de groupes de travail disciplinaires</item>
+              <item>Diffusion du modèle</item>
+              <item><hi>janvier 1999</hi> Création d’un <ref target="http://www.tei-c.org/index.xml">consortium international</ref>]</item>
+              <item><hi>juin 2002</hi> Mise à jour pour prendre en compte XML (P4) </item>
+              <item><hi>novembre 2007</hi> Version actuelle des <ref target="http://www.tei-c.org/Guidelines/P5/"><title>Guidelines</title></ref> (P5)</item>
+            </list>
+          </div>
+          <div rend="notes">
+            <head>Développements du projet</head>
+            <p>Création de groupes de travail par champs disciplinaires. La première version officielle des <title>Guidelines</title> P3, était le travail de 200 personnes.</p>
+            <p>Diffusion du modèle par l’intermédiaire de séminaires, d’ateliers, qui permettent le recueil des remarques des utilisateurs.</p>
+            <p>Création d’un consortium international en janvier 1999.</p>
+            <p>Mise à jour de la P3 pour prendre en compte XML (P4, publiée en juin 2002).</p>
+            <p>Immédiatement après la publication de cette version 4, début du travail sur la P5, version actuelle du projet publiée en novembre 2007.</p>
+            <p>P5 qui incluait nombreuses améliorations concernant l’encodage de caractères, le traitement des parties graphiques, la description des manuscrits, le balisage externe, et la structuration des <title>Guidelines</title> proprement dit. C’est dans cette version qu’apparaît notamment une première version du langage ODD pour modéliser des documents.</p>
+          </div>
+        </div>
+        <div rend="slide" xml:lang="fr">
+          <div>
+            <div>
+              <head>Un projet ancien</head>
+              <list>
+                <item>D’abord développé en SGML</item>
+                <item>Largement employé</item>
+                <item>Souvent la solution la plus adaptée pour les corpus textuels ou les sources primaires</item>
+              </list>
+            </div>
+            <div>
+              <head>Impact de la TEI</head>
+              <list>
+                <item>Une large reconnaissance internationale</item>
+                <item>Conservation à long terme du patrimoine culturel</item>
+                <item>Éviter la bibliothèque de Babel numérique</item>
+                <item>Projet phare des Humanités numériques</item>
+              </list>
+            </div>
+          </div>
+          <div rend="notes">
+            <div>
+              <head>Un projet ancien</head>
+              <p>Comme vous le constatez, la TEI est un projet d’une dizaine d’années plus ancien que le méta-langage XML. Elle fut dans un premier temps développée en SGML, un méta-langage dont XML est une simplification.</p>
+              <p>La TEI a adopté XML dès la première publication de sa spécification en 1996, certains membres de la TEI avaient en effet participé à son développement.</p>
+              <p>Par la suite, les <title>Guidelines</title> ont été étayées par l’apport de nombreuses spécialités pour prendre en charge une plus grande diversité de textes.</p>
+              <p>Malgré l’ancienneté du projet, elle reste l’un des dialectes XML les plus largement employé. On dispose donc de beaucoup de recul sur son utilisation. Dans bien des cas, c’est la solution la plus adéquate pour traiter certaines choses comme le texte ou la production de sources primaires.</p>
+            </div>
+            <div>
+              <head>Impact de la TEI</head>
+              <p>Reconnu internationalement comme un outil d’importance cruciale à la fois pour la conservation à long terme de données électroniques et comme moyen efficace d’utiliser ces données dans de nombreux domaines.</p>
+              <p>Son schéma d’encodage est particulièrement adopté pour la production d’éditions critiques de textes littéraires ou de sources primaires, de larges corpus linguistiques, ou encore la production de métadonnées détaillées relatives à des collections de textes patrimoniaux de toutes sortes.</p>
+              <p>- cf. liste (non exhaustive) des projets répertoriés http://www.tei-c.org/Activities/Projects/</p>
+              <p>Adoptée par de nombreuses organisations telles que le <name>National Endowment for the
+                Humanities</name> aux États-Unis, l’<name>Arts and Humanities Research Board</name> au Royaume-Uni, la <name>Modern Language Association</name>, l’<name>Expert Advisory Group for Language Engineering Standards</name> de l’Union européenne et de nombreuses autres organismes à travers le monde qui financent ou promeuvent la production de textes électroniques.</p>
+              <list>
+                <item>Succès qui permet d’assurer conservation à long terme de notre patrimoine culturel porté dans un monde en réseau.</item>
+                <item>Une solution pour éviter la bibliothèque de Babel numérique</item>
+                <item>À tous les égards l’un des projet phares les plus durables dans le domaine des Humanités numériques (Digital Humanities).</item>
+              </list>
+            </div>
+          </div>
+        </div>
+        <div type="part">
+          <div rend="title" xml:lang="fr" xml:id="part2">
+            <div>
+              <head>Objectifs et principes</head>
+            </div>
+          </div>
+          <div rend="slide" xml:lang="fr">
+            <div>
+              <head>Faciliter l’échange et l’intégration des travaux des chercheurs</head>
+              <list>
+                <item>Concevoir et maintenir <hi rend="bold">un modèle international générique</hi>, applicable à tous les textes, écrits dans toutes les langues, datant de toutes les périodiques</item>
+                <item>Guider les utilisateurs non techniciens (<hi rend="bold">documenter le modèle</hi>)</item>
+                <item>Aider les spécialistes et les techniciens en leur offrant un modèle <hi rend="bold">souple et adaptable</hi></item>
+              </list>
+            </div>
+            <div rend="notes">
+              <head>Principes directeurs</head>
+              <p>Faciliter l’échange et l’intégration des travaux des chercheurs</p>
+              <list>
+                <item>Concevoir et maintenir <hi rend="bold">un modèle international générique </hi>, applicable à tous les textes, écrits dans toutes les langues, datant de toutes les périodes</item>
+                <item>Guider les utilisateurs non techniciens (<hi rend="bold">documenter le modèle</hi>)</item>
+                <item>Aider les spécialistes et les techniciens en leur offrant un modèle <hi rend="bold">souple et adaptable</hi></item>
+              </list>
+            </div>
+          </div>
+          <div rend="slide" xml:lang="fr">
+            <head>Mise en œuvre</head>
+            <div>
+              <head>Publication de recommandations</head>
+              <list>
+                <item>simples</item>
+                <item>faciles à employer</item>
+                <item>compréhensibles</item>
+              </list>
+            </div>
+            <div>
+              <head>Généricité</head>
+            </div>
+            <div>
+              <head>Modularité et possibilités de personnalisation ou d’extension</head>
+            </div>
+            <div>
+              <head>Utilisation des syntaxes et mécanismes XML</head>
+            </div>
+          </div>
+          <div rend="notes">
+            <p>Rapidement <hi rend="bold">la TEI a privilégié la publication de recommandations</hi> plutôt que celle d’un standard ou d’une norme.</p>
+            <p>L’objectif était de spécifier des conventions d’encodage simples, faciles à employer, relativement compréhensibles, et qui fournissent d’amples mécanismes d’extension afin de pouvoir répondre à des besoins particuliers.</p>
+            <bibl>- Ide, Nancy M., et al., <hi rend="italic">op. cit.</hi></bibl>
+            <p>Cette <hi rend="bold">modularité avec ses possibilités de personnalisation et d’extension</hi> seyait mieux à la recherche.</p>
+            <p>Néanmoins, la TEI s’est rapidement imposée comme standard de fait pour l’encodage de textes numériques dans le domaine des sciences humaines. Plusieurs raisons expliquent en grande partie cette situation. <list>
+                <item>D’une part, la TEI repose sur l’utilisation de syntaxes et de mécanismes XML standardisés par le W3C (World Wide Web Consortium) qui présentent de nombreuses garanties en termes d’interopérabilité et permettent d’utiliser les outils puissants disponibles pour manipuler des arbres XML.</item>
+                <item>D’autre part, l’importante généricité de la TEI lui permet de couvrir une grande gamme de besoins. Cela explique en grande partie l’importante pénétration de la TEI dans la communauté scientifique.</item>
+              </list>
+            </p>
+            <p>Aujourd’hui la TEI cherche à s’abstraire du modèle XML avec la définition d’un langage TEI permettant de spécifier ses propres schémas.</p>
+          </div>
+        </div>
+      </div>
+      <div type="part">
+        <div rend="title" xml:lang="fr" xml:id="part3">
+          <div>
+            <head>Fonctionnement de la TEI</head>
+          </div>
+        </div>
+        <div rend="slide" xml:lang="fr">
+          <div>
+            <head><hi>Organisation</hi> du Consortium</head>
+            <div>
+              <head>Le <ref target="http://www.tei-c.org/Activities/Council/">TEI Council</ref></head>
+              <p>Formé de 12 personne, chargé de l’élaboration et évolution des <title>Guidelines</title>,</p>
+            </div>
+            <div>
+              <head>Le <ref target="http://www.tei-c.org/Board/">TEI Board of Directors</ref></head>
+              <p>chargé de la gestion du Consortium (orientations stratégiques, gestion financière, recrutement, etc.)</p>
+            </div>
+            <div>
+              <head>Une large communauté d’utilisateurs</head>
+              <list>
+                <item><ref target="http://www.tei-c.org/Activities/Workgroups/">Workgroups</ref></item>
+                <item><ref target="http://www.tei-c.org/Activities/SIG/">SIG Special Interest Groups</ref></item>
+                <item><ref target="https://listserv.brown.edu/tei-l.html">Liste de diffusion tei-l</ref></item>
+                <item><ref target="https://groupes.renater.fr/wiki/tei-fr/">liste de diffusion francophone tei-fr</ref></item>
+              </list>
+            </div>
+          </div>
+          <div rend="notes">
+            <div>
+              <p>La TEI est organisée autour d’un Consortium international et d’une importante communauté d’utilisateurs.</p>
+              <p>Le Consortium TEI rassemble de nombreuses organisations internationales. Il est actuellement structuré par deux instances.</p>
+            </div>
+            <div>
+              <head>Le TEI Council</head>
+              <list>
+                <item>Formé de 12 personne</item>
+                <item>Chargé de l’élaboration et évolution des <title>Guidelines</title>,</item>
+              </list>
+            </div>
+            <div>
+              <head>Le TEI Board of Directors</head>
+              <list>
+                <item>chargé de la gestion du Consortium (orientations stratégiques, gestion financière, recrutement, etc.)</item>
+              </list>
+            </div>
+            <div>
+              <head>Une large communauté d’utilisateurs</head>
+              <p>Fondamentale.</p>
+              <p>Nombreux groupes de travail <list>
+                <item><ref target="http://www.tei-c.org/Activities/Workgroups/">Workgroups</ref></item>
+                <item><ref target="http://www.tei-c.org/Activities/SIG/">SIG Special Interest Groups</ref></item>
+                </list></p>
+              <p>Plusieurs listes de diffusion : <list>
+                <item><ref target="https://listserv.brown.edu/tei-l.html">https://listserv.brown.edu/tei-l.html</ref></item>
+                <item><ref target="https://groupes.renater.fr/wiki/tei-fr/">https://groupes.renater.fr/wiki/tei-fr/</ref></item>
+                </list>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <back>
+      <div rend="title">
+        <div>
+          <head>Conclusion</head>
+        </div>
+        <div rend="notes">
+          <div>
+            <head>Avantages</head>
+            <p>Conçue comme un modèle générique de structuration et de sémantisation des textes, la TEI présente de nombreux avantages. On relève notamment :<list>
+                <item>sa modularité et sa flexibilité</item>
+                <item>son expressivité (niveau de granularité)</item>
+                <item>le fait qu’il s’agit d’un standard reconnu internationalement (interopérabilité, pérennité)</item>
+                <item>le fait qu’elle dispose des propriétés intrinsèques au modèle XML : séparation entre le contenu et a présentation, possibilité de générer plusieurs formats de sortie à partir d’une même source, bon candidat pour la pérennisation</item>
+                <item>son adaptation à l’édition électronique (croisement de sources, <foreign xml:lang="lat">fac simili</foreign>, hyperliens, etc.)</item>
+                <item>les possibilités de modulation de l’affichage et d’accessibilité, ses aspects économiques</item>
+              </list>
+            </p>
+            <p>Mis à part le fait qu’elle soit rapidement apparue comme un standard de fait pour la publication de textes numériques en sciences humaines, ce sont d’abord ces qualités qui expliquent la large implantation de la TEI dans la communauté scientifique. Elle sert de format à de nombreux projets d’envergure internationale (<ref target="http://www.blakearchive.org">Blake Archive</ref> , <ref target="http://www.perseus.tufts.edu/">Perseus Digital Library</ref> sous la direction de Gregory Crane, <ref target="http://www.rossettiarchive.org">Rosetti Archive</ref>, etc.). Plusieurs projets français de grande envergure utilisent également la TEI dans le domaine des sciences historiques (<ref target="http://www.bvh.univ-tours.fr">Les Bibliothèques virtuelles humanistes</ref>, <ref target="http://elec.enc.sorbonne.fr">Élec</ref>, le <ref target="http://www.cn-telma.fr">Portail Telma</ref>, ENS Lyon, <ref target="http://www.desgodets.net">Desgodets</ref>, <ref target="http://www.ampere.cnrs.fr">ANR Ampère</ref>, etc.).</p>
+          </div>
+          <div>
+            <head>S’approprier la TEI</head>
+            <p>La TEI fournit ainsi, à l’aide d’un vocabulaire et d’une infrastructure technique, <hi rend="bold">un cadre de travail pour la modélisation des textes</hi>. Dans la limite de leur expressivité, de tels modèles peuvent être employés à telles ou telles fins. La volonté de la TEI de couvrir l’ensemble des besoins a pour pendant négatif la nécessité de personnaliser son schéma. Et l’utilisation de la TEI suppose l’apprentissage de son vocabulaire.</p>
+            <p>Cette difficulté d’accès, ainsi que la nécessité de manier des outils nouveaux, reste un problème qui n’est toujours pas complètement réglé. Cependant, la TEI a largement été adoptée aujourd’hui dans le secteur académique pour la publication de sources primaires ou l’édition numérique. C’est la raison pour laquelle on peut affirmer qu’elle constitue de ce point de vue un standard de fait qui justifie en grande partie son utilisation dans un projet scientifique d’édition.</p>
+          </div>
+          <div>
+            <head>Le problème de l’interopérabilité</head>
+            <p>À de nombreux égards, le large emploi de la TEI est censé répondre à un <hi rend="bold">désir d’interopérabilité et de pérennisation</hi>. La promesse des standards est de nous rendre la vie plus aisée : TEI, XML, Unicode ont le potentiel de faciliter l’échange et la réutilisation des documents, c’est notamment la raison pour laquelle on y a recours.</p>
+            <p>Cependant, par sa généricité même, la nature profonde de la TEI qui nécessite d’opérer des choix, ou permet d’être étendue en fonction des besoins, explique en grande partie les difficultés que l’on peut rencontrer lorsqu’il s’agit de rassembler des collections de documents en termes de compatibilité.</p>
+            <p>Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient véritablement interopérables. Chaque document est représentatif du modèle que se fait l’éditeur du texte. Ainsi, la compatibilité ne peut être atteinte que si plusieurs documents suivent le même ensemble de conventions. </p>
+          </div>
+        </div>
+      </div>
+      <div rend="titre" xml:lang="fr">
+        <div>
+          <head>Sources et bibliographie</head>
+        </div>
+      </div>
+      <div rend="slide" xml:lang="fr">
+        <div>
+          <head>Orientations bibliographiques</head>
+          <listBibl>
+            <bibl>Burnard, Lou. <ref target="http://books.openedition.org/oep/426">What is the Text
+                Encoding Initiative</ref>, OpenEdition Books, 2014.</bibl>
+            <bibl>Sperberg-McQueen, C. Michael, Lou Burnard, and Syd Bauman. <ref
+                target="http://www.tei-c.org/Guidelines/P5/">TEI P5 : Guidelines for Electronic Text
+                Encoding</ref>. Charlottesville, Virginia: Text Encoding Initiative Consortium,
+              version 2.5.0, 2013.</bibl>
+            <bibl>Wittern, Christian, Ciula, Arianna, Tuohy, Conal, <ref
+                target="http://llc.oxfordjournals.org/content/24/3/281.abstract">"The Making of TEI
+                P5"</ref> Literary and Linguistic Computing 24, no. 3 (2009): 281-296.</bibl>
+            <bibl>Ide, Nancy M., and C. Michael Sperberg-McQueen. <ref
+                target="http://www.cs.vassar.edu/~ide/papers/teiHistory.pdf">"The Text Encoding
+                Initiative: Its History, Goals, and Future Development."</ref> In Computers and the
+              Humanities. Edited by Nancy M. Ide and Jean Véronis. 1995.</bibl>
+            <bibl>Mylonas, Elli, and Allen Renear. <ref
+                target="http://link.springer.com/article/10.1023%2FA%3A1001832310939">"The Text
+                Encoding Initiative at 10: Not Just An Interchange Format Anymore – but a New
+                Research Community."</ref> Computers and the Humanities 33, no. 1-2 (1999):
+              doi:10.1023/A:1001832310939.</bibl>
+          </listBibl>
+        </div>
+      </div>
+      <div rend="title" xml:lang="fr">
+        <div>
+          <head>La <ref target="03-organisation.html">suite</ref></head>
+          <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.html"
+              >Programme</ref></note>
+        </div>
+      </div>
+    </back>
+  </text>
+</TEI>
