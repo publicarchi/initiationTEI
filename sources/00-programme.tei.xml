@@ -17,10 +17,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change>
-                <date when="2017-02-18">18 février 2017</date>
-                <name>Emmanuel Château-Dutier, création</name>
-            </change>
+            <change> <date when="2017-02-18">18 février 2017</date>
+                <name>Emmanuel Château-Dutier, création</name> </change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -57,17 +55,18 @@
                     </div>
                     <div>
                         <div>
-                        <head>Contenu de la formation</head>
-                        <p>Cette formation est une introduction à la TEI. Nous en présenterons les principaux principes de conception et en ferons l’utilisation autour d’exercices pratiques.</p>
-                        <div>Les thématiques abordées au cours de la formation sont les suivantes :
+                            <head>Contenu de la formation</head>
+                            <p>Cette formation est une introduction à la TEI. Nous en présenterons les principaux principes de conception et en ferons l’utilisation autour d’exercices pratiques.</p>
+                            <div>
+                                <p>Les thématiques abordées au cours de la formation sont les suivantes :
                         <list>
-                            <item>Historique et application de XML</item>
-                            <item>Principes de conception du langage</item>
-                            <item>La syntaxe XML</item>
-                            <item>Notions de document bien formé et de document valide</item>
-                            <item>Les technologies de schémas (modéliser des sources avec XML)</item>
-                            <item>Langages associés et exploitation des documents</item>
-                                </list>
+                                    <item>Historique et application de XML</item>
+                                    <item>Principes de conception du langage</item>
+                                    <item>La syntaxe XML</item>
+                                    <item>Notions de document bien formé et de document valide</item>
+                                    <item>Les technologies de schémas (modéliser des sources avec XML)</item>
+                                    <item>Langages associés et exploitation des documents</item>
+                                    </list> </p>
                             </div>
                             <div>
                                 <head>Objectifs de la formation : </head>
@@ -82,36 +81,37 @@
                                 <p>Une connaissance minimale de la syntaxe XML facilitera l’apprentissage mais n’est pas nécessaire. En cas de besoin, vous pouvez vous familiariser avec cette syntaxe ou vous rafraîchir la mémoire en consultant les <ref target="https://github.com/publicarchitectura/initiationXML">supports de cours</ref> de la formation précédente.</p>
                                 <p>Afin de travailler dans leur environnement habituel, les participants travaillent sur leur propre ordinateur. Des instructions détaillées pour l’installation du logiciel utilisé au cours de la formation (oXygen) vous seront envoyées avant la session.</p>
                             </div>
-                    </div>
-                </div>
-                <div type="slide">
-                    <div>
-                        <div>
-                            <head>Approche pédagogique</head>
-                            <p>Aucun pré-requis informatique</p>
-                            <p>Plusieurs travaux pratiques</p>
-                            <p>Une perspective humaniste</p>
-                        </div>
-                        <div>
-                            <head>Objectifs</head>
-                            <p>Connaître les grandes lignes du langage</p>
-                            <p>Se familiariser avec la syntaxe</p>
-                            <p>Identifier les applications</p>
                         </div>
                     </div>
-                    <div>
+                    <div type="slide">
                         <div>
-                            <head>Approche pédagogique</head>
-                            <p>Aucun pré-requis informatique</p>
-                            <p>On part du principe que vous êtes novices en informatique.</p>
-                            <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
-                            <p>Une perspective humaniste</p>
+                            <div>
+                                <head>Approche pédagogique</head>
+                                <p>Aucun pré-requis informatique</p>
+                                <p>Plusieurs travaux pratiques</p>
+                                <p>Une perspective humaniste</p>
+                            </div>
+                            <div>
+                                <head>Objectifs</head>
+                                <p>Connaître les grandes lignes du langage</p>
+                                <p>Se familiariser avec la syntaxe</p>
+                                <p>Identifier les applications</p>
+                            </div>
                         </div>
                         <div>
-                            <head>Objectifs</head>
-                            <p>Connaître les grandes lignes du langage</p>
-                            <p>Se familiariser avec la syntaxe</p>
-                            <p>Identifier les applications</p>
+                            <div>
+                                <head>Approche pédagogique</head>
+                                <p>Aucun pré-requis informatique</p>
+                                <p>On part du principe que vous êtes novices en informatique.</p>
+                                <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
+                                <p>Une perspective humaniste</p>
+                            </div>
+                            <div>
+                                <head>Objectifs</head>
+                                <p>Connaître les grandes lignes du langage</p>
+                                <p>Se familiariser avec la syntaxe</p>
+                                <p>Identifier les applications</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,27 +125,25 @@
                         <label>10h–10h30</label>
                         <item>Introduction de la formation</item>
                         <label>10h30–11h00</label>
-                        <item>Présentation du langage</item>
+                        <item><ref target="01-editionNumerique.xml">Les éditions numériques</ref></item>
                         <label>11h00–11h30</label>
-                        <item>TP : Installation d’Oxygen et prise en main</item>
+                        <item><ref target="02-teiGeneralites.xml">Généralités sur la TEI</ref></item>
                         <label>11h30–12h</label>
                         <item>Pause</item>
                         <label>12h00–12h30</label>
-                        <item>TP : modélisation d’un carnet d’adresse avec XML</item>
+                        <item>TP : Mon premier document TEI</item>
                     </list>
                     <list>
                         <head>Après-midi</head>
-                        <label>13h–13h30</label>
-                        <item>Notion de Schéma</item>
                         <label>13h30–14h</label>
-                        <item>TP : Schéma</item>
-                        <label>14h00–14h30</label>
-                        <item>XML et les technologies associées</item>
-                        <label>14h30–15h</label>
+                        <item>La transcription des sources primaires</item>
+                        <label>14h–14h30</label>
+                        <item>TP : Encodage de la source</item>
+                        <label>15h–15h15</label>
                         <item>Pause</item>
-                        <label>15h–15h30</label>
+                        <label>15h15–15h45</label>
                         <item>Présentations d’outils et d’application</item>
-                        <label>15h30–16h00</label>
+                        <label>16h45–16h</label>
                         <item>Discussion</item>
                     </list>
                 </div>
@@ -153,7 +151,10 @@
                     <div>
                         <figure>
                             <graphic url="../images/hello.svg"/>
-                            <desc xml:lang="en">"Hello my name is" name badge resembling the Avery ones, using the ITC Avant Garde Gothic Pro font, <ref target="https://commons.wikimedia.org/wiki/File:Hello_my_name_is_sticker.svg">Public domain</ref></desc>
+                            <desc xml:lang="en"
+                                >"Hello my name is" name badge resembling the Avery ones, using the ITC Avant Garde Gothic Pro font, <ref
+                                target="https://commons.wikimedia.org/wiki/File:Hello_my_name_is_sticker.svg"
+                                >Public domain</ref></desc>
                         </figure>
                     </div>
                     <div>
