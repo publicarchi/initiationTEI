@@ -5,12 +5,14 @@
     <fileDesc>
       <titleStmt>
         <title>Un rapide panorama de l’édition critique avec la TEI</title>
+        <author>Emmanuel Château-Dutier</author>
       </titleStmt>
       <publicationStmt>
-        <p>from markdown</p>
+        <publisher>École nationale des chartes</publisher>
+        <date from="2015" to="2017">2015-2017</date>
       </publicationStmt>
       <sourceDesc>
-        <p>emchateau, ENC 2015</p>
+        <p>Fichier nativement numérique</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
@@ -34,7 +36,8 @@
       <titlePage xml:lang="fr">
         <titlePart>01 – Un rapide panorama de l’édition critique avec la TEI</titlePart>
         <docImprint>Formation TEI | ENC 27 fév au 2 mars 2017</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
+        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> |
+          <ref target="00-programme.html#jour1">jour1</ref> | <ref target="00-programme.html#jour2">jour2</ref> | <ref target="00-programme.html#jour3">jour3</ref> | <ref target="00-programme.html#jour4">jour4</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr">
         <div>
@@ -75,6 +78,39 @@
         </div>
         <div rend="slide" xml:lang="fr">
           <div>
+            <head>Qu’est-ce qu’une <hi>édition critique</hi> ?</head>
+            <list>
+              <item>Caractère savant</item>
+              <item>Un essai de reconstitution d’un texte</item>
+              <item>Objectivité / parti-pris</item>
+            </list>
+          </div>
+          <div rend="comments">
+            <head>Qu’est-ce qu’une édition critique ?</head>
+            <div>
+              <head>Un essai de reconstitution d’un texte</head>
+              <p>On parle d’édition critique, ou d’édition scientifique – l’adjectif dans appellation venant en désigner le caractère savant –, au sens où il s’agit de produire <hi>une reproduction contrôlée</hi> d’un texte dont sont procurés les états, versions, variantes et leçons.</p>
+              <p>De ce point de vue, l’édition critique constitue, selon la définition du manuel de l’École nationale des chartes sur l’édition des textes médiévaux, un <cit>
+                  <quote>Essai de reconstitution d’un texte, pour lequel l’éditeur pèse chacun des mots du texte en se servant de tous les moyens de jugement dont il dispose.</quote>
+                </cit>
+                <bibl>Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d'archives, n° Fascicule III, Textes littéraires).</bibl></p>
+            </div>
+            <div>
+              <head>Plusieurs genres d’édition critique</head>
+              <cit>
+                <quote>Cas particuliers :<list>
+                    <item>l’édition imitative ou diplomatique qui reproduit très exactement un document unique, jusqu’en ses particularités graphiques et mêmes ses erreurs, commentées à part mais pas corrigées dans le texte ;</item>
+                    <item>l’édition synthétique, intégrant différents états du texte suffisamment peu différents, moyennant un artifice typographique, avec comme variante l’édition génétique, qui rend compte par des artifices typographiques des différentes couches ou états successifs du texte ;</item>
+                    <item>l’édition <foreign xml:lang="lat"
+                      >variorum</foreign>, qui donne le texte accompagné, outre l’apparat normal des variantes, de toutes les solutions des éditeurs précédents.</item>
+                  </list></quote>
+                <bibl>Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d'archives, n° Fascicule III, Textes littéraires).</bibl>
+              </cit>
+            </div>
+          </div>
+        </div>
+        <div rend="slide" xml:lang="fr">
+          <div>
             <head>Comment rendre compte de la <hi>source primaire</hi> ?</head>
             <list>
               <item>Objectivité / parti-pris</item>
@@ -107,6 +143,8 @@
           </div>
           <div type="notes">
             <head>Critères de scientificité</head>
+<p>Il s’agit toujours de fournir un texte, et dans le domaine historique de savoir comment rendre compte le plus fidèlement possible de la source.</p>
+            <p>Critères de scientificités</p>
             <p>Même si le domaine de l’édition scientifique a connu de profonds changements au cours de ces dernières années avec l’irruption du numérique, les opérations à la base de toute édition critique sont toutefois restées pour l’essentiel identiques.</p>
             <p>La tâche principale de l’éditeur est de produire un texte fiable et consistant, avec des partis-pris éditoriaux explicites et appropriés.</p>
             <p>La production d’une telle édition peut mobiliser des savoirs relativement étendus. Elle implique que l’éditeur dispose non seulement des savoirs traditionnellement associés à l’édition des sources primaires :<list>
@@ -134,7 +172,7 @@
           </div>
           <div type="notes">
             <head>Un investissement important</head>
-            <p>Produire une édition numérique est souvent un travail long et fastidieux qui nécessite un investissement important. Parce que le travail peut s’étaler sur plusieurs années ou être mené en équipe, son élaboration requiert habituellement la mise au point de méthodes de travail adaptées (temps long, travail en équipe).</p>
+            <p>Dès lors, la production d’édition numérique est souvent un travail long et fastidieux qui nécessite un investissement important. Parce que le travail peut s’étaler sur plusieurs années ou être mené en équipe, son élaboration requiert habituellement la mise au point de méthodes de travail adaptées (temps long, travail en équipe).</p>
             <p>Compte tenu de l’investissement engagé, il est aussi nécessaire de se préoccuper de questions d’interopérabilité. Par exemple, il peut s’avérer judicieux de prévoir la réutilisation et le partage de l’édition dans des bases textuelles collectives (Frantext, etc.). Cela suppose d’une part la production de métadonnées normalisées, mais aussi l’utilisation d’un schéma d’encodage bien documentés pour le partage et l’échange des fichiers.</p>
             <p>À cela s’ajoute encore des problèmes de pérennité. Bien souvent, une édition critique est fournie pour plusieurs dizaines d’années, avant que l’on ressente le besoin, ou que l’on dispose des moyens d’en produire une nouvelle. Quoiqu’il en soit, il y a fort à parier que vous ne souhaitiez pas que tout votre travail soit perdu à la première évolution technique. Il convient donc de prévoir la conservation de son édition et de formuler des choix pour sa pérennisation. Les formats informatiques posent parfois des problèmes d’obsolescence technique, et en la matière, certains choix s’avèrent plus judicieux que d’autres de ce point de vue.</p>
           </div>

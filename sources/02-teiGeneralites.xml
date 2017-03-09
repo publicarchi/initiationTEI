@@ -9,7 +9,7 @@
       </titleStmt>
       <publicationStmt>
         <publisher>École nationale des chartes</publisher>
-        <date when="2017">2014-2017</date>
+        <date from="2014" to="2017">2014-2017</date>
       </publicationStmt>
       <sourceDesc>
         <p>Fichier nativement numérique</p>
@@ -36,7 +36,8 @@
       <titlePage xml:lang="fr">
         <titlePart>02 – teiGénéralités : La TEI comme cadre de travail pour l’édition des textes</titlePart>
         <docImprint>Formation TEI | ENC 27 fév au 2 mars 2017</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref></note>
+        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> |
+          <ref target="00-programme.html#jour1">jour1</ref> | <ref target="00-programme.html#jour2">jour2</ref> | <ref target="00-programme.html#jour3">jour3</ref> | <ref target="00-programme.html#jour4">jour4</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr">
         <div>
@@ -71,13 +72,14 @@
             <item>Un effort international pour unifier les pratiques d’encodage de textes dans le domaine académique</item>
             <item>Un vocabulaire XML qui permet de produire des modèles de textes</item>
             <item>Un cadre de travail</item>
-            <item>Un ensemble de recommandations ([_Guidelines_](http://www.tei-c.org/Guidelines/))</item>
+            <item>Un ensemble de recommandations (<ref target="http://www.tei-c.org/Guidelines/"
+              >Guidelines</ref>)</item>
           </list>
         </div>
         <div rend="notes">
           <p>La Text Encoding Initiative (TEI) est un effort international pour <hi rend="bold">unifier les pratiques d’encodage de textes</hi> dans le domaine académique.</p>
-          <p>Elle fournit <hi rend="bold">un vocabulaire XML</hi> qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires. </p>
-          <p>Plus qu’un schéma générique, elle offre en fait **un cadre de travail** qui permet de traiter différents cas de figure.</p>
+          <p>Elle fournit <hi>un vocabulaire XML</hi> qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires. </p>
+          <p>Plus qu’un schéma générique, elle offre en fait <hi>un cadre de travail</hi> qui permet de traiter différents cas de figure.</p>
           <p>Ce cadre de travail se compose <list>
               <item>d’un vocabulaire,</item>
               <item>d’une documentation qui en fournit la sémantique en langage naturel,</item>
