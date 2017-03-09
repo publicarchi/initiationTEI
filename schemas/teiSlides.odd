@@ -118,7 +118,7 @@
             <!-- some attribute classes are modified -->
             <classRef key="att.global.rendition" except="rendition style"/>
             <classRef key="att.datable" except="period calendar"/>
-            <classRef key="att.datable.w3c" include="when"/>
+            <classRef key="att.datable.w3c" include="when from to"/>
             <classRef key="att.naming" except="nymRef"/>
             <classRef key="att.pointing" except="targetLang evaluate"/>
          </schemaSpec>

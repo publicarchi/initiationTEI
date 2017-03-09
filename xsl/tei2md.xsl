@@ -6,9 +6,9 @@
   xpath-default-namespace="http://www.tei-c.org/ns/1.0">
 
   <xsl:import
-    href="/usr/share/xml/tei/stylesheet/markdown/tei-to-markdown.xsl"/>
+    href="/Users/emmanuelchateau/TEIC/stylesheets/markdown/tei-to-markdown.xsl"/>
 
-  <xsl:output method="html" version="5" indent="yes"/>
+  <xsl:output method="html" version="5.0" indent="yes"/>
 
   <xsl:strip-space elements="egXML"/>
 
@@ -152,6 +152,13 @@
     <xsl:text>
 ```
 </xsl:text>
+  </xsl:template>
+
+
+  <xsl:template match="q">
+    <xsl:text>« </xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text> »</xsl:text>
   </xsl:template>
 
   <xsl:template match="att">
