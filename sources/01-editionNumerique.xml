@@ -43,23 +43,6 @@
         <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
           <ref target="00-programme.xml">Programme</ref></note>
       </titlePage>
-      <div rend="slide" xml:lang="fr">
-        <div>
-          <head>L’édition critique numérique</head>
-          <list type="unordered">
-            <item>un domaine en évolution rapide</item>
-            <item>voir la biblio ecdotique traditionnelle</item>
-            <item>bcp de biblio en langue anglaise</item>
-          </list>
-          <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
-        </div>
-        <div rend="notes">
-          <p>Dans le cadre de cette formation consacrée à la modélisation, il est important de revenir un peu sur ce que l’on fait lorsque l’on produit une édition critique numérique.</p>
-          <p>Le domaine de l’édition critique numérique est un domaine en évolution rapide. En la matière, on peut se référer à la bibliographie ecdotique traditionnelle et à une bibliographie abondante en langue anglaise.</p>
-          <p>Toutefois, il n’y a pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
-          <p>Exemples structurants : édition perseus, van Gogh, etc.</p>
-        </div>
-      </div>
       <div rend="slide" xml:lang="fr" xml:id="index">
         <div>
           <head>L’édition critique numérique</head>
@@ -182,6 +165,24 @@
           </div>
         </div>
       </div>
+      <div type="slide"></div>
+      <div type="slide" xml:lang="fr">
+        <div>
+          <head>L’édition critique numérique</head>
+          <list type="unordered">
+            <item>un domaine en évolution rapide</item>
+            <item>voir la biblio ecdotique traditionnelle</item>
+            <item>bcp de biblio en langue anglaise</item>
+          </list>
+          <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
+        </div>
+        <div rend="notes">
+          <p>Dans le cadre de cette formation consacrée à la modélisation, il est important de revenir un peu sur ce que l’on fait lorsque l’on produit une édition critique numérique.</p>
+          <p>Le domaine de l’édition critique numérique est un domaine en évolution rapide. En la matière, on peut se référer à la bibliographie ecdotique traditionnelle et à une bibliographie abondante en langue anglaise.</p>
+          <p>Toutefois, il n’y a pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
+          <p>Exemples structurants : édition perseus, van Gogh, etc.</p>
+        </div>
+      </div>
       <div type="part">
         <div type="title" xml:lang="fr" xml:id="balisageDescriptif">
           <div>
@@ -213,34 +214,16 @@
         </div>
         <div type="slide" xml:lang="fr">
           <div>
-            <head>Exemples d’éditions numériques</head>
-            <list>
-              <item><ref target="http://elec.enc.sorbonne.fr">elec</ref></item>
-              <item><ref target="http://hyperdonat.tge-adonis.fr">hyperdonnat</ref></item>
-              <item><ref
-                  target="http://www.unicaen.fr/puc/sources/gsp/www.unicaen.fr/services/puc/sources/gsp/index-2.html"
-                  >Roman du Mont Saint-Michel</ref></item>
-              <item><ref target="http://obvil.paris-sorbonne.fr/corpus/mercure-galant/">Mercure
-                  galant</ref></item>
-              <item><ref target="http://vangoghletters.org/vg/">vangoghletters.org</ref></item>
-              <item><ref target="http://www.sandrart.net/de/">sandrart.net</ref></item>
-            </list>
-          </div>
-        </div>
-        <div type="slide" xml:lang="fr">
-          <div>
             <head>Encodage descriptif</head>
-            <head>vs</head>
+            <head><hi>vs</hi></head>
             <head>encodage présentationnel</head>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
           <div>
-            <head>Encodage descriptif vs encodage présentationnel</head>
+            <head>Encodage descriptif <hi>vs</hi> encodage présentationnel</head>
             <p>Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages : procédural, présentationnel, ou encore descriptif.</p>
-            <bibl>cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, <ref
-                target="http://xml.coverpages.org/coombs.html">« Markup Systems and the Future of Scholarly Text Processing »</ref>, Communications of the ACM, n° 11, t. 30, 1987,
-              p.933-947.</bibl>
+            <bibl>cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, <ref target="http://xml.coverpages.org/coombs.html">« Markup Systems and the Future of Scholarly Text Processing »</ref>, Communications of the ACM, n° 11, t. 30, 1987, p.933-947.</bibl>
             <p>La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.</p>
           </div>
         </div>
@@ -328,6 +311,20 @@
         <div type="title" xml:lang="fr" xml:id="presentationEdition">
           <div>
             <head>La présentation de l’édition critique</head>
+          </div>
+        </div>
+        <div type="slide" xml:lang="fr">
+          <div>
+            <head>Exemples d’éditions numériques</head>
+            <list>
+              <item><ref target="http://elec.enc.sorbonne.fr">elec</ref></item>
+              <item><ref target="http://hyperdonat.tge-adonis.fr">hyperdonnat</ref></item>
+              <item><ref target="http://www.unicaen.fr/puc/sources/gsp/www.unicaen.fr/services/puc/sources/gsp/index-2.html">Roman du Mont Saint-Michel</ref></item>
+              <item><ref target="http://obvil.paris-sorbonne.fr/corpus/mercure-galant/">Mercure
+                galant</ref></item>
+              <item><ref target="http://vangoghletters.org/vg/">vangoghletters.org</ref></item>
+              <item><ref target="http://www.sandrart.net/de/">sandrart.net</ref></item>
+            </list>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
@@ -508,34 +505,19 @@
             <head>Orientations bibliographiques .inverse[(suite)]</head>
             <list>
               <item><bibl>Guyotjeannin, Olivier, and Olivier Poncet. <hi rend="italic">
-                    <ref
-                      target="https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf"
-                      >L’édition électronique de sources d’archives médiévales et modernes, Quelques
-                      réflexions</ref>
+                    <ref target="https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf">L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions</ref>
                   </hi>. mars, 2010.</bibl></item>
-              <item><bibl>Bourgain, Pascale, and Françoise Vieillard (dir.), <hi rend="italic"
-                    >Conseils Pour L’édition Des Textes Médiévaux</hi>. Conseils généraux, Fascicule
-                  I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris:
-                  Comité des travaux historiques et scientifiques / École nationale des chartes,
-                  2001-2002.</bibl></item>
-              <item><bibl>Barbiche, Bernard. <hi rend="italic"><ref target="http://theleme.enc.sorbonne.fr/cours/edition">"Conseils Pour L’édition Des Textes
-                    De L’époque Moderne (XVIe-XVIIIe
-                    Siècle)"</ref></hi>epoque<hi
-                    rend="italic">moderne/edition</hi>des<hi rend="italic">textes)</hi>. Theleme
-                  (Techniques pour l’Historien en Ligne : Études, Manuels, Exercices).</bibl></item>
-              <item><bibl>Christine Nougaret et Elisabeth Parinet (dir.), <hi rend="italic">Conseils
-                    pour l’édition des textes de l’époque moderne</hi>, École nationale des chartes,
-                    <hi rend="bold">à paraître en décembre 2014 (avec un chapitre de Florence
-                    Clavaud consacré à l’édition électronique) !!</hi>.</bibl></item>
+              <item><bibl>Bourgain, Pascale, and Françoise Vieillard (dir.), <hi rend="italic">Conseils Pour L’édition Des Textes Médiévaux</hi>. Conseils généraux, Fascicule I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris : Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.</bibl></item>
+              <item><bibl>Barbiche, Bernard. <title><ref target="http://theleme.enc.sorbonne.fr/cours/edition">Conseils pour l’édition des textes de l’époque moderne (XVI<hi rend="superscript">e</hi>-XVIII<hi rend="superscript">e</hi> siècle)</ref></title>, époque moderne / édition des textes. Theleme (Techniques pour l’historien en Ligne : Études, Manuels, Exercices).</bibl></item>
+              <item><bibl>Christine Nougaret et Elisabeth Parinet (dir.), <hi rend="italic">Conseils pour l’édition des textes de l’époque moderne</hi>, École nationale des chartes, <hi rend="bold">à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l’édition électronique) !!</hi>.</bibl></item>
             </list>
           </div>
         </div>
       </div>
       <div>
         <div type="title" xml:lang="fr">
-          <head>XML, <ref target="02-teiGeneralites.html">Et la TEI dans tout ça ?</ref></head>
-          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml"
-              >Programme</ref></note>
+          <head><ref target="02-teiGeneralites.html">Et la TEI dans tout ça ?</ref></head>
+          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml">Programme</ref></note>
         </div>
       </div>
     </back>
