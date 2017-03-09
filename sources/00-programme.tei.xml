@@ -22,7 +22,7 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <front>
+        <front xml:id="index">
             <titlePage>
                 <titlePart>Programme de la formation</titlePart>
                 <docImprint>Initiation à la TEI | CRIHN, 10 mars 2017</docImprint>
@@ -39,7 +39,8 @@
                         <p>Bonjour, </p>
                         <p>J’ai le plaisir de vous accueillir au nom du Centre de recherche inter-universitaire des humanités numériques (CRIHN) dans cette formation d’Initiation à la TEI.  Michael Sinatra le directeur du centre m’a chargé de vous souhaiter la bienvenue à cette première formation d’un nouveau cycle que plusieurs collègues proposent afin d’accompagner nos activités. Cette seconde formation courte est une introduction à la Text Encoding Initiative, elle fait suite à une première initiation à XML.</p>
                         <p>Je m’appelle Emmanuel Château-Dutier, je suis professeur-adjoint en muséologie numérique à l’Université de Montréal. Je suis engagé depuis plusieurs années sur divers projets d’édition structurées. Et j’assure avec Lou Burnard à l’École nationale des chartes à Paris la formation continue de l’École des chartes sur la Text Encoding Initiative.</p>
-                        <p>La <ref target="http://www.tei-c.org">Text Encoding Initiative (TEI)</ref> offre un cadre de travail pour l’édition structurée de textes littéraires ou historiques. Tout à la fois modèle conceptuel, infrastructure technique, et communauté, la TEI s’est largement imposée, au niveau international, comme standard de fait pour la production d’éditions critiques numériques.</p>
+                        <p>La <ref target="http://www.tei-c.org"
+                            >Text Encoding Initiative (TEI)</ref> offre un cadre de travail pour l’édition structurée de textes littéraires ou historiques. Tout à la fois modèle conceptuel, infrastructure technique, et communauté, la TEI s’est largement imposée, au niveau international, comme standard de fait pour la production d’éditions critiques numériques.</p>
                     </div>
                 </div>
                 <div type="slide">
@@ -53,65 +54,62 @@
                             <item>Solutions de publication</item>
                         </list>
                     </div>
-                    <div>
+                    <div type="notes">
                         <div>
                             <head>Contenu de la formation</head>
-                            <p>Cette formation est une introduction à la TEI. Nous en présenterons les principaux principes de conception et en ferons l’utilisation autour d’exercices pratiques.</p>
-                            <div>
-                                <p>Les thématiques abordées au cours de la formation sont les suivantes :
-                        <list>
-                                    <item>Historique et application de XML</item>
-                                    <item>Principes de conception du langage</item>
-                                    <item>La syntaxe XML</item>
-                                    <item>Notions de document bien formé et de document valide</item>
-                                    <item>Les technologies de schémas (modéliser des sources avec XML)</item>
-                                    <item>Langages associés et exploitation des documents</item>
-                                    </list> </p>
-                            </div>
-                            <div>
-                                <head>Objectifs de la formation : </head>
-                                <list>
-                                    <item>Se familiariser avec les principes de l’édition structurée et la notion de balisage descriptif</item>
-                                    <item>Acquérir une première expérience d’encodage en XML-TEI</item>
-                                    <item>Comprendre les personnalisations possibles de la TEI</item>
-                                </list>
-                            </div>
-                            <div>
-                                <head>Pré-requis</head>
-                                <p>Une connaissance minimale de la syntaxe XML facilitera l’apprentissage mais n’est pas nécessaire. En cas de besoin, vous pouvez vous familiariser avec cette syntaxe ou vous rafraîchir la mémoire en consultant les <ref target="https://github.com/publicarchitectura/initiationXML">supports de cours</ref> de la formation précédente.</p>
-                                <p>Afin de travailler dans leur environnement habituel, les participants travaillent sur leur propre ordinateur. Des instructions détaillées pour l’installation du logiciel utilisé au cours de la formation (oXygen) vous seront envoyées avant la session.</p>
-                            </div>
+                            <list>
+                                <item>Les éditions structurées</item>
+                                <item>La production d’une édition critique avec la TEI</item>
+                                <item>Organisation de la TEI</item>
+                                <item>Personnalisation de la TEI</item>
+                                <item>Solutions de publication</item>
+                            </list>
+                        </div>
+                        <div>
+                            <head>Objectifs de la formation : </head>
+                            <list>
+                                <item>Se familiariser avec les principes de l’édition structurée et la notion de balisage descriptif</item>
+                                <item>Acquérir une première expérience d’encodage en XML-TEI</item>
+                                <item>Comprendre les personnalisations possibles de la TEI</item>
+                            </list>
+                        </div>
+                        <div>
+                            <head>Pré-requis</head>
+                            <p>Une connaissance minimale de la syntaxe XML facilitera l’apprentissage mais n’est pas nécessaire. En cas de besoin, vous pouvez vous familiariser avec cette syntaxe ou vous rafraîchir la mémoire en consultant les <ref
+                                target="https://github.com/publicarchitectura/initiationXML"
+                                >supports de cours</ref> de la formation précédente.</p>
+                            <p>Afin de travailler dans leur environnement habituel, les participants travaillent sur leur propre ordinateur. Des instructions détaillées pour l’installation du logiciel utilisé au cours de la formation (oXygen) vous seront envoyées avant la session.</p>
                         </div>
                     </div>
-                    <div type="slide">
+                </div>
+                <div type="slide">
+                    <div>
                         <div>
-                            <div>
-                                <head>Approche pédagogique</head>
-                                <p>Aucun pré-requis informatique</p>
-                                <p>Plusieurs travaux pratiques</p>
-                                <p>Une perspective humaniste</p>
-                            </div>
-                            <div>
-                                <head>Objectifs</head>
-                                <p>Connaître les grandes lignes du langage</p>
-                                <p>Se familiariser avec la syntaxe</p>
-                                <p>Identifier les applications</p>
-                            </div>
+                            <head>Approche pédagogique</head>
+                            <p>Aucun pré-requis informatique</p>
+                            <p>Plusieurs travaux pratiques</p>
+                            <p>Une perspective humaniste</p>
                         </div>
                         <div>
-                            <div>
-                                <head>Approche pédagogique</head>
-                                <p>Aucun pré-requis informatique</p>
-                                <p>On part du principe que vous êtes novices en informatique.</p>
-                                <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
-                                <p>Une perspective humaniste</p>
-                            </div>
-                            <div>
-                                <head>Objectifs</head>
-                                <p>Connaître les grandes lignes du langage</p>
-                                <p>Se familiariser avec la syntaxe</p>
-                                <p>Identifier les applications</p>
-                            </div>
+                            <head>Objectifs</head>
+                            <p>Présentation du projet de la Text Encoding Initiative</p>
+                            <p>Se familiariser avec le langage</p>
+                            <p>Identifier les applications</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <head>Approche pédagogique</head>
+                            <p>Aucun pré-requis informatique</p>
+                            <p>On part du principe que vous êtes novices en informatique.</p>
+                            <p>Une démarche progressive, adossée à des Travaux pratiques.</p>
+                            <p>Une perspective humaniste</p>
+                        </div>
+                        <div>
+                            <head>Objectifs</head>
+                            <p>Connaître les grandes lignes du langage</p>
+                            <p>Se familiariser avec la syntaxe</p>
+                            <p>Identifier les applications</p>
                         </div>
                     </div>
                 </div>
@@ -122,27 +120,29 @@
                     <head>Programme de la formation</head>
                     <list>
                         <head>Mâtinée</head>
-                        <label>10h–10h30</label>
+                        <label>10h–10h15</label>
                         <item>Introduction de la formation</item>
-                        <label>10h30–11h00</label>
-                        <item><ref target="01-editionNumerique.xml">Les éditions numériques</ref></item>
+                        <label>10h15–10h45</label>
+                        <item><ref target="01-editionNumerique.xml"
+                            >Un rapide panorama de l’édition critique avec la TEI</ref></item>
                         <label>11h00–11h30</label>
-                        <item><ref target="02-teiGeneralites.xml">Généralités sur la TEI</ref></item>
+                        <item><ref target="02-teiGeneralites.xml"
+                            >La TEI comme cadre de travail pour l’édition des textes</ref></item>
                         <label>11h30–12h</label>
                         <item>Pause</item>
                         <label>12h00–12h30</label>
-                        <item>TP : Mon premier document TEI</item>
+                        <item>TP01 : Mon premier document TEI</item>
                     </list>
                     <list>
                         <head>Après-midi</head>
                         <label>13h30–14h</label>
-                        <item>La transcription des sources primaires</item>
-                        <label>14h–14h30</label>
+                        <item><ref target="03-transcription.xml">La transcription des sources primaires</ref></item>
+                        <label>14h–15h</label>
                         <item>TP : Encodage de la source</item>
                         <label>15h–15h15</label>
                         <item>Pause</item>
                         <label>15h15–15h45</label>
-                        <item>Présentations d’outils et d’application</item>
+                        <item><ref target="04-traitements.xml">Présentations d’outils et d’application</ref></item>
                         <label>16h45–16h</label>
                         <item>Discussion</item>
                     </list>
@@ -152,9 +152,7 @@
                         <figure>
                             <graphic url="../images/hello.svg"/>
                             <desc xml:lang="en"
-                                >"Hello my name is" name badge resembling the Avery ones, using the ITC Avant Garde Gothic Pro font, <ref
-                                target="https://commons.wikimedia.org/wiki/File:Hello_my_name_is_sticker.svg"
-                                >Public domain</ref></desc>
+                                >"Hello my name is" name badge resembling the Avery ones, using the ITC Avant Garde Gothic Pro font, <ref target="https://commons.wikimedia.org/wiki/File:Hello_my_name_is_sticker.svg">Public domain</ref></desc>
                         </figure>
                     </div>
                     <div>
@@ -165,6 +163,13 @@
                             <item>Sur quoi portent vos recherches ?</item>
                             <item>Ce qui vous intéresse avec cette formation.</item>
                         </list>
+                    </div>
+                </div>
+                <div>
+                    <div type="title" xml:lang="fr">
+                        <head>XML, <ref target="01-editionNumerique.xml">Qu’est-ce qu’une édition critique numérique ?</ref></head>
+                        <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.html"
+                            >Programme</ref></note>
                     </div>
                 </div>
             </div>

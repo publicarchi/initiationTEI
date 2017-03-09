@@ -8,17 +8,17 @@
         <author>Emmanuel Château-Dutier</author>
       </titleStmt>
       <publicationStmt>
-        <publisher>École nationale des chartes</publisher>
-        <date from="2014" to="2017">2014-2017</date>
+        <publisher>CRIHN | Initiation TEI</publisher>
+        <date from="2017">2017</date>
       </publicationStmt>
       <sourceDesc>
         <p>Fichier nativement numérique</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change when="2017-02-18">Relecture du fichier</change>
+      <change when="2017-03-09">Adaptation pour la formation du CRIHN</change>
       <change when="2015-11-17">conversion du fichier en TEI</change>
-      <change when="2014-05">première rédaction</change>
+      <change when="2014-05">première rédaction (Formation continue de l’ENC)</change>
     </revisionDesc>
   </teiHeader>
   <!--
@@ -33,11 +33,11 @@
            <p>class: center middle</p>-->
   <text>
     <front>
-      <titlePage xml:lang="fr">
-        <titlePart>02 – teiGénéralités : La TEI comme cadre de travail pour l’édition des textes</titlePart>
-        <docImprint>Formation TEI | ENC 27 fév au 2 mars 2017</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> |
-          <ref target="00-programme.html#jour1">jour1</ref> | <ref target="00-programme.html#jour2">jour2</ref> | <ref target="00-programme.html#jour3">jour3</ref> | <ref target="00-programme.html#jour4">jour4</ref></note>
+      <titlePage xml:lang="fr" xml:id="index">
+        <titlePart>02 – La TEI comme cadre de travail pour l’édition des textes</titlePart>
+        <docImprint>Initiation TEI | CRIHN, 10 mars 2017</docImprint>
+        <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
+          <ref target="00-programme.xml">Programme</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr">
         <div>
@@ -228,7 +228,7 @@
           </div>
           <div rend="slide" xml:lang="fr">
             <div>
-              <head>Faciliter l’échange et l’intégration des travaux des chercheurs</head>
+              <head>Faciliter l’échange et l’intégration des travaux des chercheurs</head>
               <list>
                 <item>Concevoir et maintenir <hi rend="bold">un modèle international générique</hi>, applicable à tous les textes, écrits dans toutes les langues, datant de toutes les périodiques</item>
                 <item>Guider les utilisateurs non techniciens (<hi rend="bold">documenter le modèle</hi>)</item>
@@ -405,8 +405,8 @@
       </div>
       <div rend="title" xml:lang="fr">
         <div>
-          <head>La <ref target="03-organisation.html">suite</ref></head>
-          <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.html"
+          <head>La <ref target="ex01-oxygen.xml">Une première mise en jambe</ref></head>
+          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml"
               >Programme</ref></note>
         </div>
       </div>

@@ -8,17 +8,21 @@
         <author>Emmanuel Château-Dutier</author>
       </titleStmt>
       <publicationStmt>
-        <publisher>École nationale des chartes</publisher>
-        <date from="2015" to="2017">2015-2017</date>
+        <publisher>CRIHN | Initiation TEI</publisher>
+        <date from="2017">2017</date>
+        <availability>
+          <licence></licence>
+        </availability>
       </publicationStmt>
       <sourceDesc>
         <p>Fichier nativement numérique</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change when="2017-03-09">Adaptation pour la formation du CRIHN</change>
       <change when="2017-02-18">Relecture et corrections diverses</change>
       <change when="2015-05-24">conversion du fichier en TEI</change>
-      <change when="2014-10-30">première rédaction</change>
+      <change when="2014-10-30">première rédaction (Formation continue de l’ENC)</change>
     </revisionDesc>
   </teiHeader>
   <!--
@@ -35,9 +39,9 @@
     <front>
       <titlePage xml:lang="fr">
         <titlePart>01 – Un rapide panorama de l’édition critique avec la TEI</titlePart>
-        <docImprint>Formation TEI | ENC 27 fév au 2 mars 2017</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2017-02">Répertoire GitHub</ref> |
-          <ref target="00-programme.html#jour1">jour1</ref> | <ref target="00-programme.html#jour2">jour2</ref> | <ref target="00-programme.html#jour3">jour3</ref> | <ref target="00-programme.html#jour4">jour4</ref></note>
+        <docImprint>Initiation TEI | CRIHN, 10 mars 2017</docImprint>
+        <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
+          <ref target="00-programme.xml">Programme</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr">
         <div>
@@ -530,7 +534,7 @@
       <div>
         <div type="title" xml:lang="fr">
           <head>XML, <ref target="02-teiGeneralites.html">Et la TEI dans tout ça ?</ref></head>
-          <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.html"
+          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml"
               >Programme</ref></note>
         </div>
       </div>
