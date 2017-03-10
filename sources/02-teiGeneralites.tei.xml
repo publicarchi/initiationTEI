@@ -37,7 +37,7 @@
         <titlePart>02 – La TEI comme cadre de travail pour l’édition des textes</titlePart>
         <docImprint>Initiation TEI | CRIHN, 10 mars 2017</docImprint>
         <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
-          <ref target="00-programme.xml">Programme</ref></note>
+          <ref target="00-programme.tei.xml">Programme</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr">
         <div>
@@ -405,8 +405,8 @@
       </div>
       <div rend="title" xml:lang="fr">
         <div>
-          <head>La <ref target="ex01-oxygen.xml">Une première mise en jambe</ref></head>
-          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml"
+          <head>La <ref target="ex01-oxygen.tei.xml">Une première mise en jambe</ref></head>
+          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.tei.xml"
               >Programme</ref></note>
         </div>
       </div>

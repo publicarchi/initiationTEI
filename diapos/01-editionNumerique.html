@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Programme</title>
+      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
+   </head>
+   <body><textarea id="source">
+title: Un rapide panorama de l’édition critique avec la TEI
+description: Emmanuel Château-Dutier, 2017
+theme: theme/remark-dark-em.css
+name: inverse
+layout: true
+class: inverse
+
+---
+class: center middle
+
+
+
+# 01 – Un rapide panorama de l’édition critique avec la TEI
+
+### Initiation TEI | CRIHN, 10 mars 2017
+
+.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html)]
+![test](images/logo.svg)
+
+---
+name: index
+
+## L’édition critique numérique
+
+## Sommaire
+
+1. [Caractéristiques attendues d’une édition critique](#caracteristiques)
+
+1. [La prise en charge de l’édition critique par un balisage descriptif](#balisageDescriptif)
+
+1. [Présentation et potentiel des éditions numériques](#presentationEdition)
+
+---
+template: inverse
+class: center middle
+
+
+---
+template: inverse
+class: center middle
+name: caracteristiques
+
+
+## Caractéristiques attendues d’une édition critique
+
+---
+
+
+## Qu’est-ce qu’une .red[édition critique]&nbsp;?
+
+* Caractère savant
+
+* Un essai de reconstitution d’un texte
+
+* Objectivité / parti-pris
+
+???
+
+## Qu’est-ce qu’une édition critique&nbsp;?
+
+### Un essai de reconstitution d’un texte
+
+On parle d’édition critique, ou d’édition scientifique –&nbsp;l’adjectif dans appellation venant en désigner le caractère savant&nbsp;–, au sens où il s’agit de produire .red[une reproduction contrôlée] d’un texte dont sont procurés les états, versions, variantes et leçons.
+
+De ce point de vue, l’édition critique constitue, selon la définition du manuel de l’École nationale des chartes sur l’édition des textes médiévaux, un Essai de reconstitution d’un texte, pour lequel l’éditeur pèse chacun des mots du texte en se servant de tous les moyens de jugement dont il dispose. Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d'archives, n° Fascicule III, Textes littéraires).
+
+### Plusieurs genres d’édition critique
+Cas particuliers&nbsp;:
+* l’édition imitative ou diplomatique qui reproduit très exactement un document unique, jusqu’en ses particularités graphiques et mêmes ses erreurs, commentées à part mais pas corrigées dans le texte&nbsp;;
+
+* l’édition synthétique, intégrant différents états du texte suffisamment peu différents, moyennant un artifice typographique, avec comme variante l’édition génétique, qui rend compte par des artifices typographiques des différentes couches ou états successifs du texte&nbsp;;
+
+* l’édition variorum, qui donne le texte accompagné, outre l’apparat normal des variantes, de toutes les solutions des éditeurs précédents.
+Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d'archives, n° Fascicule III, Textes littéraires).
+---
+
+
+## Comment rendre compte de la .red[source primaire]&nbsp;?
+
+* Objectivité / parti-pris
+
+* Édition de sources primaires
+
+* Matérialité de l’édition
+
+???
+
+## Comment rendre compte de la source primaire&nbsp;?
+
+On parle d’édition critique, ou d’édition scientifique –&nbsp;l’adjectif dans appellation venant en désigner le caractère savant&nbsp;–, au sens où il s’agit de produire .red[une reproduction contrôlée] d’un texte dont sont procurés les états, versions, variantes et leçons.
+
+De ce point de vue, l’édition critique constitue, selon la définition du manuel de l’École nationale des chartes sur l’édition des textes médiévaux, un Essai de reconstitution d’un texte, pour lequel l’éditeur pèse chacun des mots du texte en se servant de tous les moyens de jugement dont il dispose. Cas particuliers&nbsp;:
+* l’édition imitative ou diplomatique qui reproduit très exactement un document unique, jusqu’en ses particularités graphiques et mêmes ses erreurs, commentées à part mais pas corrigées dans le texte&nbsp;;
+
+* l’édition synthétique, intégrant différents états du texte suffisamment peu différents, moyennant un artifice typographique, avec comme variante l’édition génétique, qui rend compte par des artifices typographiques des différentes couches ou états successifs du texte&nbsp;;
+
+* l’édition variorum, qui donne le texte accompagné, outre l’apparat normal des variantes, de toutes les solutions des éditeurs précédents.
+Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d’archives, n° Fascicule III, Textes littéraires).
+
+---
+
+
+# Critères de scientificité
+
+* Fiable
+
+* Consistante
+
+* Justification des partis-pris
+
+???
+
+# Critères de scientificité
+
+Il s’agit toujours de fournir un texte, et dans le domaine historique de savoir comment rendre compte le plus fidèlement possible de la source.
+
+Critères de scientificités
+
+Même si le domaine de l’édition scientifique a connu de profonds changements au cours de ces dernières années avec l’irruption du numérique, les opérations à la base de toute édition critique sont toutefois restées pour l’essentiel identiques.
+
+La tâche principale de l’éditeur est de produire un texte fiable et consistant, avec des partis-pris éditoriaux explicites et appropriés.
+
+La production d’une telle édition peut mobiliser des savoirs relativement étendus. Elle implique que l’éditeur dispose non seulement des savoirs traditionnellement associés à l’édition des sources primaires&nbsp;:
+* Il doit en effet être en mesure d’identifier comment le texte a été construit, à la fois comme document et comme instance de l’œuvre.
+
+* Il doit également savoir comment celui-ci a été transmis, altéré ou transformé au cours du temps, etc.
+
+* Mais l’éditeur doit encore être en mesure de connaître son lectorat, et d’identifier la meilleure manière de communiquer les textes, et ce qu’il en sait.
+
+
+Ainsi&nbsp;:
+Une édition critique n’est pas une reproduction photographique. Elle résulte d’un compromis raisonnable entre, d’une part, le respect du texte à publier (dont on ne doit en aucun cas moderniser la graphie) et, d’autre part, le souci de le rendre aussi intelligible que possible pour un lecteur d’aujourd’hui.Barbiche, Bernard, Châtenet, Monique, Delmas, Jean, Guyotjeannin, Olivier, et Belhoste, Jean-François, L’Édition des textes anciens : XVI&lt;sup&gt;e&lt;/sup&gt;-XVIII&lt;sup&gt;e&lt;/sup&gt; siècle, Paris, Association Études, loisirs, patrimoine, 1993, (Documents &amp; méthodes / Inventaire général des monuments et des richesses artistiques de la France, n° 1).
+La production d’une édition critique de qualité exige de ce fait d’avoir bien défini son public de destination. Cette question est déterminante même si l’on ne renonce généralement pas à toucher un public un tant soit peu élargi.
+
+Par exemple, dans le cas des Cours d’Antoine Desgodets à l’Académie d’architecture, s’agissant de mettre à disposition un corpus de textes inédits, établi d’après une tradition abondante de témoins manuscrits, l’édition des cours de Desgodets offrait un intérêt tout particulier pour l’historien de l’art et l’historien du droit. Elle devait présenter toutes les qualités habituellement requises par une édition de haute tenue scientifique en termes de fiabilité, de solidité et de justification des parti-pris. S’agissant d’un matériau entièrement neuf pour la recherche, il s’agissait également de faciliter son étude et de prendre en compte certaines particularités propres à des manuscrits architecturaux pour la consultation.
+
+---
+
+
+# Un investissement important
+
+* Méthode de travail adaptée (temps long, travail en équipe)
+
+* Enjeux d’interopérabilité
+
+* Problèmes de pérennité
+
+???
+
+# Un investissement important
+
+Dès lors, la production d’édition numérique est souvent un travail long et fastidieux qui nécessite un investissement important. Parce que le travail peut s’étaler sur plusieurs années ou être mené en équipe, son élaboration requiert habituellement la mise au point de méthodes de travail adaptées (temps long, travail en équipe).
+
+Compte tenu de l’investissement engagé, il est aussi nécessaire de se préoccuper de questions d’interopérabilité. Par exemple, il peut s’avérer judicieux de prévoir la réutilisation et le partage de l’édition dans des bases textuelles collectives (Frantext, etc.). Cela suppose d’une part la production de métadonnées normalisées, mais aussi l’utilisation d’un schéma d’encodage bien documentés pour le partage et l’échange des fichiers.
+
+À cela s’ajoute encore des problèmes de pérennité. Bien souvent, une édition critique est fournie pour plusieurs dizaines d’années, avant que l’on ressente le besoin, ou que l’on dispose des moyens d’en produire une nouvelle. Quoiqu’il en soit, il y a fort à parier que vous ne souhaitiez pas que tout votre travail soit perdu à la première évolution technique. Il convient donc de prévoir la conservation de son édition et de formuler des choix pour sa pérennisation. Les formats informatiques posent parfois des problèmes d’obsolescence technique, et en la matière, certains choix s’avèrent plus judicieux que d’autres de ce point de vue.
+
+---
+
+
+---
+
+
+# L’édition critique numérique
+
+* un domaine en évolution rapide
+
+* voir la biblio ecdotique traditionnelle
+
+* bcp de biblio en langue anglaise
+
+Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.
+
+???
+
+Dans le cadre de cette formation consacrée à la modélisation, il est important de revenir un peu sur ce que l’on fait lorsque l’on produit une édition critique numérique.
+
+Le domaine de l’édition critique numérique est un domaine en évolution rapide. En la matière, on peut se référer à la bibliographie ecdotique traditionnelle et à une bibliographie abondante en langue anglaise.
+
+Toutefois, il n’y a pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.
+
+Exemples structurants&nbsp;: édition perseus, van Gogh, etc.
+
+---
+template: inverse
+class: center middle
+name: balisageDescriptif
+
+
+# Prise en charge de l’édition critique par le balisage descriptif
+
+---
+
+
+# Peut-on .red[(sérieusement)] utiliser un traitement de texte&nbsp;?
+
+# Plusieurs questions à se poser
+
+* La forme / le contenu
+
+* L’expressivité
+
+* Documentation de l’édition
+
+* Contrôle de la production
+
+* Pérennité et interopérabilité
+
+???
+
+# Peut-on .red[(sérieusement)] utiliser un traitement de texte&nbsp;?
+
+Ici, les critères de qualité d’une édition critique peuvent guider certains choix&nbsp;:
+
+* Les traitements de texte sont souvent centrés sur la présentation. Question des formats de sorties, maintenance.
+
+* Dans bien des cas, l’expressivité d’un logiciel de traitement de texte s’avère insuffisante pour documenter certains aspects de la source, en particulier lorsqu’il s’agit de manuscrit.
+
+* Dans le contexte d’un travail collectif, il est souvent utile de disposer d’une méthode de travail qui assure un contrôle de la consistance de l’édition.
+
+* Dans un objectif de pérennisation, envisager le statut des formats informatiques (ouverts vs propriétaires), les risques d’obsolescence technique, les problèmes de maintenance.
+
+---
+
+
+# Encodage descriptif
+
+# .red[vs]
+
+# encodage présentationnel
+
+---
+
+
+# Encodage descriptif .red[vs] encodage présentationnel
+
+Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages&nbsp;: procédural, présentationnel, ou encore descriptif.
+cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, [« Markup Systems and the Future of Scholarly Text Processing »](http://xml.coverpages.org/coombs.html), Communications of the ACM, n° 11, t. 30, 1987, p.933-947.
+La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.
+
+---
+
+
+# La production d’un .red[balisage descriptif]
+
+Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.
+
+* Distinguer à l’intérieur du texte différents objets éditoriaux
+
+* Fournir une information sémantique
+
+* Possibilité de produire des vues distinctes
+
+???
+
+# La production d’un .red[balisage descriptif]
+
+La production d’un .red[balisage descriptif] consiste à identifier explicitement la structure sémantique sous-jacente d’un document, cela indépendamment de tout traitement déterminé à l’avance.
+cf. Renear, Allen, Dubin, David, Sperberg-McQueen, C. Michael, et Huitfeldt, Claus, [«&nbsp;XML semantics and digital libraries&nbsp;»](http://dl.acm.org/citation.cfm?id=827140.827192), Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, p. 303-305, 2003.
+Il s’agit de .red[distinguer explicitement à l’intérieur du texte différents objets éditoriaux] en les encadrant par des balises dont le nom peut être arbitraire.
+
+Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.
+
+---
+
+
+# Procédure mise en œuvre lors du .red[balisage]
+
+* Reconnaissance des éléments
+
+* Sélection des balises
+
+* Réalisation du balisage, marquage de l’élément
+
+???
+
+# Procédure mise en œuvre lors du .red[balisage]
+
+Les trois opérations qui interviennent au cours du balisage sont donc les suivantes&nbsp;:
+* la reconnaissance des éléments, &nbsp;: reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
+* la sélection des balises,&nbsp;: déterminer le balisage qui s’applique au type d’élément reconnu
+* la réalisation du balisage,&nbsp;: marquage de l’élément à l’intérieur du flux textuel
+cf. Coombs, James, et al., .red[op. cit.]
+---
+
+
+# .red[OHCO], Ordered Hierarchical Content Objects
+
+L’idée d’un balisage descriptif suggère une représentation du texte qui correspond à un modèle d’.red[éléments contenus hiérarchiquement imbriqués] (OHCO, .red[Ordered Hierarchical Content Objects, en anglais]).
+
+* structure hiérarchique
+
+* relations linéaires
+
+Une manière de se représenter ce qu’est un texte
+
+???
+
+# .red[OHCO], Ordered Hierarchical Content Objects
+
+L’idée d’un balisage descriptif qui repose sur le fait de marquer le contenu d’un texte par des éléments suggère une représentation du texte qui correspond à ce qu’on a appelé un modèle d’.red[]éléments contenus hiérarchiquement imbriqués.red[] (OHCO, Ordered Hierarchical Content Objects, en anglais).
+
+Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.
+
+C’est ici l’occasion de souligner qu’il s’agit ici d’une modélisation. C’est une manière de représenter ce qu’est un texte qui impose son expressivité et ses contraintes. Nous verrons que la TEI, tout en étant en grande basée sur le balisage descriptif offre différents mécanismes pour prendre en charge des relations non hiérarchiques comme les chevauchements, etc.
+
+---
+
+
+# Avantages d’un balisage descriptif sur un balisage présentationnel
+
+1. Processus d’établissement du texte simplifié
+
+1. Réduction des problèmes de maintenance
+
+1. Meilleure portabilité
+
+???
+
+# Avantages sur un balisage présentationnel
+
+Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex&nbsp;:
+
+1. Le .red[processus d’établissement du texte se trouve simplifié] par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)
+
+1. Les .red[questions de maintenance sont réduites] à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.
+
+1. Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la .red[portabilité]. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.
+
+Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il .red[permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités], il offre un .red[gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier]. De surcroît, ce balisage permet le plus souvent la .red[génération automatique de l’information bibliographique] directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.
+
+---
+template: inverse
+class: center middle
+name: presentationEdition
+
+
+# La présentation de l’édition critique
+
+---
+
+
+# Exemples d’éditions numériques
+
+* [elec](http://elec.enc.sorbonne.fr)
+
+* [hyperdonnat](http://hyperdonat.tge-adonis.fr)
+
+* [Roman du Mont Saint-Michel](http://www.unicaen.fr/puc/sources/gsp/www.unicaen.fr/services/puc/sources/gsp/index-2.html)
+
+* [Mercure galant](http://obvil.paris-sorbonne.fr/corpus/mercure-galant/)
+
+* [vangoghletters.org](http://vangoghletters.org/vg/)
+
+* [sandrart.net](http://www.sandrart.net/de/)
+
+---
+
+
+# La Présentation de l’édition critique
+
+* déterminer les modalités de consultation du texte
+
+* déterminer la réception du texte
+
+* pas de modèle unique
+
+* des conventions
+
+???
+
+La méthode d’édition critique bien établie, il convient de régler le problème pratique de la présentation de l’édition. Ici, les choix que vous allez formuler détermineront les modalités de consultation du texte et sa réception.
+
+Même si une édition numérique offre plus de souplesse qu’une édition imprimée, elle n’en reste pas moins problématique sous cet aspect qui tient du parti-pris éditorial. Là encore, il n’existe pas de solution absolue en la matière, le meilleur dispositif étant celui qui sert le mieux le point de vue éditorial adopté ou qui offre les meilleures conditions d’accessibilité au texte.
+
+Avant de pouvoir établir un cahier des charges fonctionnel, il vous faudra donc arrêter clairement ce que doit véhiculer l’édition d’un point de vue scientifique. Les pré-requis pour l’édition que vous voulez produire seront soit généralement liés au respect des conventions de l’édition scientifique, soit propres aux spécificités du corpus édité.
+
+---
+
+
+# La Présentation de l’apparat critique
+
+* une longue tradition d’appareillage savant du texte
+
+* de nouvelles formes de présentation avec le numérique
+
+* des enjeux identiques (citabilité, commodité, etc.)
+
+???
+
+# La Présentation de l’apparat critique
+
+Dans une édition critique d’un texte ancien, on appelle apparat critique l’ensemble des notes fournies par l’auteur de l’édition pour justifier des choix opérés dans l’édition ou signaler certaines particularités de la source. L’apparat critique d’une édition a essentiellement une fonction descriptive. Il concerne la description des particularités matérielles du texte transcrit, et celle des autres états du texte s’il en existe par un relevé des leçons pour chaque passage.
+
+Il est d’usage de fournir les leçons variantes du texte au moyen de notes critiques habituellement numérotées alphabétiquement. Bien que l’édition numérique permette de les afficher d’une autre manière (par exemple en proposant plusieurs vues), il a été choisi de les présenter en note. N’ayant pas totalement renoncé à une édition imprimée, une telle présentation permettait notamment d’être identique dans les deux versions. D’autre part, cette solution correspondait assez bien au mode de production du texte qui, comme nous le verrons plus loin, a été traité par les auteurs de l’édition critique à partir d’un logiciel de traitement de texte.
+
+La lecture du texte ne présentant le plus souvent pas de difficultés très spécifiques, les autres aspects de l’apparat critique, comme l’indication des lacunes, des difficultés de lecture, ou des segments sémantiquement incorrects, etc., utilisent également une présentation typographique conventionnelle. Néanmoins, elle peut être enrichie par des artifices de présentation que permet le numérique tels que l’affichage au survol, etc.
+
+La longue tradition de l’édition critique détermine en grande partie .red[ce qu’est en droit d’attendre un lecteur] lors de la consultation d’une édition. Elle fixe un ensemble de prérequis qui .red[qualifient en grande partie l’édition]. Au cours du temps, cette tradition a généré une grande richesse dans l’emploi des marques typographiques (barres, crochets, soufflets, etc.) pour signifier telle ou telle caractéristique matérielle, mais celles-ci n’ont pas toujours la même signification à travers les éditions. Elle a également fixé un certain nombre d’habitudes pour donner des éléments de repérage et de citabilité, pour indiquer la pagination du texte de base, une numérotation marginale des lignes, etc.
+
+L’utilisation du support numérique a donné l’occasion d’explorer de .red[nouvelles formes de présentation de l’apparat critique]. Sa malléabilité a notamment permis d’envisager de manière nouvelle la présentation des variantes puisqu’elle permet de proposer alternativement plusieurs vues sur un même texte, ou encore par exemple de proposer à bien moindre frais qu’avec l’imprimé des éditions dites hyper-diplomatiques qui présentent des fac simili en regard du texte édité. Il n’en reste pas moins qu’une bonne édition numérique se doit de respecter un certain nombre de .red[standards éditoriaux] en particulier pour faciliter la citation ou rendre la consultation de l’apparat critique ou des notes de commentaire historique la plus aisée possible.
+
+---
+
+
+# Glossaires et index
+
+* termes
+
+* gloses
+
+* toponymique
+
+* patronymique
+
+* matière
+
+* Listes d’occurences
+
+* …
+
+???
+
+# Glossaires et index
+
+Outre cet apparat critique et historique, on peut avoir le désir de fournir un glossaire des termes architecturaux et juridiques. C’est-à-dire une liste alphabétique des mots difficiles jouant le rôle d’un dictionnaire propre au texte pour favoriser sa compréhension. En dehors des aspects de vulgarisation, un tel glossaire peut aussi assez bien répondre au caractère pluri-disciplinaire d’une édition.
+
+Plusieurs index peuvent également permettre d’offrir différents types d’accès aux textes. En plus des index patronymiques et toponymiques habituellement requis dans une édition critique, on peut parfois envisager l’établissement d’un index des matières. Attention, la production d’un index même si elle se trouve en grande partie facilité par l’emploi du numérique doit être consistante. Elle elle surtout difficile et extrêmement chronophage.
+
+---
+
+
+# Recherche et recherche plein texte
+
+* Recherche structurée
+
+* Recherche plein-texte
+
+???
+
+# Recherche et recherche plein texte
+
+Outre les index qui relèvent en grande partie de l’apparat critique, il s’agissait également de proposer au lecteur une recherche plein texte. La recherche dite plein texte est l’une des modalités de consultation du texte spécifiquement permise par le support numérique. Il paraît donc souvent difficile de s’en passer dans une édition numérique.
+
+Toutefois, pour être efficace, une telle recherche suppose un traitement particulier de la langue qui n’est pas sans présenter quelques difficultés&nbsp;; a fortiori lorsque le texte n’est pas modernisé. Si une telle fonctionnalité est apparemment simple pour l’utilisateur, sa mise en place efficace est loin d’être triviale. On a habituellement recours à des logiciels spécifiques comme [Apache Lucene](http://lucene.apache.org/core/), [Solr](http://lucene.apache.org/solr/), ou [ElasticSearch](https://www.elastic.co/products/elasticsearch) qui fonctionnent généralement en environnement Java.
+
+---
+
+
+# Hypertextualité et matérialité
+
+* liens cliquables
+
+* traitements automatisés
+
+* enrichissements interactifs
+
+* visualisations complexes
+
+* Matérialité de l’édition
+
+???
+
+# Hypertextualité et matérialité
+
+# L’hypertextualité
+
+Une édition électronique peut présenter de nombreux avantages pratiques sur une édition imprimée. D’abord, elle est de loin moins coûteuse à produire et peut être directement mise à disposition d’un très grand nombre de lecteurs. Surtout comme nous venons de le voir, elle rend possible des recherches textuelles et permet d’accéder rapidement aux informations qu’elles contiennent en utilisant l’hypertextualité.
+
+À cet égard, l’utilisation de l’hypertexte rend particulièrement maniable toute l’information para-textuelle qui peut accompagner l’édition. Les index électroniques, et les listes d’occurrences lorsqu’ils existent dans le format papier sont bien moins maniables qu’avec le numérique. De surcroît, l’édition électronique permet d’envisager des traitements automatisés qui présentent un réel gain de temps dans l’établissement de telles modalités d’accès au contenu. Elle permet également de produire une visualisation plus contextuelle des entités.
+
+L’édition numérique se caractérise également par la possibilité de permettre des enrichissements interactifs de l’édition. Afficher des définitions au survol, proposer des hyperliens.
+
+# Matérialité de l’édition
+
+Dans un tel contexte, il n’y a plus de texte définitif. Le numérique est un support labile qui permet les enrichissements successifs et les améliorations. L’utilisation de système de gestion de versions règle les problèmes de citation. Plutôt que de concevoir le travail comme un objet terminé, il n’est plus nécessaire d’attendre l’achèvement complet du travail pour mettre à disposition le matériel ou exposer le travail en cours. De telles dispositions peuvent toutefois heurter les cadres de pensée habituels.
+
+La finesse de l’enregistrement que le balisage rend possible est paradoxalement parfois difficile à exprimer de manière typographique. Car le support numérique ne fait pas complètement disparaître la matérialité du texte. Il conditionne au contraire les lectures du texte. Il n’est d’ailleurs pas contradictoire avec une édition papier. Celle-ci n’a simplement pas la même autorité, et n’offre pas la même qualité de lecture. Il s’agit simplement d’envisager différents usages en fonction des supports.
+
+---
+
+
+# Offrir plus de choix au lecteur
+
+* plus accessible&nbsp;?
+
+* accès plus direct aux sources&nbsp;?
+
+* quel public
+
+???
+
+# Offrir plus de choix au lecteur
+
+Dans sa présentation de 2013, A Bag of Words, Edward Vanhotte soulevait la question de ce que pourrait être une édition numérique par rapport à ce qu’elle est en définitive aux prises avec diverses contraintes qui pèsent sur sa production. Ce faisant, il déconstruisait à cette occasion plusieurs mythes sur la nature des éditions numériques. Notamment le fait que celles-ci seraient plus accessibles, ou permettrait d’offrir un accès plus rapide ou plus direct à des sources que des éditions imprimées.
+
+Une édition imprimée est par nature accessible, généralement fournie pour une audience clairement ciblée et lorsqu’il s’agit d’une édition scientifique elle adopte le plus souvent des critères explicites. En réalité, et pour reprendre les termes d’Edward Vanhoutte, une édition numérique présente une accessibilité «&nbsp;qualitativement différente&nbsp;». Le média numérique permet notamment la recherche plein texte que n’offre pas le support imprimé. Une édition numérique mettra également souvent en place toute une série d’index dont l’utilisation repose entièrement sur l’hypertextualité.
+
+Qu’importe l’honnêteté ou la transparence de l’éditeur, le support imprimé impose une structure particulière, une séquence, une mise en page, etc. Ce qui change avec l’électronique ce sont les hiérarchies qui libèrent les choix du lecteur. Mais le numérique n’est pas sans conséquence sur le texte lui-même et sa lecture.
+
+Avec une édition électronique, on peut également de proposer au lecteur de produire sa propre édition en fonction de ses lectures ou des utilisations qu’il souhaite faire de la source. Bien sûr pour ce faire il demeure nécessaire que l’éditeur ait considéré à l’avance ces questions de sorte qu’il puisse ménager les utilisations potentielles en laissant libre le plus de choix possibles. Il s’agit donc de produire un dispositif, d’offrir selon l’expression de Corinne Welger-Barboza un «&nbsp;corpus outillé&nbsp;».
+
+---
+template: inverse
+class: center middle
+
+
+# Conclusions
+
+???
+
+# Conclusions
+
+Dans la perspective de produire une édition critique de qualité, privilégier le marquage sémantique plutôt que présentationnel présente plusieurs avantages notables tels que&nbsp;:
+
+* Ne pas se contraindre du point de vue logiciel
+
+* Profiter pleinement des possibilités offertes par le numérique
+
+* Disposer d’un cadre de travail qui contrôle la qualité des documents
+
+Même si la mise en place d’un balisage descriptif du texte, implique le déploiement d’une infrastructure technique sans-doute moins confortable pour travailler que l’utilisation de logiciels de traitement de texte, il faut relever qu’il permet de se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document. Bien entendu, concernant l’édition de manuscrits historiques, ou de sources primaires, il pourra être nécessaire de traiter la matérialité physique du document. Néanmoins c’est avant tout l’édition du texte qui est ici privilégiée. Dans une telle démarche, il convient en premier lieu de rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles. Et la présence du balisage détermine la possibilité de traiter les éléments pour une transformation.
+
+---
+template: inverse
+class: center middle
+name: biblio
+
+
+# Sources et bibliographie
+
+---
+
+
+# Orientations bibliographiques
+
+* Burnard, Lou, O’Brien O’Keeffe, Katherine et Unsworth, John. [Electronic Textual Editing. Modern Language Association](http://www.tei-c.org/About/Archive_new/ETE/Preview/index.xml), 2006.
+
+* Schillingsburg, Peter L., [From Gutenberg to Google](http://books.google.fr/books/about/From_Gutenberg_to_Google.html?id=rd57F8IjyF0C), 2006.
+
+* Coombs, James H, Renear, Allen H, et DeRose, Steven J. ["Markup Systems and the Future of Scholarly Text Processing."](http://xml.coverpages.org/coombs.html) Communications of the ACM 30, no. 11 (1987): 933-947.
+
+* Hayles, Katherine. ["Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis."](http://www.lab404.com/242/hayles_print_is_flat.pdf) Poetics Today 25, no. 1 (2004): 67-90.
+
+* Barney, Brett. ["Digital Editing with the TEI Yesterday, Today, and Tomorrow."](http://www.jstor.org/stable/10.2979/textcult.7.1.29) Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.
+
+* Boot, Peter. ["Some Digital Editions and Some Remaining Challenges."](http://www.janusdigital.es/articulo.htm?id=7) Janus, Estudios sobre el siglo de oro , no. 1 (2012).
+
+---
+
+
+# Orientations bibliographiques .inverse[(suite)]
+
+* Guyotjeannin, Olivier, and Olivier Poncet. .red[[L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions](https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf)]. mars, 2010.
+
+* Bourgain, Pascale, and Françoise Vieillard (dir.), .red[Conseils Pour L’édition Des Textes Médiévaux]. Conseils généraux, Fascicule I. Documents d’archives, Fascicule II. Textes littéraires, Fascicule III. Paris&nbsp;: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
+
+* Barbiche, Bernard. [Conseils pour l’édition des textes de l’époque moderne (XVI&lt;sup&gt;e&lt;/sup&gt;-XVIII&lt;sup&gt;e&lt;/sup&gt; siècle)](http://theleme.enc.sorbonne.fr/cours/edition), époque moderne / édition des textes. Theleme (Techniques pour l’historien en Ligne&nbsp;: Études, Manuels, Exercices).
+
+* Christine Nougaret et Élisabeth Parinet (dir.), .red[Conseils pour l’édition des textes de l’époque moderne]. Paris&nbsp;: École nationale des chartes, 2015 (avec un chapitre de Florence Clavaud consacré à l’édition électronique)&nbsp;!!.
+
+---
+template: inverse
+class: center middle
+
+
+## [Et la TEI dans tout ça&nbsp;?](02-teiGeneralites.html)
+
+.footnote[[Revenir au sommaire](#index) | [Programme](00-programme.html)]
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+        var hljs = remark.highlighter.engine;
+      </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
+        var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+        }) ;
+      </script></body>
+</html>

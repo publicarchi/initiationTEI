@@ -76,7 +76,7 @@
     <xsl:call-template name="newline"/>
     <xsl:call-template name="newline"/>
     <xsl:apply-templates/>
-    <xsl:text>![test](images/logo-ecole-nationale-des-chartes.png)</xsl:text>
+    <xsl:text>![test](images/logo.svg)</xsl:text>
     <xsl:call-template name="newline"/>
   </xsl:template>
   
@@ -240,16 +240,38 @@
 
   <xsl:template match="docImprint">
     <xsl:call-template name="newline"/>
-    <xsl:text>## </xsl:text>
+    <xsl:text>### </xsl:text>
     <xsl:apply-templates/>
     <xsl:call-template name="newline"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:div"
+    mode="depth">
+    <xsl:choose>
+      <xsl:when test="ancestor::tei:text/parent::tei:group and
+        self::tei:div">
+        <xsl:value-of select="count(ancestor::tei:div) + 1"/>
+      </xsl:when>
+      <xsl:when test="local-name(.) = 'div'">
+        <xsl:value-of select="count(ancestor::tei:div[not(@type)])"/>
+      </xsl:when>
+      <xsl:when test="ancestor::tei:text/parent::tei:group">
+        <xsl:value-of select="number(substring-after(local-name(.),'div')) "/>
+      </xsl:when>
+      <xsl:when test="ancestor::tei:text/parent::tei:group">
+        <xsl:value-of select="number(substring-after(local-name(.),'div'))"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="number(substring-after(local-name(.),'div')) - 1"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="ref">
     <xsl:text>[</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>](</xsl:text>
-    <xsl:value-of select="@target"/>
+    <xsl:value-of select="replace(@target,'.tei.xml','.html')"/>
     <xsl:text>)</xsl:text>
   </xsl:template>
   

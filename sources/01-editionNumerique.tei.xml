@@ -41,7 +41,7 @@
         <titlePart>01 – Un rapide panorama de l’édition critique avec la TEI</titlePart>
         <docImprint>Initiation TEI | CRIHN, 10 mars 2017</docImprint>
         <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
-          <ref target="00-programme.xml">Programme</ref></note>
+          <ref target="00-programme.tei.xml">Programme</ref></note>
       </titlePage>
       <div rend="slide" xml:lang="fr" xml:id="index">
         <div>
@@ -516,8 +516,8 @@
       </div>
       <div>
         <div type="title" xml:lang="fr">
-          <head><ref target="02-teiGeneralites.html">Et la TEI dans tout ça ?</ref></head>
-          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.xml">Programme</ref></note>
+          <head><ref target="02-teiGeneralites.tei.xml">Et la TEI dans tout ça ?</ref></head>
+          <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.tei.xml">Programme</ref></note>
         </div>
       </div>
     </back>

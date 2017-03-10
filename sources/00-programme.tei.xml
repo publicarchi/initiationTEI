@@ -26,6 +26,7 @@
             <titlePage>
                 <titlePart>Programme de la formation</titlePart>
                 <docImprint>Initiation à la TEI | CRIHN, 10 mars 2017</docImprint>
+                <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> | <ref target="00-programme.tei.xml">Programme</ref></note>
             </titlePage>
         </front>
         <body xml:lang="fr">
@@ -123,10 +124,10 @@
                         <label>10h–10h15</label>
                         <item>Introduction de la formation</item>
                         <label>10h15–10h45</label>
-                        <item><ref target="01-editionNumerique.xml"
+                        <item><ref target="01-editionNumerique.tei.xml"
                             >Un rapide panorama de l’édition critique avec la TEI</ref></item>
                         <label>11h00–11h30</label>
-                        <item><ref target="02-teiGeneralites.xml"
+                        <item><ref target="02-teiGeneralites.tei.xml"
                             >La TEI comme cadre de travail pour l’édition des textes</ref></item>
                         <label>11h30–12h</label>
                         <item>Pause</item>
@@ -136,13 +137,13 @@
                     <list>
                         <head>Après-midi</head>
                         <label>13h30–14h</label>
-                        <item><ref target="03-transcription.xml">La transcription des sources primaires</ref></item>
+                        <item><ref target="03-transcription.tei.xml">La transcription des sources primaires</ref></item>
                         <label>14h–15h</label>
                         <item>TP : Encodage de la source</item>
                         <label>15h–15h15</label>
                         <item>Pause</item>
                         <label>15h15–15h45</label>
-                        <item><ref target="04-traitements.xml">Présentations d’outils et d’application</ref></item>
+                        <item><ref target="04-traitements.tei.xml">Présentations d’outils et d’application</ref></item>
                         <label>16h45–16h</label>
                         <item>Discussion</item>
                     </list>
@@ -167,8 +168,8 @@
                 </div>
                 <div>
                     <div type="title" xml:lang="fr">
-                        <head>XML, <ref target="01-editionNumerique.xml">Qu’est-ce qu’une édition critique numérique ?</ref></head>
-                        <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.html"
+                        <head>Qu’est-ce qu’une <ref target="01-editionNumerique.tei.xml">édition critique numérique</ref> ?</head>
+                        <note><ref target="#index">Revenir au début</ref> | <ref target="00-programme.tei.xml"
                             >Programme</ref></note>
                     </div>
                 </div>
