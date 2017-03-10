@@ -164,7 +164,6 @@
           </div>
         </div>
       </div>
-      <div type="slide"></div>
       <div type="slide" xml:lang="fr">
         <div>
           <head>L’édition critique numérique</head>
@@ -175,7 +174,7 @@
           </list>
           <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
         </div>
-        <div rend="notes">
+        <div type="notes">
           <p>Dans le cadre de cette formation consacrée à la modélisation, il est important de revenir un peu sur ce que l’on fait lorsque l’on produit une édition critique numérique.</p>
           <p>Le domaine de l’édition critique numérique est un domaine en évolution rapide. En la matière, on peut se référer à la bibliographie ecdotique traditionnelle et à une bibliographie abondante en langue anglaise.</p>
           <p>Toutefois, il n’y a pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques favorisent la convergence.</p>
@@ -217,8 +216,6 @@
             <head><hi>vs</hi></head>
             <head>encodage présentationnel</head>
           </div>
-        </div>
-        <div type="slide" xml:lang="fr">
           <div>
             <head>Encodage descriptif <hi>vs</hi> encodage présentationnel</head>
             <p>Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages : procédural, présentationnel, ou encore descriptif.</p>
@@ -228,22 +225,44 @@
         </div>
         <div type="slide" xml:lang="fr">
           <div>
-            <head>La production d’un <hi>balisage descriptif</hi></head>
-            <p>Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.</p>
-            <list>
-              <item>Distinguer à l’intérieur du texte différents objets éditoriaux</item>
-              <item>Fournir une information sémantique</item>
-              <item>Possibilité de produire des vues distinctes</item>
-            </list>
+            <div>
+              <head>La production d’un <hi>balisage descriptif</hi></head>
+              <p>Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.</p>
+              <list>
+                <item>Distinguer à l’intérieur du texte différents objets éditoriaux</item>
+                <item>Fournir une information sémantique</item>
+                <item>Possibilité de produire des vues distinctes</item>
+              </list>
+            </div>
+            <div>
+              <head>Avantages d’un balisage descriptif sur un balisage présentationnel</head>
+              <list type="ordered">
+                <head>Expressivité</head>
+                <item>Processus d’établissement du texte simplifié</item>
+                <item>Réduction des problèmes de maintenance</item>
+                <item>Meilleure portabilité</item>
+              </list>
+            </div>
           </div>
           <div type="notes">
-            <head>La production d’un <hi>balisage descriptif</hi></head>
+            <div><head>La production d’un <hi>balisage descriptif</hi></head>
             <p>La production d’un <hi rend="bold">balisage descriptif</hi> consiste à identifier explicitement la structure sémantique sous-jacente d’un document, cela indépendamment de tout traitement déterminé à l’avance.</p>
             <bibl>cf. Renear, Allen, Dubin, David, Sperberg-McQueen, C. Michael, et Huitfeldt, Claus, <ref target="http://dl.acm.org/citation.cfm?id=827140.827192">« XML semantics and digital libraries »</ref>, Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, p. 303-305, 2003.</bibl>
             <p>Il s’agit de <hi rend="bold">distinguer explicitement à l’intérieur du texte différents objets éditoriaux</hi> en les encadrant par des balises dont le nom peut être arbitraire.</p>
-            <p>Ce faisant l’auteur d’un balisage fournit une <hi rend="bold">information sémantique</hi> et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.</p>
+            <p>Ce faisant l’auteur d’un balisage fournit une <hi rend="bold">information sémantique</hi> et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.</p></div>
+          </div>
+          <div>
+            <head>Avantages sur un balisage présentationnel</head>
+            <p>Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex :</p>
+            <list type="ordered">
+              <item>Le <hi rend="bold">processus d’établissement du texte se trouve simplifié</hi> par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)</item>
+              <item>Les <hi rend="bold">questions de maintenance sont réduites</hi> à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.</item>
+              <item>Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la <hi rend="bold">portabilité</hi>. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.</item>
+            </list>
+            <p>Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il <hi rend="bold">permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités</hi>, il offre un <hi rend="bold">gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier</hi>. De surcroît, ce balisage permet le plus souvent la <hi rend="bold">génération automatique de l’information bibliographique</hi> directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.</p>
           </div>
         </div>
+        <!--
         <div type="slide" xml:lang="fr">
           <div>
             <head>Procédure mise en œuvre lors du <hi>balisage</hi></head>
@@ -266,7 +285,7 @@
             </list>
             <bibl>cf. Coombs, James, et al., <hi rend="italic">op. cit.</hi></bibl>
           </div>
-        </div>
+        </div>-->
         <div type="slide" xml:lang="fr">
           <div>
             <head><hi>OHCO</hi>, Ordered Hierarchical Content Objects</head>
@@ -282,27 +301,6 @@
             <p>L’idée d’un balisage descriptif qui repose sur le fait de marquer le contenu d’un texte par des éléments suggère une représentation du texte qui correspond à ce qu’on a appelé un modèle d’<hi rend="bold"/>éléments contenus hiérarchiquement imbriqués<hi rend="bold"/> (OHCO, Ordered Hierarchical Content Objects, en anglais).</p>
             <p>Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.</p>
             <p>C’est ici l’occasion de souligner qu’il s’agit ici d’une modélisation. C’est une manière de représenter ce qu’est un texte qui impose son expressivité et ses contraintes. Nous verrons que la TEI, tout en étant en grande basée sur le balisage descriptif offre différents mécanismes pour prendre en charge des relations non hiérarchiques comme les chevauchements, etc.</p>
-          </div>
-        </div>
-        <div type="slide" xml:lang="fr">
-          <div>
-            <head>Avantages d’un balisage descriptif sur un balisage présentationnel</head>
-            <list type="ordered">
-              <head>Expressivité</head>
-              <item>Processus d’établissement du texte simplifié</item>
-              <item>Réduction des problèmes de maintenance</item>
-              <item>Meilleure portabilité</item>
-            </list>
-          </div>
-          <div type="notes">
-            <head>Avantages sur un balisage présentationnel</head>
-            <p>Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex :</p>
-            <list type="ordered">
-              <item>Le <hi rend="bold">processus d’établissement du texte se trouve simplifié</hi> par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)</item>
-              <item>Les <hi rend="bold">questions de maintenance sont réduites</hi> à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.</item>
-              <item>Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la <hi rend="bold">portabilité</hi>. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.</item>
-            </list>
-            <p>Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il <hi rend="bold">permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités</hi>, il offre un <hi rend="bold">gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier</hi>. De surcroît, ce balisage permet le plus souvent la <hi rend="bold">génération automatique de l’information bibliographique</hi> directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.</p>
           </div>
         </div>
       </div>
@@ -336,7 +334,7 @@
               <item>des conventions</item>
             </list>
           </div>
-          <div rend="type">
+          <div type="notes">
             <p>La méthode d’édition critique bien établie, il convient de régler le problème pratique de la présentation de l’édition. Ici, les choix que vous allez formuler détermineront les modalités de consultation du texte et sa réception.</p>
             <p>Même si une édition numérique offre plus de souplesse qu’une édition imprimée, elle n’en reste pas moins problématique sous cet aspect qui tient du parti-pris éditorial. Là encore, il n’existe pas de solution absolue en la matière, le meilleur dispositif étant celui qui sert le mieux le point de vue éditorial adopté ou qui offre les meilleures conditions d’accessibilité au texte.</p>
             <p>Avant de pouvoir établir un cahier des charges fonctionnel, il vous faudra donc arrêter clairement ce que doit véhiculer l’édition d’un point de vue scientifique. Les pré-requis pour l’édition que vous voulez produire seront soit généralement liés au respect des conventions de l’édition scientifique, soit propres aux spécificités du corpus édité.</p>
@@ -434,7 +432,7 @@
               <list>
                 <item>plus accessible ?</item>
                 <item>accès plus direct aux sources ?</item>
-                <item>quel public</item>
+                <item>quel public ?</item>
               </list>
             </div>
             <div type="notes">

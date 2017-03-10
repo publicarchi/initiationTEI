@@ -1,11 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Programme</title>
-      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
-   </head>
-   <body><textarea id="source">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
 title: Rudiments d’encodage
 description: , 2017
 theme: theme/remark-dark-em.css
@@ -49,15 +43,12 @@ name: part1
 
 # Composition d’un fichier TEI
 
-```xml
-<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+```xml<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
   <teiHeader>
-    
-               <!-- métadonnées décrivant le texte -->
+    <!-- métadonnées décrivant le texte -->
   </teiHeader>
   <text>
-    
-               <!-- représentation du texte lui-même -->
+    <!-- représentation du texte lui-même -->
   </text>
 </TEI>
 ```
@@ -89,20 +80,14 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 
 # Macrostructures de texte composite
 
-```xml
-<text >
-  <front>
-               <!-- ... --></front>
+```xml<text xmlns="http://www.tei-c.org/ns/Examples">
+  <front><!-- ... --></front>
   <group>
-    <text>
-                  <!-- ... --></text>
-    <text>
-                  <!-- ... --></text>
-    <text>
-                  <!-- ... --></text>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
   </group>
-  <back>
-               <!-- ... --></back>
+  <back><!-- ... --></back>
 </text>
 ```
 
@@ -113,12 +98,9 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 
 Dans le cas de corpus de textes hétérogènes, on utilisera des éléments `&lt;teiCorpus&gt;` comme élément racine comportant des éléments `&lt;TEI&gt;`
 
-```xml
-<teiCorpus >
-  <TEI>
-               <!-- ... --></TEI>
-  <TEI>
-               <!-- ... --></TEI>
+```xml<teiCorpus xmlns="http://www.tei-c.org/ns/Examples">
+  <TEI><!-- ... --></TEI>
+  <TEI><!-- ... --></TEI>
 </teiCorpus>
 ```
 
@@ -135,8 +117,7 @@ name: part2
 
 # teiHeader minimal
 
-```xml
-<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+```xml<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -168,8 +149,7 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
 
 # `&lt;teiHeader&gt;`, mentions de responsabilité
 
-```xml
-<teiHeader >
+```xml<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
   <fileDesc>
     <titleStmt>
       <title xml:lang="fr" type="main">Sauval 1724</title>
@@ -189,14 +169,12 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
           <forename>Emmanuel</forename>
           <surname>Château</surname>
         </persName>
-      </respStmt>
-                  <!-- ... -->
+      </respStmt><!-- ... -->
     </titleStmt>
     <editionStmt>
       <edition n="1">première édition électronique, <date from="2013" to="2018">2013-2018</date></edition>
     </editionStmt>
-  
-               <!-- ... -->
+  <!-- ... -->
   </fileDesc>
 </teiHeader>
 ```
@@ -206,10 +184,8 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
 
 # Mentions de publications
 
-```xml
-<teiHeader >
-  
-            <!-- ... -->
+```xml<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
+  <!-- ... -->
   <publicationStmt>
     <authority>
       <orgName>Histoire des Arts &amp; Représentations</orgName>
@@ -222,8 +198,7 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
     </authority>
     <date from="2014" to="2018">2014-2018</date>
     <idno>ark</idno>
-    
-               <!-- responsable de la publication -->
+    <!-- responsable de la publication -->
     <publisher>
       <orgName>Histoire des Arts &amp; Représentations</orgName>
     </publisher>
@@ -252,28 +227,21 @@ name: part3
 
 # Parties liminaires, postérieures
 
-```xml
-<TEI >
+```xml<TEI xmlns="http://www.tei-c.org/ns/Examples">
   <teiHeader>
-    
-               <!-- ... -->
+    <!-- ... -->
   </teiHeader>
   <text>
     <front>
-      
-                  <!-- parties liminaire -->
-      
-                  <!-- (préfaces, introductions, etc. dans des éléments div) -->
+      <!-- parties liminaire -->
+      <!-- (préfaces, introductions, etc. dans des éléments div) -->
     </front>
     <body>
-      
-                  <!-- corps de texte, structuré en sous-éléments div -->
+      <!-- corps de texte, structuré en sous-éléments div -->
     </body>
     <back>
-      
-                  <!-- parties postérieures -->
-      
-                  <!-- (annexes et appendices dans des éléments div) -->
+      <!-- parties postérieures -->
+      <!-- (annexes et appendices dans des éléments div) -->
     </back>
   </text>
 </TEI>
@@ -307,8 +275,7 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Macrostructure du texte
 
-```xml
-<text >
+```xml<text xmlns="http://www.tei-c.org/ns/Examples">
   <body>
     <div type="volume" xml:id="TS01">
       <div type="chapter" xml:id="TS0101">
@@ -316,22 +283,18 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
         <p>I wish either my father or my mother, or indeed both of them,
         as they were in duty both equally bound to it, had minded what
         they were about when they begot me; ...</p>
-        
-                     <!-- reste du chapitre 1 -->
+        <!-- reste du chapitre 1 -->
       </div>
       <div type="chapter" xml:id="TS0102">
         <head>Chap. II</head>
         <p> — Then, positively, there is nothing in the question, that I
         can see, either good or bad. — Then let me tell you, Sir, it
         was a very unseasonable question at least ...</p>
-        
-                     <!-- reste du chapitre 2 -->
+        <!-- reste du chapitre 2 -->
       </div>
-      
-                  <!-- reste du volume 1 -->
+      <!-- reste du volume 1 -->
     </div>
-    
-               <!-- les autres volumes -->
+    <!-- les autres volumes -->
   </body>
 </text>
 ```
@@ -341,18 +304,12 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures de listes
 
-```xml
-<list >
-  <label>
-               <!-- étiquette --></label>
-  <item>
-               <!-- item de liste --></item>
-  <label>
-               <!-- étiquette --></label>
-  <item>
-               <!-- item de liste --></item>
-  
-            <!-- ... -->
+```xml<list xmlns="http://www.tei-c.org/ns/Examples">
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <!-- ... -->
 </list>
 ```
 
@@ -361,27 +318,18 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures de tableaux
 
-```xml
-<table >
-  <head>
-               <!-- titre --></head>
-  
-            <!-- rangée -->
+```xml<table xmlns="http://www.tei-c.org/ns/Examples">
+  <head><!-- titre --></head>
+  <!-- rangée -->
   <row>
-    <cell>
-                  <!-- contenu cellule --></cell>
-    <cell>
-                  <!-- contenu cellule --></cell>
-    <cell>
-                  <!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
   </row>
-  
-            <!-- rangée -->
+  <!-- rangée -->
   <row>
-    <cell>
-                  <!-- contenu cellule --></cell>
-    <cell>
-                  <!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
   </row>
 </table>
 ```
@@ -391,8 +339,7 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures versifiées
 
-```xml
-<body  n="spleenEtIdeal">
+```xml<body xmlns="http://www.tei-c.org/ns/Examples" n="spleenEtIdeal">
   <div type="longPoem">
     <head>Les Phares</head>
     <lg type="stanza">
@@ -491,11 +438,12 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 
 * `&lt;anchor&gt;` ancre avec `@xml:id`
 
-```xml
-<delSpan  spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere des hilgen dages
-  nicht over setten noch uppe den stillen fridach bruwen.</zone><addSpan  spanTo="#endDel" change="#L2"></addSpan><zone xmlns="http://www.tei-c.org/ns/Examples">Noch nymande over setten, se en sehin denne erst, dat uppe den bonen neyn
-  stro noch, huw noch flaß ligghe, by pine eyner halven roden, deme bruwere so
-  wol alse dem bruwheren to murende.</zone><anchor  xml:id="endDel"></anchor>
+```xml<delSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere 
+    des hilgen dages nicht over setten noch uppe den stillen 
+    fridach bruwen.</zone><addSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L2"></addSpan><zone xmlns="http://www.tei-c.org/ns/Examples">Noch nymande over setten, se en sehin denne erst, dat 
+    uppe den bonen neyn stro noch, huw noch flaß ligghe, by pine 
+    eyner halven roden, deme bruwere so wol alse dem bruwheren 
+    to murende.</zone><anchor xmlns="http://www.tei-c.org/ns/Examples" xml:id="endDel"></anchor>
 ```
 
 ---
@@ -503,10 +451,8 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 
 # Pages de titre
 
-```xml
-<titlePage  xml:lang="fr">
-  
-            <!-- page de titre transcrite à l'identique -->
+```xml<titlePage xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
+  <!-- page de titre transcrite à l'identique -->
   <docTitle>
     <titlePart rend="capital">Histoire <lb></lb>et <lb></lb>recherches
      <lb></lb>des <lb></lb>antiquités <lb></lb>de la ville
@@ -545,5 +491,4 @@ class: center middle
         highlightStyle: 'monokai',
         highlightLanguage: 'remark'
         }) ;
-      </script></body>
-</html>
+      </script></body></html>

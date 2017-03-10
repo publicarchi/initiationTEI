@@ -1,11 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Programme</title>
-      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
-   </head>
-   <body><textarea id="source">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
 title: Le teiHeader
 description: , 
 theme: theme/remark-dark-em.css
@@ -101,16 +95,13 @@ name: part2
 
 # teiHeader minimal
 
-```xml
-<teiHeader >
+```xml<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
                 <fileDesc>
                   <titleStmt>
-                    <title>
-                     <!-- titre --></title>
+                    <title><!-- titre --></title>
                   </titleStmt>
                   <publicationSmt>
-                    <p>
-                     <!-- mentions de publication --></p>
+                    <p><!-- mentions de publication --></p>
                   </publicationSmt>
                   <sourceDesc>
                     <p></p>
@@ -143,8 +134,7 @@ name: part2
 
 # Mentions de titre et de responsabilité `&lt;titleStmt&gt;`
 
-```xml
-<titleStmt >
+```xml<titleStmt xmlns="http://www.tei-c.org/ns/Examples">
                 <title xml:lang="fre" type="main">Sauval 1724</title>
                 <principal>
                   <persName ref="#MCL">
@@ -162,8 +152,7 @@ name: part2
                     <forename>Emmanuel</forename>
                     <surname>Château</surname>
                   </persName>
-                </respStmt>
-            <!-- ... -->
+                </respStmt><!-- ... -->
               </titleStmt>
 ```
 
@@ -195,8 +184,7 @@ name: part2
 
 # exemple d’`&lt;encodingDesc&gt;`
 
-```xml
-<encodingDesc >
+```xml<encodingDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <charDecl>
                   <glyph xml:id="uut">
                     <glyphName>two latin small letter u with macron and vertical
@@ -222,8 +210,7 @@ name: part2
 
 # Par exemple, pour les ouvrages imprimés
 
-```xml
-<hyphenation >
+```xml<hyphenation xmlns="http://www.tei-c.org/ns/Examples">
                 <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
               </hyphenation>
 ```
@@ -241,8 +228,7 @@ name: part2
 
 * `&lt;textClass&gt;` nature du texte d’après un thesaurus interne ou externe
 
-```xml
-<profileDesc >
+```xml<profileDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <creation><date when="2009-04-20">20 avril 2009</date></creation>
                 <langUsage>
                   <language indent="fre" scope="60">Français</language>
@@ -257,8 +243,7 @@ name: part2
 
 Enregistre les révisions et modifications du fichier
 
-```xml
-<revisionDesc >
+```xml<revisionDesc xmlns="http://www.tei-c.org/ns/Examples">
                   <change when="2009-11" who="#VJ">Deuxième édition électronique</change>
                   <change when="2009-10" who="#FG">Schéma et transformations</change>
                   <change when="2009-10" who="#CD">Encodage de l'apparat critique</change>
@@ -282,8 +267,7 @@ L’élément `&lt;sourceDesc&gt;` est obligatoire et sert à la description des
 
 Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
 
-```xml
-<msDesc >
+```xml<msDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <msIdentifier>
                   <country>France</country>
                   <settlement>Paris</settlement>
@@ -292,12 +276,10 @@ Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
                   <idno>F/12/5080</idno>
                 </msIdentifier>
                 <msContents>
-                  <p>
-                  <!-- description du contenu --></p>
+                  <p><!-- description du contenu --></p>
                 </msContents>
                 <physDesc>
-                  <p>
-                  <!-- description physique --></p>
+                  <p><!-- description physique --></p>
                 </physDesc>
               </msDesc>
 ```
@@ -327,8 +309,7 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 # `&lt;msContents&gt;` (dans `&lt;msDesc&gt;`)
 
-```xml
-<msContents >
+```xml<msContents xmlns="http://www.tei-c.org/ns/Examples">
                 <msItemStruct>
                   <author>
                     <persName xml:lang="fre" full="yes" ref="#desgodets">Desgodets,
@@ -359,8 +340,7 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 # Description du support (dans msContent)
 
-```xml
-<physDesc >
+```xml<physDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <objectDesc form="codex">
                   <supportDesc material="paper">
                     <support>
@@ -373,8 +353,7 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                         <width quantity="250" unit="mm"></width>
                         <depth quantity="40" unit="mm"></depth>
                       </dimensions>
-                      
-                     <!-- dimensions est répétable -->
+                      <!-- dimensions est répétable -->
                     </extent>
                     <foliation>foliotées au crayon en haut, au centre des pages</foliation>
                     <collation>le manuscrit est monté sur onglet</collation>
@@ -382,8 +361,7 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                   </supportDesc>
                   <layoutDesc>
                     <layout columns="1" ruledLines="25 30">texte sur une colonne, 25 à 30 lignes réglées à la mine de plomb</layout>
-                    
-                  <!-- layout est répétable -->
+                    <!-- layout est répétable -->
                   </layoutDesc>
                 </objectDesc>
               </physDesc>
@@ -394,21 +372,17 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 # Autres éléments pour la description physique (dans `&lt;physDesc&gt;`)
 
-```xml
-<physDesc >
-                
-            <!-- ... -->
+```xml<physDesc xmlns="http://www.tei-c.org/ns/Examples">
+                <!-- ... -->
                 <handDesc>
                   <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
-                  
-               <!-- handNote est répétable, localisation avec locus -->
+                  <!-- handNote est répétable, localisation avec locus -->
                   <handNote xml:id="c2Hand2" scope="minor">à l’encre noire</handNote>
                 </handDesc>
                 <decoDesc>
                   <decoNote>le manuscrit contient 42 planches au lavis d’une grande
                         qualité d’exécution</decoNote>
-                  
-               <!-- decoNote est répétable, localisation avec locus -->
+                  <!-- decoNote est répétable, localisation avec locus -->
                 </decoDesc>
                 <bindingDesc>
                   <binding>
@@ -425,8 +399,7 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 # L’historique du manuscrit (dans `&lt;msDesc&gt;`)
 
-```xml
-<history >
+```xml<history xmlns="http://www.tei-c.org/ns/Examples">
                 <origin>
                   <p>Copié au cours du <origDate notBefore="1725" notAfter="1785">XVIII<hi rend="superscript">e</hi> siècle</origDate> ce manuscrit est pour ainsi dire en tous points identique à celui conservé au Rijk. La numérotation des planches semble indiquer qu’il a pu être copié d’après un même original.</p>
                 </origin>
@@ -436,12 +409,11 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                 <acquisition>
                   <p>Entré par le biais d’une acquisition du cabinet des Estampes de la bibliothèque du roi circa 1785.</p>
                 </acquisition>
-              </history><additional >
+              </history><additional xmlns="http://www.tei-c.org/ns/Examples">
                 <surrogates>
                   <idno>microfilm R 710124-710264</idno>
                 </surrogates>
-                
-            <!-- références bibliographiques sur l’exemplaire -->
+                <!-- références bibliographiques sur l’exemplaire -->
                 <listBibl>
                   <bibl corresp="#scheurleer1964"></bibl>
                 </listBibl>
@@ -485,5 +457,4 @@ class: center middle
         highlightStyle: 'monokai',
         highlightLanguage: 'remark'
         }) ;
-      </script></body>
-</html>
+      </script></body></html>

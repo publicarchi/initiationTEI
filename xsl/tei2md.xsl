@@ -8,10 +8,9 @@
   <xsl:import
     href="/Users/emmanuelchateau/TEIC/stylesheets/markdown/tei-to-markdown.xsl"/>
 
-  <xsl:output method="html" version="5.0" indent="yes"/>
+  <xsl:output method="html" version="5.0" indent="no"/>
 
-  <!--<xsl:strip-space elements="egXML"/>-->
-  <xsl:preserve-space elements="egXML"/>
+  <xsl:strip-space elements="egXML"/>
 
   <xsl:param name="language" select="fr"/>
 
@@ -145,11 +144,11 @@
     <xsl:text>)</xsl:text>
   </xsl:template>
 
-  <xsl:template match="teix:egXML">
+  <!-- fixed the namespace issue, I think the whitespace issue comes from the comments -->
+  <xsl:template match="teix:egXML" exclude-result-prefixes="#all">
     <xsl:text>
-```xml
-</xsl:text>
-    <xsl:copy-of select="./*" copy-namespaces="no" exclude-result-prefixes="#all" />
+```xml</xsl:text>
+    <xsl:copy-of select="./*" copy-namespaces="no" />
     <xsl:text>
 ```
 </xsl:text>
@@ -267,7 +266,14 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+  
+  <!-- to review -->
+  <xsl:template match="listBibl/bibl">
+    <xsl:text>- </xsl:text>
+    <xsl:apply-templates/>
+    <xsl:call-template name="newline"/>
+  </xsl:template>
+  
   <xsl:template match="ref">
     <xsl:text>[</xsl:text>
     <xsl:apply-templates/>

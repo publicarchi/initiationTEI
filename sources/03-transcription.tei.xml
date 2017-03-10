@@ -65,8 +65,7 @@
   <text>
     <!-- représentation du texte lui-même -->
   </text>
-</TEI>
-            </egXML>
+</TEI></egXML>
             <list>
               <item>l’élément racine est <gi>TEI</gi></item>
               <item>tous les éléments sont placés dans l’espace de nom de la TEI avec <ident>xmlns</ident></item>
@@ -101,20 +100,18 @@
     <text><!-- ... --></text>
   </group>
   <back><!-- ... --></back>
-</text>
-            </egXML>
+</text></egXML>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
           <div>
             <head>teiCorpus</head>
             <p>Dans le cas de corpus de textes hétérogènes, on utilisera des éléments <gi>teiCorpus</gi> comme élément racine comportant des éléments <gi>TEI</gi></p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
 <teiCorpus>
   <TEI><!-- ... --></TEI>
   <TEI><!-- ... --></TEI>
-</teiCorpus>
-            </egXML>
+</teiCorpus></egXML>
           </div>
         </div>
       </div>
@@ -435,14 +432,16 @@
 <delSpan spanTo="#endDel" change="#L3"/>
   <metamark function="flag" target="#zone-1"
   change="#L2">lege</metamark>
-  <zone xml:id="zone-1" change="#L1">Ock en schullen de bruwere des hilgen dages
-  nicht over setten noch uppe den stillen fridach bruwen.</zone>
+  <zone xml:id="zone-1" change="#L1">Ock en schullen de bruwere 
+    des hilgen dages nicht over setten noch uppe den stillen 
+    fridach bruwen.</zone>
   <addSpan spanTo="#endDel" change="#L2"/>
-  <zone>Noch nymande over setten, se en sehin denne erst, dat uppe den bonen neyn
-  stro noch, huw noch flaß ligghe, by pine eyner halven roden, deme bruwere so
-  wol alse dem bruwheren to murende.</zone>
+  <zone>Noch nymande over setten, se en sehin denne erst, dat 
+    uppe den bonen neyn stro noch, huw noch flaß ligghe, by pine 
+    eyner halven roden, deme bruwere so wol alse dem bruwheren 
+    to murende.</zone>
   <anchor xml:id="endDel"/>
-              </egXML>
+</egXML>
             </div>
           </div>
           <div type="slide" xml:lang="fr">

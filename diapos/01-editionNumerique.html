@@ -1,11 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Programme</title>
-      <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
-   </head>
-   <body><textarea id="source">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
 title: Un rapide panorama de l’édition critique avec la TEI
 description: Emmanuel Château-Dutier, 2017
 theme: theme/remark-dark-em.css
@@ -161,9 +155,6 @@ Compte tenu de l’investissement engagé, il est aussi nécessaire de se préoc
 ---
 
 
----
-
-
 # L’édition critique numérique
 
 * un domaine en évolution rapide
@@ -232,8 +223,7 @@ Ici, les critères de qualité d’une édition critique peuvent guider certains
 
 # encodage présentationnel
 
----
-
+???
 
 # Encodage descriptif .red[vs] encodage présentationnel
 
@@ -244,7 +234,7 @@ La supériorité du balisage descriptif sur les autres types de balisage du text
 ---
 
 
-# La production d’un .red[balisage descriptif]
+## La production d’un .red[balisage descriptif]
 
 Identifier explicitement la structure sémantique sous-jacente d’un document, indépendamment de tout traitement déterminé à l’avance.
 
@@ -253,6 +243,14 @@ Identifier explicitement la structure sémantique sous-jacente d’un document, 
 * Fournir une information sémantique
 
 * Possibilité de produire des vues distinctes
+
+## Avantages d’un balisage descriptif sur un balisage présentationnel
+
+1. Processus d’établissement du texte simplifié
+
+1. Réduction des problèmes de maintenance
+
+1. Meilleure portabilité
 
 ???
 
@@ -264,26 +262,18 @@ Il s’agit de .red[distinguer explicitement à l’intérieur du texte différe
 
 Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.
 
----
+# Avantages sur un balisage présentationnel
 
+Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex&nbsp;:
 
-# Procédure mise en œuvre lors du .red[balisage]
+1. Le .red[processus d’établissement du texte se trouve simplifié] par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)
 
-* Reconnaissance des éléments
+1. Les .red[questions de maintenance sont réduites] à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.
 
-* Sélection des balises
+1. Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la .red[portabilité]. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.
 
-* Réalisation du balisage, marquage de l’élément
+Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il .red[permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités], il offre un .red[gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier]. De surcroît, ce balisage permet le plus souvent la .red[génération automatique de l’information bibliographique] directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.
 
-???
-
-# Procédure mise en œuvre lors du .red[balisage]
-
-Les trois opérations qui interviennent au cours du balisage sont donc les suivantes&nbsp;:
-* la reconnaissance des éléments, &nbsp;: reconnaître que l’élément courant est un élément d’un certain type (paragraphe, citation en prose, note de bas de page, etc.)
-* la sélection des balises,&nbsp;: déterminer le balisage qui s’applique au type d’élément reconnu
-* la réalisation du balisage,&nbsp;: marquage de l’élément à l’intérieur du flux textuel
-cf. Coombs, James, et al., .red[op. cit.]
 ---
 
 
@@ -306,31 +296,6 @@ L’idée d’un balisage descriptif qui repose sur le fait de marquer le conten
 Dans une telle représentation du texte, les éléments contenus (paragraphes, citations, phrases, notes, etc.) sont présentés à l’intérieur d’une structure hiérarchique. La structure du texte est hiérarchique parce qu’ils résident les uns à l’intérieur des autres. Les objets reçoivent donc des relations linéaires.
 
 C’est ici l’occasion de souligner qu’il s’agit ici d’une modélisation. C’est une manière de représenter ce qu’est un texte qui impose son expressivité et ses contraintes. Nous verrons que la TEI, tout en étant en grande basée sur le balisage descriptif offre différents mécanismes pour prendre en charge des relations non hiérarchiques comme les chevauchements, etc.
-
----
-
-
-# Avantages d’un balisage descriptif sur un balisage présentationnel
-
-1. Processus d’établissement du texte simplifié
-
-1. Réduction des problèmes de maintenance
-
-1. Meilleure portabilité
-
-???
-
-# Avantages sur un balisage présentationnel
-
-Contrairement aux apparences, les logiciels de traitement de texte qui mettent en forme les documents ne simplifient pas la production de documents en éliminant le besoin du balisage. D’une certaine manière cela est devenu plus clair aujourd’hui avec l’adoption des formats XML par Microsoft Word et Open Office. Mais, le balisage requis pour ces formats, tout en étant plus consommateur de ressources, n’atteint pas la même expressivité qu’un simple balisage descriptif. Par ailleurs, les dispositifs d’édition fondés sur un balisage descriptif présentent plusieurs avantages sur le balisage fondé sur la présentation comme LaTex&nbsp;:
-
-1. Le .red[processus d’établissement du texte se trouve simplifié] par la focalisation sur le contenu plutôt que sur le contrôle du programme (dans le cas d’un balisage procédural) ou de la présentation typographique de la copie (comme avec LaTex)
-
-1. Les .red[questions de maintenance sont réduites] à un nombre limité de problèmes indépendants du fichier proprement dit. L’actualisation des styles et la mise à jour s’en trouvent facilitées sans risque de corruption des documents.
-
-1. Enfin, ils fournissent de meilleurs standards dans le domaine patrimonial et culturel, ou pour l’industrie, du point de vue de la .red[portabilité]. Ils permettent en effet le partage aisé des fichiers et réduisent, à terme, les coûts de publication.
-
-Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il .red[permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités], il offre un .red[gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier]. De surcroît, ce balisage permet le plus souvent la .red[génération automatique de l’information bibliographique] directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.
 
 ---
 template: inverse
@@ -489,7 +454,7 @@ La finesse de l’enregistrement que le balisage rend possible est paradoxalemen
 
 * accès plus direct aux sources&nbsp;?
 
-* quel public
+* quel public&nbsp;?
 
 ???
 
@@ -577,5 +542,4 @@ class: center middle
         highlightStyle: 'monokai',
         highlightLanguage: 'remark'
         }) ;
-      </script></body>
-</html>
+      </script></body></html>

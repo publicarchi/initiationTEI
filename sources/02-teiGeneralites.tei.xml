@@ -39,7 +39,7 @@
         <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
           <ref target="00-programme.tei.xml">Programme</ref></note>
       </titlePage>
-      <div rend="slide" xml:lang="fr">
+      <div type="slide" xml:lang="fr">
         <div>
           <head>La Text Encoding Initiative</head>
           <list>
@@ -50,7 +50,7 @@
               >Guidelines</ref>)</item>
           </list>
         </div>
-        <div rend="notes">
+        <div type="notes">
           <p>La Text Encoding Initiative (TEI) est un effort international pour <hi rend="bold">unifier les pratiques d’encodage de textes</hi> dans le domaine académique.</p>
           <p>Elle fournit <hi>un vocabulaire XML</hi> qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires. </p>
           <p>Plus qu’un schéma générique, elle offre en fait <hi>un cadre de travail</hi> qui permet de traiter différents cas de figure.</p>
@@ -62,7 +62,7 @@
           <p>En ce sens, comme le relève Florence Clavaud dans son cours à l’École nationale des chartes, il s’agit plutôt d’une sorte d’« ontologie générique du texte ».</p>
         </div>
       </div>
-      <div rend="slide">
+      <div type="slide">
         <div>
           <head>La Text Encoding Initiative comme cadre de travail pour l’édition des textes</head>
           <list type="ordered">
@@ -75,12 +75,12 @@
     </front>
     <body>
       <div type="part">
-        <div rend="title" xml:lang="fr" xml:id="part1">
+        <div type="title" xml:lang="fr" xml:id="part1">
           <div>
             <head>Historique de la TEI</head>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <div>
               <head>Un projet collectif</head>
@@ -92,13 +92,16 @@
               <p>Recherche d’un modèle commun pour encoder &amp; partager des textes</p>
             </div>
             <div>
-              <head><hi>novembre 1987</hi> – Première réunion au Vassar College à Poughkeepsie</head>
-              <head>Création de la Text Encoding Initiative</head>
-              <head><hi>juin 1990</hi> – Premier brouillon (P1)</head>
-              <head><hi>mai 1994</hi> – Première publication des <title>Guidelines</title> (P3)</head>
+              <head>Chronologie</head>
+              <list>
+              <item><hi>novembre 1987</hi> – Première réunion au Vassar College à Poughkeepsie</item>
+              <item>Création de la Text Encoding Initiative</item>
+              <item><hi>juin 1990</hi> – Premier brouillon (P1)</item>
+              <item><hi>mai 1994</hi> – Première publication des <title>Guidelines</title> (P3)</item>
+              </list>
             </div>
           </div>
-          <div rend="notes" xml:lang="fr">
+          <div type="notes" xml:lang="fr">
             <div>
               <head>Un projet collectif</head>
               <p>La Text Encoding Initiative est née d’un constat partagé, au sein d’une communauté de chercheurs déjà engagés dans la production de textes numériques, du manque de solutions pour faciliter l’échange de textes et d’information sur leur travail.</p>
@@ -130,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Développements du projet</head>
             <list>
@@ -141,7 +144,7 @@
               <item><hi>novembre 2007</hi> Version actuelle des <ref target="http://www.tei-c.org/Guidelines/P5/"><title>Guidelines</title></ref> (P5)</item>
             </list>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <head>Développements du projet</head>
             <p>Création de groupes de travail par champs disciplinaires. La première version officielle des <title>Guidelines</title> P3, était le travail de 200 personnes.</p>
             <p>Diffusion du modèle par l’intermédiaire de séminaires, d’ateliers, qui permettent le recueil des remarques des utilisateurs.</p>
@@ -151,7 +154,7 @@
             <p>P5 qui incluait nombreuses améliorations concernant l’encodage de caractères, le traitement des parties graphiques, la description des manuscrits, le balisage externe, et la structuration des <title>Guidelines</title> proprement dit. C’est dans cette version qu’apparaît notamment une première version du langage ODD pour modéliser des documents.</p>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <div>
               <head>Un projet ancien</head>
@@ -171,7 +174,7 @@
               </list>
             </div>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <div>
               <head>Un projet ancien</head>
               <p>Comme vous le constatez, la TEI est un projet d’une dizaine d’années plus ancien que le méta-langage XML. Elle fut dans un premier temps développée en SGML, un méta-langage dont XML est une simplification.</p>
@@ -184,8 +187,7 @@
               <p>Reconnu internationalement comme un outil d’importance cruciale à la fois pour la conservation à long terme de données électroniques et comme moyen efficace d’utiliser ces données dans de nombreux domaines.</p>
               <p>Son schéma d’encodage est particulièrement adopté pour la production d’éditions critiques de textes littéraires ou de sources primaires, de larges corpus linguistiques, ou encore la production de métadonnées détaillées relatives à des collections de textes patrimoniaux de toutes sortes.</p>
               <p>- cf. liste (non exhaustive) des projets répertoriés http://www.tei-c.org/Activities/Projects/</p>
-              <p>Adoptée par de nombreuses organisations telles que le <name>National Endowment for the
-                Humanities</name> aux États-Unis, l’<name>Arts and Humanities Research Board</name> au Royaume-Uni, la <name>Modern Language Association</name>, l’<name>Expert Advisory Group for Language Engineering Standards</name> de l’Union européenne et de nombreuses autres organismes à travers le monde qui financent ou promeuvent la production de textes électroniques.</p>
+              <p>Adoptée par de nombreuses organisations telles que le <name>National Endowment for the Humanities</name> aux États-Unis, l’<name>Arts and Humanities Research Board</name> au Royaume-Uni, la <name>Modern Language Association</name>, l’<name>Expert Advisory Group for Language Engineering Standards</name> de l’Union européenne, le Canadian Research Writing Collaboratory de Susan Brown et de nombreuses autres organismes à travers le monde qui financent ou promeuvent la production de textes électroniques.</p>
               <list>
                 <item>Succès qui permet d’assurer conservation à long terme de notre patrimoine culturel porté dans un monde en réseau.</item>
                 <item>Une solution pour éviter la bibliothèque de Babel numérique</item>
@@ -196,12 +198,12 @@
         </div>
       </div>
       <div type="part">
-        <div rend="title" xml:lang="fr" xml:id="part2">
+        <div type="title" xml:lang="fr" xml:id="part2">
           <div>
             <head>Objectifs et principes</head>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Faciliter l’échange et l’intégration des travaux des chercheurs</head>
             <list>
@@ -213,7 +215,7 @@
                 rend="bold">souple et adaptable</hi></item>
             </list>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <head>Principes directeurs</head>
             <p>Faciliter l’échange et l’intégration des travaux des chercheurs</p>
             <list>
@@ -226,7 +228,7 @@
             </list>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Mise en œuvre</head>
             <div>
@@ -247,7 +249,7 @@
               <head>Utilisation des syntaxes et mécanismes XML</head>
             </div>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <p>Rapidement <hi rend="bold"
               >la TEI a privilégié la publication de recommandations</hi> plutôt que celle d’un standard ou d’une norme.</p>
             <p>L’objectif était de spécifier des conventions d’encodage simples, faciles à employer, relativement compréhensibles, et qui fournissent d’amples mécanismes d’extension afin de pouvoir répondre à des besoins particuliers.</p>
@@ -261,7 +263,7 @@
             <p>Aujourd’hui la TEI cherche à s’abstraire du modèle XML avec la définition d’un langage TEI permettant de spécifier ses propres schémas.</p>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head><hi>Organisation</hi> du Consortium</head>
             <div>
@@ -287,7 +289,7 @@
               </list>
             </div>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <div>
               <p>La TEI est organisée autour d’un Consortium international et d’une importante communauté d’utilisateurs.</p>
               <p>Le Consortium TEI rassemble de nombreuses organisations internationales. Il est actuellement structuré par deux instances.</p>
@@ -328,7 +330,7 @@
         <div type="title" xml:id="part3">
           <head>Mise en œuvre</head>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Pourquoi utiliser la Text Encoding Initiative ?</head>
             <list>
@@ -339,7 +341,7 @@
             <p><ref target="http://references.modernisation.gouv.fr/rgi-interoperabilite">Référentiel Général d’Interopérabilité</ref></p>
             <p>Large adoption (standard de fait)</p>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <head>Pourquoi la TEI ?</head>
             <p>La production d’une édition électronique exige la mobilisation de techniques spécifiques pour l’établissement des textes, l’enregistrement des annotations scientifiques et la publication.</p>
             <p>Deux considérations doivent principalement guider les choix en la matière :<list>
@@ -354,7 +356,7 @@
             <p>Nous verrons cependant que certains aspects propres à un projet peuvent nécessiter des adaptations dans l’utilisation de ce dialecte, ou qu’il faut parfois conjointement confier à d’autres modèles documentaires la prise en charge de l’enregistrement du travail.</p>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>La Text Encoding Initiative</head>
             <list>
@@ -365,7 +367,7 @@
                 >Guidelines</ref>)</item>
             </list>
           </div>
-          <div rend="notes">
+          <div type="notes">
             <p>La Text Encoding Initiative (TEI) est un effort international pour <hi rend="bold">unifier les pratiques d’encodage de textes</hi> dans le domaine académique.</p>
             <p>Elle fournit <hi>un vocabulaire XML</hi> qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires. </p>
             <p>Plus qu’un schéma générique, elle offre en fait <hi>un cadre de travail</hi> qui permet de traiter différents cas de figure.</p>
@@ -379,14 +381,14 @@
         </div>
         <div type="slide">
           <div>
-            <head>Personnalisation de la TEI</head>
+            <head>Un exemple de workflow avec la TEI</head>
             <list>
               <item>Modélisation des documents</item>
-              <item>Spécification d’un sous ensemble de la TEI (fichier ODD)</item>
+              <item>Spécification d’un sous-ensemble de la TEI (fichier ODD)</item>
               <item>Génération d’un schéma et d’une documentation</item>
               <item>Encodage des documents</item>
-              <item>Révision du modèle (processus itératif)</item>
             </list>
+            <p>Révision du modèle (processus itératif)</p>
           </div>
           <div>
             <div>
@@ -430,11 +432,11 @@
       </div>
     </body>
     <back>
-      <div rend="title">
+      <div type="title">
         <div>
           <head>Conclusion</head>
         </div>
-        <div rend="notes">
+        <div type="notes">
           <div>
             <head>Avantages</head>
             <p>Conçue comme un modèle générique de structuration et de sémantisation des textes, la TEI présente de nombreux avantages. On relève notamment :<list>
@@ -451,12 +453,12 @@
           
         </div>
       </div>
-      <div rend="titre" xml:lang="fr">
+      <div type="titre" xml:lang="fr">
         <div>
           <head>Sources et bibliographie</head>
         </div>
       </div>
-      <div rend="slide" xml:lang="fr">
+      <div type="slide" xml:lang="fr">
         <div>
           <head>Orientations bibliographiques</head>
           <listBibl>
@@ -481,9 +483,9 @@
           </listBibl>
         </div>
       </div>
-      <div rend="title" xml:lang="fr">
+      <div type="title" xml:lang="fr">
         <div>
-          <head>La <ref target="ex01-oxygen.tei.xml">Une première mise en jambe</ref></head>
+          <head>Une première <ref target="ex01-oxygen.tei.xml">mise en jambe</ref></head>
           <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.tei.xml"
               >Programme</ref></note>
         </div>
