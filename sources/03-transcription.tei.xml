@@ -58,14 +58,14 @@
           <div>
             <head>Composition d’un fichier TEI</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <TEI xmlns="http://www.tei-c.org/​ns/​1.0">
-                <teiHeader>
-                  <!-- métadonnées décrivant le texte -->
-                </teiHeader>
-                <text>
-                  <!-- représentation du texte lui-même -->
-                </text>
-              </TEI>
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+  <teiHeader>
+    <!-- métadonnées décrivant le texte -->
+  </teiHeader>
+  <text>
+    <!-- représentation du texte lui-même -->
+  </text>
+</TEI>
             </egXML>
             <list>
               <item>l’élément racine est <gi>TEI</gi></item>

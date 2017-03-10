@@ -28,45 +28,6 @@ name: index
 ---
 
 
-## Pourquoi la Text Encoding Initiative&nbsp;?
-
-* adaptation aux objectifs scientifiques
-
-* interopérabilité
-
-* pérennisation
-
-[Référentiel Général d’Interopérabilité](http://references.modernisation.gouv.fr/rgi-interoperabilite)
-
-Large adoption (standard de fait)
-
-???
-
-## Pourquoi la TEI&nbsp;?
-
-La production d’une édition électronique exige la mobilisation de techniques spécifiques pour l’établissement des textes, l’enregistrement des annotations scientifiques et la publication.
-
-Deux considérations doivent principalement guider les choix en la matière&nbsp;:
-* d’une part l’adaptation aux objectifs scientifiques du projet,
-
-* d’autre part l’interopérabilité et la pérennisation.
-
-
-Sur ces derniers points, le Référentiel général d’interopérabilité publié en 2009 par la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (eXtensible Markup Language)
-
-cf. Ministre du Budget, des Comptes publics, [Référentiel Général d’Interopérabilité (RGI)](http://references.modernisation.gouv.fr/rgi-interoperabilite), 2009.
-
-En outre, le dialecte XML de la Text Encoding Initiative (TEI) s’est très largement imposé ces dernières années comme .red[standard de fait] dans le domaine de l’édition numérique à caractère scientifique.
-
-Telle que la définie Laurent Romary, la TEI est une «&nbsp;Norme de balisage, de notation et d’échanges de corpus des documents électroniques. Elle s’est élaborée à partir des besoins de structuration, de conceptualisation et de mise en réseau des textes&nbsp;»
-
-Sa large adoption, les possibilités de personnalisation, ainsi que l’expérience acquise en matière de traitement des sources primaires à caractère textuel en histoire ou en littérature ces dernières années permet de juger que son utilisation est le plus souvent tout fait adaptée.
-
-Nous verrons cependant que certains aspects propres à un projet peuvent nécessiter des adaptations dans l’utilisation de ce dialecte, ou qu’il faut parfois conjointement confier à d’autres modèles documentaires la prise en charge de l’enregistrement du travail.
-
----
-
-
 ## La Text Encoding Initiative
 
 * Un effort international pour unifier les pratiques d’encodage de textes dans le domaine académique
@@ -104,7 +65,7 @@ En ce sens, comme le relève Florence Clavaud dans son cours à l’École natio
 
 1. [Objectifs et principes](#part2)
 
-1. [Fonctionnement de la TEI](#part3)
+1. [Mise en œuvre](#part3)
 
 ---
 template: inverse
@@ -134,7 +95,7 @@ Recherche d’un modèle commun pour encoder &amp; partager des textes
 
 ### .red[novembre 1987]&nbsp;–&nbsp;Première réunion au Vassar College à Poughkeepsie
 
-### Création de la Texte Encoding Initiative
+### Création de la Text Encoding Initiative
 
 ### .red[juin 1990]&nbsp;– Premier brouillon (P1)
 
@@ -166,7 +127,7 @@ Ceux-ci mettaient notamment l’accent sur la conversion de formats et la néces
 
 L’ACH, rapidement suivie dans son effort de standardisation par l’Association for Literary and Linguistic Computing et l’Association for Computational Linguistics formèrent ensemble la Text Encoding Initiative (TEI) afin de conduire le projet sous une forme internationale et multilingue et .red[développer des recommandations pour la préparation et l’échange de textes électroniques dans le domaine universitaire].
 
-Plus de 50 chercheurs contribuent déjà à la TEI P1 (juin 1990)
+Plus de 50 chercheurs contribuent déjà à la TEI P1 (juin 1990)
 
 15 groupes de travail collaborent de 1990-93 à la P2
 
@@ -297,9 +258,9 @@ Faciliter l’échange et l’intégration des travaux des chercheurs
 ---
 
 
-# Mise en œuvre
+## Mise en œuvre
 
-## Publication de recommandations
+### Publication de recommandations
 
 * simples
 
@@ -307,13 +268,13 @@ Faciliter l’échange et l’intégration des travaux des chercheurs
 
 * compréhensibles
 
+### Généricité
+
+### Modularité et possibilités de personnalisation ou d’extension
+
+### Utilisation des syntaxes et mécanismes XML
+
 ???
-
-## Généricité
-
-## Modularité et possibilités de personnalisation ou d’extension
-
-## Utilisation des syntaxes et mécanismes XML
 
 Rapidement .red[la TEI a privilégié la publication de recommandations] plutôt que celle d’un standard ou d’une norme.
 
@@ -328,19 +289,6 @@ Néanmoins, la TEI s’est rapidement imposée comme standard de fait pour l’e
 
 
 Aujourd’hui la TEI cherche à s’abstraire du modèle XML avec la définition d’un langage TEI permettant de spécifier ses propres schémas.
-
----
-template: inverse
-class: center middle
-
-
----
-template: inverse
-class: center middle
-name: part3
-
-
-## Fonctionnement de la TEI
 
 ---
 
@@ -400,6 +348,146 @@ Plusieurs listes de diffusion&nbsp;:
 ---
 template: inverse
 class: center middle
+name: part3
+
+
+# Mise en œuvre
+
+---
+
+
+## Pourquoi utiliser la Text Encoding Initiative&nbsp;?
+
+* adaptation aux objectifs scientifiques
+
+* interopérabilité
+
+* pérennisation
+
+[Référentiel Général d’Interopérabilité](http://references.modernisation.gouv.fr/rgi-interoperabilite)
+
+Large adoption (standard de fait)
+
+???
+
+## Pourquoi la TEI&nbsp;?
+
+La production d’une édition électronique exige la mobilisation de techniques spécifiques pour l’établissement des textes, l’enregistrement des annotations scientifiques et la publication.
+
+Deux considérations doivent principalement guider les choix en la matière&nbsp;:
+* d’une part l’adaptation aux objectifs scientifiques du projet,
+
+* d’autre part l’interopérabilité et la pérennisation.
+
+
+Sur ces derniers points, le Référentiel général d’interopérabilité publié en 2009 par la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (eXtensible Markup Language)
+
+cf. Ministre du Budget, des Comptes publics, [Référentiel Général d’Interopérabilité (RGI)](http://references.modernisation.gouv.fr/rgi-interoperabilite), 2009.
+
+En outre, le dialecte XML de la Text Encoding Initiative (TEI) s’est très largement imposé ces dernières années comme .red[standard de fait] dans le domaine de l’édition numérique à caractère scientifique.
+
+Telle que la définie Laurent Romary, la TEI est une «&nbsp;Norme de balisage, de notation et d’échanges de corpus des documents électroniques. Elle s’est élaborée à partir des besoins de structuration, de conceptualisation et de mise en réseau des textes&nbsp;»
+
+Sa large adoption, les possibilités de personnalisation, ainsi que l’expérience acquise en matière de traitement des sources primaires à caractère textuel en histoire ou en littérature ces dernières années permet de juger que son utilisation est le plus souvent tout fait adaptée.
+
+Nous verrons cependant que certains aspects propres à un projet peuvent nécessiter des adaptations dans l’utilisation de ce dialecte, ou qu’il faut parfois conjointement confier à d’autres modèles documentaires la prise en charge de l’enregistrement du travail.
+
+---
+
+
+## La Text Encoding Initiative
+
+* Un effort international pour unifier les pratiques d’encodage de textes dans le domaine académique
+
+* Un vocabulaire XML qui permet de produire des modèles de textes
+
+* Un cadre de travail
+
+* Un ensemble de recommandations ([Guidelines](http://www.tei-c.org/Guidelines/))
+
+???
+
+La Text Encoding Initiative (TEI) est un effort international pour .red[unifier les pratiques d’encodage de textes] dans le domaine académique.
+
+Elle fournit .red[un vocabulaire XML] qui permet de produire des modèles de textes que l’on peut utiliser à différentes fins notamment pour l’édition de sources primaires.
+
+Plus qu’un schéma générique, elle offre en fait .red[un cadre de travail] qui permet de traiter différents cas de figure.
+
+Ce cadre de travail se compose 
+* d’un vocabulaire,
+
+* d’une documentation qui en fournit la sémantique en langage naturel,
+
+* et d’un ensemble de recommandations rassemblées sous l’intitulé de Guidelines.
+
+
+En ce sens, comme le relève Florence Clavaud dans son cours à l’École nationale des chartes, il s’agit plutôt d’une sorte d’« ontologie générique du texte ».
+
+---
+
+
+# Personnalisation de la TEI
+
+* Modélisation des documents
+
+* Spécification d’un sous ensemble de la TEI (fichier ODD)
+
+* Génération d’un schéma et d’une documentation
+
+* Encodage des documents
+
+* Révision du modèle (processus itératif)
+
+???
+
+### Personnalisation de la TEI
+
+La TEI a été conçue comme un modèle générique et extensible. Elle laisse entièrement libre le chercheur de ses choix de modélisation.
+
+La TEI fournit ainsi, à l’aide d’un vocabulaire et d’une infrastructure technique, .red[un cadre de travail pour la modélisation des textes]. Dans la limite de leur expressivité, de tels modèles peuvent être employés à telles ou telles fins. La volonté de la TEI de couvrir l’ensemble des besoins a pour pendant négatif la nécessité de personnaliser son schéma. Et l’utilisation de la TEI suppose l’apprentissage de son vocabulaire.
+
+* Modélisation des documents
+
+* Spécification d’un sous ensemble de la TEI (fichier ODD)
+
+* Génération d’un schéma et d’une documentation
+
+* Encodage des documents
+
+* Révision du modèle (processus itératif)
+
+## S’approprier la TEI
+
+Cette difficulté d’accès, ainsi que la nécessité de manier des outils nouveaux, reste un problème qui n’est toujours pas complètement réglé. Cependant, la TEI a largement été adoptée aujourd’hui dans le secteur académique pour la publication de sources primaires ou l’édition numérique. C’est la raison pour laquelle on peut affirmer qu’elle constitue de ce point de vue un standard de fait qui justifie en grande partie son utilisation dans un projet scientifique d’édition.
+
+---
+
+
+# Le problème de l’interopérabilité
+
+être conforme à la TEI ne signifie pas nécessairement être interopérable
+
+* Mécanismes d’extension et de personnalisation
+
+* Notion de conformité à la TEI (honnêteté)
+
+* Déclarer ses pratiques de manière formelle
+
+* Respect des bonnes pratiques de son domaine métier
+
+???
+
+# Le problème de l’interopérabilité
+
+À de nombreux égards, le large emploi de la TEI est censé répondre à un .red[désir d’interopérabilité et de pérennisation]. La promesse des standards est de nous rendre la vie plus aisée : TEI, XML, Unicode ont le potentiel de faciliter l’échange et la réutilisation des documents, c’est notamment la raison pour laquelle on y a recours.
+
+Cependant, par sa généricité même, la nature profonde de la TEI qui nécessite d’opérer des choix, ou permet d’être étendue en fonction des besoins, explique en grande partie les difficultés que l’on peut rencontrer lorsqu’il s’agit de rassembler des collections de documents en termes de compatibilité.
+
+Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient véritablement interopérables. Chaque document est représentatif du modèle que se fait l’éditeur du texte. Ainsi, la compatibilité ne peut être atteinte que si plusieurs documents suivent le même ensemble de conventions. 
+
+---
+template: inverse
+class: center middle
 
 
 ## Conclusion
@@ -423,20 +511,6 @@ Conçue comme un modèle générique de structuration et de sémantisation des t
 
 
 Mis à part le fait qu’elle soit rapidement apparue comme un standard de fait pour la publication de textes numériques en sciences humaines, ce sont d’abord ces qualités qui expliquent la large implantation de la TEI dans la communauté scientifique. Elle sert de format à de nombreux projets d’envergure internationale ([Blake Archive](http://www.blakearchive.org) , [Perseus Digital Library](http://www.perseus.tufts.edu/) sous la direction de Gregory Crane, [Rosetti Archive](http://www.rossettiarchive.org), etc.). Plusieurs projets français de grande envergure utilisent également la TEI dans le domaine des sciences historiques ([Les Bibliothèques virtuelles humanistes](http://www.bvh.univ-tours.fr), [Élec](http://elec.enc.sorbonne.fr), le [Portail Telma](http://www.cn-telma.fr), ENS Lyon, [Desgodets](http://www.desgodets.net), [ANR Ampère](http://www.ampere.cnrs.fr), etc.).
-
-### S’approprier la TEI
-
-La TEI fournit ainsi, à l’aide d’un vocabulaire et d’une infrastructure technique, .red[un cadre de travail pour la modélisation des textes]. Dans la limite de leur expressivité, de tels modèles peuvent être employés à telles ou telles fins. La volonté de la TEI de couvrir l’ensemble des besoins a pour pendant négatif la nécessité de personnaliser son schéma. Et l’utilisation de la TEI suppose l’apprentissage de son vocabulaire.
-
-Cette difficulté d’accès, ainsi que la nécessité de manier des outils nouveaux, reste un problème qui n’est toujours pas complètement réglé. Cependant, la TEI a largement été adoptée aujourd’hui dans le secteur académique pour la publication de sources primaires ou l’édition numérique. C’est la raison pour laquelle on peut affirmer qu’elle constitue de ce point de vue un standard de fait qui justifie en grande partie son utilisation dans un projet scientifique d’édition.
-
-### Le problème de l’interopérabilité
-
-À de nombreux égards, le large emploi de la TEI est censé répondre à un .red[désir d’interopérabilité et de pérennisation]. La promesse des standards est de nous rendre la vie plus aisée : TEI, XML, Unicode ont le potentiel de faciliter l’échange et la réutilisation des documents, c’est notamment la raison pour laquelle on y a recours.
-
-Cependant, par sa généricité même, la nature profonde de la TEI qui nécessite d’opérer des choix, ou permet d’être étendue en fonction des besoins, explique en grande partie les difficultés que l’on peut rencontrer lorsqu’il s’agit de rassembler des collections de documents en termes de compatibilité.
-
-Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient véritablement interopérables. Chaque document est représentatif du modèle que se fait l’éditeur du texte. Ainsi, la compatibilité ne peut être atteinte que si plusieurs documents suivent le même ensemble de conventions. 
 
 ## Sources et bibliographie
 

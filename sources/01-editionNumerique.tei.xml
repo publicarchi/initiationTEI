@@ -43,27 +43,26 @@
         <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
           <ref target="00-programme.tei.xml">Programme</ref></note>
       </titlePage>
-      <div rend="slide" xml:lang="fr" xml:id="index">
+      <div type="slide" xml:lang="fr" xml:id="index">
         <div>
           <head>L’édition critique numérique</head>
           <head>Sommaire</head>
           <list type="ordered">
             <item><ref target="#caracteristiques">Caractéristiques attendues d’une édition critique</ref></item>
             <item><ref target="#balisageDescriptif">La prise en charge de l’édition critique par un balisage descriptif</ref></item>
-            <item><ref target="#presentationEdition">Présentation et potentiel des éditions
-                numériques</ref></item>
+            <item><ref target="#presentationEdition">Présentation et potentiel des éditions numériques</ref></item>
           </list>
         </div>
       </div>
     </front>
     <body>
       <div type="part">
-        <div rend="title" xml:lang="fr" xml:id="caracteristiques">
+        <div type="title" xml:lang="fr" xml:id="caracteristiques">
           <div>
             <head>Caractéristiques attendues d’une édition critique</head>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Qu’est-ce qu’une <hi>édition critique</hi> ?</head>
             <list>
@@ -72,7 +71,7 @@
               <item>Objectivité / parti-pris</item>
             </list>
           </div>
-          <div rend="comments">
+          <div type="comments">
             <head>Qu’est-ce qu’une édition critique ?</head>
             <div>
               <head>Un essai de reconstitution d’un texte</head>
@@ -96,7 +95,7 @@
             </div>
           </div>
         </div>
-        <div rend="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Comment rendre compte de la <hi>source primaire</hi> ?</head>
             <list>
@@ -129,7 +128,7 @@
             </list>
           </div>
           <div type="notes">
-            <head>Critères de scientificité</head>
+            <head>Critères de <hi>scientificité</hi></head>
 <p>Il s’agit toujours de fournir un texte, et dans le domaine historique de savoir comment rendre compte le plus fidèlement possible de la source.</p>
             <p>Critères de scientificités</p>
             <p>Même si le domaine de l’édition scientifique a connu de profonds changements au cours de ces dernières années avec l’irruption du numérique, les opérations à la base de toute édition critique sont toutefois restées pour l’essentiel identiques.</p>
@@ -150,7 +149,7 @@
         </div>
         <div type="slide" xml:lang="fr">
           <div>
-            <head>Un investissement important</head>
+            <head>Un <hi>investissement</hi> important</head>
             <list>
               <item>Méthode de travail adaptée (temps long, travail en équipe)</item>
               <item>Enjeux d’interopérabilité</item>
@@ -516,7 +515,7 @@
       </div>
       <div>
         <div type="title" xml:lang="fr">
-          <head><ref target="02-teiGeneralites.tei.xml">Et la TEI dans tout ça ?</ref></head>
+          <head>Et la <ref target="02-teiGeneralites.tei.xml">TEI</ref> dans tout ça ?</head>
           <note><ref target="#index">Revenir au sommaire</ref> | <ref target="00-programme.tei.xml">Programme</ref></note>
         </div>
       </div>

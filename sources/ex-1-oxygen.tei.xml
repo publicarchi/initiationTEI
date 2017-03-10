@@ -201,7 +201,7 @@
           XML, que l’on peut manipuler, et donc qu’on peut transformer dans un format XML TEI. </p>
         <p>Dans votre dossier <ident>Travaux</ident> il y a un fichier nommé
             <ident>acteRoyale-s.docx</ident> et un autre <ident>acteRoyale.jpg</ident>: cliquez
-          dessus pour les ouvrir. Il s’agit d’un document numerisé en mode image qui a ensuite été rapidement retranscrit avec Microsoft Word. On va se servir d’oXygen pour transformer cette
+          dessus pour les ouvrir. Il s’agit d’un document numérisé en mode image qui a ensuite été rapidement retranscrit avec Microsoft Word. On va se servir d’oXygen pour transformer cette
           transcription en XML TEI.</p>
         <p>Un fichier Microsoft Word au format docx est une archive compressée qui contient plusieurs autres fichiers, y
           compris des fichiers XML qu’on peut gérer et transformer avec oXygen comme n’importe quel

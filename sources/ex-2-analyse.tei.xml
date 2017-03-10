@@ -40,17 +40,17 @@
       
       <div>
         <head>Numériser et encoder...</head>
-        <p>La numérisation nous propose une <emph>image</emph>, une représentation d'un
+        <p>La numérisation nous propose une <emph>image</emph>, une représentation d’un
           object déjà existant</p>
-        <p>L'encodage nous permet de représenter l'image des <emph>idées</emph>
+        <p>L'encodage nous permet de représenter l’image des <emph>idées</emph>
           résultant de ces représentations</p>
         <note><p>Distinction fine mais très importante.</p></note>
       </div>
       
       
       <div>
-        <head>Des idées sur quoi?</head>
-        <p>Tout! mais on peut distinger plusieurs axes...
+        <head>Des idées sur quoi ?</head>
+        <p>Tout! mais on peut distinguer plusieurs axes...
           <list>
             <item>infos <q>intrinsèques</q> à l'objet : les formes, couleurs,
               etc. d'une image; les sons, rythmes, etc. d'une musique; les
@@ -67,23 +67,23 @@
       
       
       <div>
-        <head>Modelisation et structuration</head>
+        <head>Modélisation et structuration</head>
         <p>Il existe (quelques) méthodes classiques d'analyses de données. L'important c'est de
           comprendre: <list>
             <item>toute méthode ne serait qu'une modélisation</item>
-            <item>la modelisation devrait faire resortir la structuration essentielle d'un objet
+            <item>la modélisation devrait faire ressortir la structuration essentielle d'un objet
               complexe</item>
           </list>
         </p>
         <p>Après une modélisation, on peut donner une implémentation informatisée ; sans modèle, une
           implémentation risque d’être incompréhensible et aléatoire, inutile…</p>
-        <note><p>Ce que va vouloir faire, c’est modaliser. Pourquoi conduire cette étape, c’est que cela permettra de donner une implémentation informatisée. Si vous n’êtes pas conscient de votre modèle, vous risquer d’avoir une implémentation inconsistante ou incompréhensible qui ne sera pas exploitable.</p></note>
+        <note><p>Ce que va vouloir faire, c’est modéliser. Pourquoi conduire cette étape, c’est que cela permettra de donner une implémentation informatisée. Si vous n’êtes pas conscient de votre modèle, vous risquer d’avoir une implémentation inconsistante ou incompréhensible qui ne sera pas exploitable.</p></note>
       </div>
 
       <div>
         <head>Analyse des données classique</head>
         <p>On identifie… <list>
-            <item>les <soCalled>objets d’interêt</soCalled></item>
+            <item>les <soCalled>objets d’intérêt</soCalled></item>
             <item>leurs attributs/propriétés</item>
             <item>les relations entre objets</item>
             <item>les procédures/traitements essentiels envisagés </item>
@@ -106,12 +106,12 @@
       <div>
         <head>Analyse des documents </head>
         <list>
-          <item>quels sont les unites que nous souhaitons traiter?</item>
+          <item>quels sont les unités que nous pourrions vouloir traiter ?</item>
           <item>comment sont-ils structures (quels composants, quels attributs)?</item>
           <item>est-ce que les occurrences de ces objets sont clairement identifiables dans un flux
             de texte?</item>
         </list>
-        <p rend="box">Essayons cela avec ces trois documents:</p>
+        <p rend="box">Essayons cela avec ces trois documents :</p>
         <note><p>Je vous propose avec l’exercice qui vient de vous même identifier un certain nombre de choses.</p></note>
       </div>
       
@@ -130,15 +130,15 @@
        <head>
        Exercice 2 : analyse d'un document
      </head> 
-     <list><item>Dans votre groupe, selectionner d'abord un rapporteur</item><item>Regarder bien votre document. Supposer que vous en avez quelques centaines d'autres
-            pareilles.</item><item>Comment est votre document organise? </item>
+     <list><item>Dans votre groupe, sélectionner d’abord un rapporteur</item><item>Regarder bien votre document. Supposer que vous en avez quelques centaines d'autres
+            pareilles.</item><item>Comment est-ce que votre document organise ? </item>
           <item>Quels sont ses composants essentiels, commun  a tous ces documents ?</item>
-          <item>Quels sont ses composants interessants, possible dans tous ces documents ?</item>
-          <item>Sauriez vous faire en sorte qu'une autre personne reconnaitrait les memes objets
+          <item>Quels sont ses composants intéressants, possible dans tous ces documents ?</item>
+          <item>Sauriez vous faire en sorte qu'une autre personne reconnaîtrait les mêmes objets
             ?</item>
-          <item>Faire une liste de tous les  objets et proprietes essentiels de votre
+          <item>Faire une liste de tous les  objets et propriétés essentiels de votre
             document</item>
-          <item>Présenter cette liste ... et la justifier ! </item></list></div>
+          <item>Présenter cette liste ... et la justifier ! </item></list></div>
       <note><p>L’une des leçons de cet exercice, c’est que l’on ne peut pas encoder mécaniquement un texte. Toujours intéressant de voir une personne prendre un document et se l’approprier.</p></note>
     </body>
   </text>

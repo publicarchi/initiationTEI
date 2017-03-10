@@ -10,7 +10,8 @@
 
   <xsl:output method="html" version="5.0" indent="yes"/>
 
-  <xsl:strip-space elements="egXML"/>
+  <!--<xsl:strip-space elements="egXML"/>-->
+  <xsl:preserve-space elements="egXML"/>
 
   <xsl:param name="language" select="fr"/>
 
