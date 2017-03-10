@@ -22,7 +22,7 @@
   <text>
     <body>
       <!-- ceci n'est pas une pipe -->
-      <div rend="slide">
+      <div type="slide">
         <head>Magritte nous rappelle</head>
         <figure>
           <graphic url="../images/ceci-nest-pas-une-pipe.jpg"/>
@@ -38,7 +38,7 @@
 
       </div>-->
       
-      <div>
+      <div type="slide">
         <head>Numériser et encoder...</head>
         <p>La numérisation nous propose une <emph>image</emph>, une représentation d’un
           object déjà existant</p>
@@ -48,7 +48,7 @@
       </div>
       
       
-      <div>
+      <div type="slide">
         <head>Des idées sur quoi ?</head>
         <p>Tout! mais on peut distinguer plusieurs axes...
           <list>
@@ -66,7 +66,7 @@
       </div>
       
       
-      <div>
+      <div type="slide">
         <head>Modélisation et structuration</head>
         <p>Il existe (quelques) méthodes classiques d'analyses de données. L'important c'est de
           comprendre: <list>
@@ -80,7 +80,7 @@
         <note><p>Ce que va vouloir faire, c’est modéliser. Pourquoi conduire cette étape, c’est que cela permettra de donner une implémentation informatisée. Si vous n’êtes pas conscient de votre modèle, vous risquer d’avoir une implémentation inconsistante ou incompréhensible qui ne sera pas exploitable.</p></note>
       </div>
 
-      <div>
+      <div type="slide">
         <head>Analyse des données classique</head>
         <p>On identifie… <list>
             <item>les <soCalled>objets d’intérêt</soCalled></item>
@@ -93,7 +93,7 @@
         <p>On peut également appliquer ce modèle dans notre cas. Vous savez tous ce qu’est qu’une carte postale.</p></note>
       </div>
 
-      <div>
+      <div type="slide">
         <head>Par exemple…</head>
         <figure>    
           <graphic url="../images/carte-modele.png"/>
@@ -103,7 +103,7 @@
         <p>On a une carte et des noms de personnes. Les noms de personnes peuvent intervenir pour deux raisons : où une carte mentionne la personne, ou bien la personne est soit destinataire soit expéditeur. De même la carte peut être rédigée en un lieu, ou adressée à une adresse. Mais la carte peut encore représenter un lieu…</p></note>
       </div>
 
-      <div>
+      <div type="slide">
         <head>Analyse des documents </head>
         <list>
           <item>quels sont les unités que nous pourrions vouloir traiter ?</item>
@@ -111,35 +111,37 @@
           <item>est-ce que les occurrences de ces objets sont clairement identifiables dans un flux
             de texte?</item>
         </list>
-        <p rend="box">Essayons cela avec ces trois documents :</p>
+        <p rend="box">Essayons cela avec le document qui nous occupe :</p>
         <note><p>Je vous propose avec l’exercice qui vient de vous même identifier un certain nombre de choses.</p></note>
       </div>
       
-      <div><head>Document A</head>
-        <figure><graphic url="../exemples/carte-1v.png"/>
-        <head>une carte postale</head></figure></div>
-      
-      <div><head>Document B</head>
-        <figure><graphic url="../exemples/acteRoyale.jpg"/>
-          <head>un manuscrit </head></figure></div>
-      
-      <div><head>Document C</head>
-        <figure><graphic url="../exemples/10010099-1_1.jpg"/>
-          <head>un tapuscrit </head></figure></div>
+      <div type="slide">
+        <head>Acte royal</head>
+        <figure><graphic url="../exercices/acteRoyal.jpg"/>
+        </figure>
+      </div>
       <div>
-       <head>
-       Exercice 2 : analyse d'un document
-     </head> 
-     <list><item>Dans votre groupe, sélectionner d’abord un rapporteur</item><item>Regarder bien votre document. Supposer que vous en avez quelques centaines d'autres
-            pareilles.</item><item>Comment est-ce que votre document organise ? </item>
-          <item>Quels sont ses composants essentiels, commun  a tous ces documents ?</item>
-          <item>Quels sont ses composants intéressants, possible dans tous ces documents ?</item>
-          <item>Sauriez vous faire en sorte qu'une autre personne reconnaîtrait les mêmes objets
-            ?</item>
-          <item>Faire une liste de tous les  objets et propriétés essentiels de votre
-            document</item>
-          <item>Présenter cette liste ... et la justifier ! </item></list></div>
-      <note><p>L’une des leçons de cet exercice, c’est que l’on ne peut pas encoder mécaniquement un texte. Toujours intéressant de voir une personne prendre un document et se l’approprier.</p></note>
+        <head>Que faut-il encoder ?</head> 
+        <p>Regarder bien votre document. Supposer que vous en avez quelques centaines d’autres du même genre.</p>
+        <list>
+          <item>Comment votre document s’organise-t-il ? </item>
+          <item>Quels sont ses composants essentiels, communs  a tous ces documents ?</item>
+          <item>Quels sont ses composants intéressants, qui pourraient apparaître dans tous ces documents ?</item>
+          <item>Sauriez vous faire en sorte qu’une autre personne reconnaisse les mêmes objets ?</item>
+          <item>Faire une liste de tous les  objets et propriétés essentiels de votre document</item>
+          <item>Justifiez cette liste ! </item></list></div>
+      <note><p>L’une des leçons de cet exercice, c’est que l’on ne peut pas encoder mécaniquement un texte. Il est toujours intéressant de voir une personne prendre un document et se l’approprier.</p></note>
+      <div type="slide">
+        <head>Encodage du document</head>
+        <p>À partir de votre analyse du document proposez un encodage du document</p>
+        <list>
+          <item>Marquez les saut de ligne avec <gi>lb</gi></item>
+          <item>Encodez les abbréviations</item>
+          <item>Encodez les noms de personnes, de lieux, les dates</item>
+          <item>Traitez les signatures</item>
+          <item>Trouvez une manière de représenter la structure du texte</item>
+        </list>
+      </div>
     </body>
   </text>
 </TEI>
