@@ -3,26 +3,29 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La macrostructure TEI</title>
+        <title>Rudiments d’encodage</title>
       </titleStmt>
       <publicationStmt>
-        <p>from markdown</p>
+        <publisher>CRIHN | Initiation TEI</publisher>
+        <date from="2017">2017</date>
       </publicationStmt>
       <sourceDesc>
-        <p>emchateau, ENC 2015</p>
+        <p>Fichier nativement numérique</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change when="2017-03-09">Adaptation pour la formation du CRIHN</change>
       <change when="2015-05-24">conversion du fichier en TEI</change>
-      <change when="2014-10-30">première rédaction</change>
+      <change when="2014-10-30">première rédaction (formation continue de l’ENC)</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <front>
       <titlePage xml:lang="fr">
-        <titlePart>02-Macrostructure TEI</titlePart>
-        <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
-        <note><ref target="00-programme.html">Programme</ref></note>
+        <titlePart>03 – Rudiments d’encodage</titlePart>
+        <docImprint>Initiation TEI | CRIHN, 10 mars 2017</docImprint>
+        <note><ref target="https://github.com/publicarchitectura/initiationTEI">Répertoire GitHub</ref> |
+          <ref target="00-programme.xml">Programme</ref></note>
       </titlePage>
       <div type="sommaire" xml:lang="fr" xml:id="index">
         <div>
@@ -90,15 +93,15 @@
           <div>
             <head>Macrostructures de texte composite</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <text>
-                <front><!-- ... --></front>
-                <group>
-                  <text><!-- ... --></text>
-                  <text><!-- ... --></text>
-                  <text><!-- ... --></text>
-                </group>
-                <back><!-- ... --></back>
-              </text>
+<text>
+  <front><!-- ... --></front>
+  <group>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
+  </group>
+  <back><!-- ... --></back>
+</text>
             </egXML>
           </div>
         </div>
@@ -107,10 +110,10 @@
             <head>teiCorpus</head>
             <p>Dans le cas de corpus de textes hétérogènes, on utilisera des éléments <gi>teiCorpus</gi> comme élément racine comportant des éléments <gi>TEI</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <teiCorpus>
-                <TEI><!-- ... --></TEI>
-                <TEI><!-- ... --></TEI>
-              </teiCorpus>
+<teiCorpus>
+  <TEI><!-- ... --></TEI>
+  <TEI><!-- ... --></TEI>
+</teiCorpus>
             </egXML>
           </div>
         </div>
@@ -125,23 +128,23 @@
           <div>
             <head>teiHeader minimal</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <TEI xmlns="http://www.tei-c.org/​ns/​1.0">
-                <teiHeader>
-                  <fileDesc>
-                    <titleStmt>
-                      <title>The life and opinions of Tristram Shandy, 
-                    Gentleman: TEI edition</title>
-                    </titleStmt>
-                    <publicationStmt>
-                      <publisher>Web Head Press</publisher>
-                      <date>2013</date>
-                    </publicationStmt>
-                    <sourceDesc>
-                      <p>Transcribed from the first edition, 1708</p>
-                    </sourceDesc>
-                  </fileDesc>
-                </teiHeader>
-              </TEI>
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The life and opinions of Tristram Shandy, 
+        Gentleman: TEI edition</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Web Head Press</publisher>
+        <date>2013</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Transcribed from the first edition, 1708</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+</TEI>
             </egXML>
           </div>
           <div>
@@ -154,35 +157,35 @@
           <div>
             <head><gi>teiHeader</gi>, mentions de responsabilité</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <teiHeader>
-                <fileDesc>
-                  <titleStmt>
-                    <title xml:lang="fre" type="main">Sauval 1724</title>
-                    <principal>
-                      <persName ref="#MCL">
-                        <forename>Marianne</forename>
-                        <surname>Cojannot-Le Blanc</surname>
-                      </persName>
-                    </principal>
-                    <funder>
-                      <orgName>Labex Les Passés dans le Présent</orgName>
-                      <date from="2013" to="2018">2013-2018</date>
-                    </funder>
-                    <respStmt>
-                      <resp key="prg">modélisation XML-TEI</resp>
-                      <persName ref="#EC">
-                        <forename>Emmanuel</forename>
-                        <surname>Château</surname>
-                      </persName>
-                    </respStmt><!-- ... -->
-                  </titleStmt>
-                  <editionStmt>
-                    <edition n="1">première édition électronique, <date
-                        from="2013" to="2018">2013-2018</date></edition>
-                  </editionStmt>
-                  <!-- ... -->
-                </fileDesc>
-              </teiHeader>
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title xml:lang="fr" type="main">Sauval 1724</title>
+      <principal>
+        <persName ref="#MCL">
+          <forename>Marianne</forename>
+          <surname>Cojannot-Le Blanc</surname>
+        </persName>
+      </principal>
+      <funder>
+        <orgName>Labex Les Passés dans le Présent</orgName>
+        <date from="2013" to="2018">2013-2018</date>
+      </funder>
+      <respStmt>
+        <resp key="prg">modélisation XML-TEI</resp>
+        <persName ref="#EC">
+          <forename>Emmanuel</forename>
+          <surname>Château</surname>
+        </persName>
+      </respStmt><!-- ... -->
+    </titleStmt>
+    <editionStmt>
+      <edition n="1">première édition électronique, <date
+      from="2013" to="2018">2013-2018</date></edition>
+    </editionStmt>
+  <!-- ... -->
+  </fileDesc>
+</teiHeader>
             </egXML>
           </div>
         </div>
@@ -190,36 +193,36 @@
           <div>
             <head>Mentions de publications</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <teiHeader>
-                <!-- ... -->
-                <publicationStmt>
-                  <authority>
-                    <orgName>Histoire des Arts &amp; Représentations</orgName>
-                    <orgName type="acronym">HAR</orgName>
-                    <orgName type="alt">EA 4414</orgName>
-                    <address>
-                      <addrLine>Université Paris Ouest-Nanterre La Défense</addrLine>
-                      <addrLine>http://har.u-paris10.fr</addrLine>
-                    </address>
-                  </authority>
-                  <date from="2014" to="2018">2014-2018</date>
-                  <idno>ark</idno>
-                  <!-- responsable de la publication -->
-                  <publisher>
-                    <orgName>Histoire des Arts &amp; Représentations</orgName>
-                  </publisher>
-                  <availability status="restricted"
-                    xml:id="gdpLicenceTextSauval1724">
-                    <licence
-                      target="http://creativecommons.org/licenses/by-nc-sa/4.0/fr/">
-                      <p>Texte de la licence</p></licence>
-                  </availability>
-                </publicationStmt>
-                <revisionDesc>
-                  <change when="2014-04-15"
-                    >Remaniement de l’entête et de la structure</change>
-                </revisionDesc>
-              </teiHeader>
+<teiHeader>
+  <!-- ... -->
+  <publicationStmt>
+    <authority>
+      <orgName>Histoire des Arts &amp; Représentations</orgName>
+      <orgName type="acronym">HAR</orgName>
+      <orgName type="alt">EA 4414</orgName>
+      <address>
+        <addrLine>Université Paris Ouest-Nanterre La Défense</addrLine>
+        <addrLine>http://har.u-paris10.fr</addrLine>
+      </address>
+    </authority>
+    <date from="2014" to="2018">2014-2018</date>
+    <idno>ark</idno>
+    <!-- responsable de la publication -->
+    <publisher>
+      <orgName>Histoire des Arts &amp; Représentations</orgName>
+    </publisher>
+    <availability status="restricted"
+      xml:id="gdpLicenceTextSauval1724">
+      <licence
+        target="http://creativecommons.org/licenses/by-nc-sa/4.0/fr/">
+      <p>Texte de la licence</p></licence>
+    </availability>
+  </publicationStmt>
+  <revisionDesc>
+    <change when="2014-04-15">Remaniement de l’entête et 
+      de la structure</change>
+  </revisionDesc>
+</teiHeader>
             </egXML>
           </div>
         </div>
@@ -234,24 +237,24 @@
             <div>
               <head>Parties liminaires, postérieures</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <TEI>
-                  <teiHeader>
-                    <!-- ... -->
-                  </teiHeader>
-                  <text>
-                    <front>
-                      <!-- parties liminaire -->
-                      <!-- (préfaces, introductions, etc. dans des éléments div) -->
-                    </front>
-                    <body>
-                      <!-- corps de texte, structuré en sous-éléments div -->
-                    </body>
-                    <back>
-                      <!-- parties postérieures -->
-                      <!-- (annexes et appendices dans des éléments div) -->
-                    </back>
-                  </text>
-                </TEI>
+<TEI>
+  <teiHeader>
+    <!-- ... -->
+  </teiHeader>
+  <text>
+    <front>
+      <!-- parties liminaire -->
+      <!-- (préfaces, introductions, etc. dans des éléments div) -->
+    </front>
+    <body>
+      <!-- corps de texte, structuré en sous-éléments div -->
+    </body>
+    <back>
+      <!-- parties postérieures -->
+      <!-- (annexes et appendices dans des éléments div) -->
+    </back>
+  </text>
+</TEI>
               </egXML>
             </div>
             <div>
@@ -276,29 +279,29 @@
             <div>
               <head>Macrostructure du texte</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <!-- ... -->
-                <text>
-                  <body>
-                    <div type="volume" xml:id="TS01">
-                      <div type="chapter" xml:id="TS0101">
-                        <head>Chap. I</head>
-                        <p>I wish either my father or my mother, or indeed both of them,
-                          as they were in duty both equally bound to it, had minded what
-                          they were about when they begot me; ...</p>
-                        <!-- reste du chapitre 1 -->
-                      </div>
-                      <div type="chapter" xml:id="TS0102">
-                        <head>Chap. II</head>
-                        <p> — Then, positively, there is nothing in the question, that I
-                          can see, either good or bad. — Then let me tell you, Sir, it
-                          was a very unseasonable question at least ...</p>
-                        <!-- reste du chapitre 2 -->
-                      </div>
-                      <!-- reste du volume 1 -->
-                    </div>
-                    <!-- les autres volumes -->
-                  </body>
-                </text>
+<!-- ... -->
+<text>
+  <body>
+    <div type="volume" xml:id="TS01">
+      <div type="chapter" xml:id="TS0101">
+        <head>Chap. I</head>
+        <p>I wish either my father or my mother, or indeed both of them,
+        as they were in duty both equally bound to it, had minded what
+        they were about when they begot me; ...</p>
+        <!-- reste du chapitre 1 -->
+      </div>
+      <div type="chapter" xml:id="TS0102">
+        <head>Chap. II</head>
+        <p> — Then, positively, there is nothing in the question, that I
+        can see, either good or bad. — Then let me tell you, Sir, it
+        was a very unseasonable question at least ...</p>
+        <!-- reste du chapitre 2 -->
+      </div>
+      <!-- reste du volume 1 -->
+    </div>
+    <!-- les autres volumes -->
+  </body>
+</text>
               </egXML>
             </div>
           </div>
@@ -306,13 +309,13 @@
             <div>
               <head>Structures de listes</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <list>
-                  <label><!-- étiquette --></label>
-                  <item><!-- item de liste --></item>
-                  <label><!-- étiquette --></label>
-                  <item><!-- item de liste --></item>
-                  <!-- ... -->
-                </list>
+<list>
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <!-- ... -->
+</list>
               </egXML>
             </div>
           </div>
@@ -320,20 +323,20 @@
             <div>
               <head>Structures de tableaux</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <table>
-                  <head><!-- titre --></head>
-                  <!-- rangée -->
-                  <row>
-                    <cell><!-- contenu cellule --></cell>
-                    <cell><!-- contenu cellule --></cell>
-                    <cell><!-- contenu cellule --></cell>
-                  </row>
-                  <!-- rangée -->
-                  <row>
-                    <cell><!-- contenu cellule --></cell>
-                    <cell><!-- contenu cellule --></cell>
-                  </row>
-                </table>
+<table>
+  <head><!-- titre --></head>
+  <!-- rangée -->
+  <row>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+  </row>
+  <!-- rangée -->
+  <row>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+  </row>
+</table>
               </egXML>
             </div>
           </div>
@@ -341,28 +344,28 @@
             <div>
               <head>Structures versifiées</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <body n="spleenEtIdeal">
-                  <div type="longPoem">
-                    <head>Les Phares</head>
-                    <lg type="stanza">
-                      <l n="1">Rubens, fleuve d'oubli, jardin de la paresse,</l>
-                      <l n="2">Oreiller de chair fraîche où l'on ne peut aimer,</l>
-                      <l n="3">Mais où la vie afflue et s'agite sans cesse,</l>
-                      <l n="4">Comme l'air dans le ciel et la mer dans la mer ;</l>
-                    </lg>
-                    <lg type="stanza">
-                      <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
-                      <l n="6">Où des anges charmants, avec un doux souris</l>
-                      <l n="7">Tout chargé de mystère, apparaissent à l'ombre</l>
-                      <l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
-                    </lg>
-                    <gap reason="sampling" quantity="9" unit="stanza"/>
-                  </div>
-                  <div type="shortPoem">
-                    <head>La Muse malade</head>
-                    <gap reason="sampling" quantity="4" unit="stanza"/>
-                  </div>
-                </body>
+<body n="spleenEtIdeal">
+  <div type="longPoem">
+    <head>Les Phares</head>
+    <lg type="stanza">
+      <l n="1">Rubens, fleuve d'oubli, jardin de la paresse,</l>
+      <l n="2">Oreiller de chair fraîche où l'on ne peut aimer,</l>
+      <l n="3">Mais où la vie afflue et s'agite sans cesse,</l>
+      <l n="4">Comme l'air dans le ciel et la mer dans la mer ;</l>
+    </lg>
+    <lg type="stanza">
+      <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
+      <l n="6">Où des anges charmants, avec un doux souris</l>
+      <l n="7">Tout chargé de mystère, apparaissent à l'ombre</l>
+      <l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
+    </lg>
+    <gap reason="sampling" quantity="9" unit="stanza"/>
+  </div>
+  <div type="shortPoem">
+    <head>La Muse malade</head>
+    <gap reason="sampling" quantity="4" unit="stanza"/>
+  </div>
+</body>
               </egXML>
             </div>
           </div>
@@ -429,16 +432,16 @@
                 <item><gi>anchor</gi> ancre avec <att>xml:id</att></item>
               </list>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <delSpan spanTo="#endDel" change="#L3"/>
-                <metamark function="flag" target="#zone-1"
-                  change="#L2">lege</metamark>
-                <zone xml:id="zone-1" change="#L1">Ock en schullen de bruwere des hilgen dages
-                  nicht over setten noch uppe den stillen fridach bruwen.</zone>
-                <addSpan spanTo="#endDel" change="#L2"/>
-                <zone>Noch nymande over setten, se en sehin denne erst, dat uppe den bonen neyn
-                  stro noch, huw noch flaß ligghe, by pine eyner halven roden, deme bruwere so
-                  wol alse dem bruwheren to murende.</zone>
-                <anchor xml:id="endDel"/>
+<delSpan spanTo="#endDel" change="#L3"/>
+  <metamark function="flag" target="#zone-1"
+  change="#L2">lege</metamark>
+  <zone xml:id="zone-1" change="#L1">Ock en schullen de bruwere des hilgen dages
+  nicht over setten noch uppe den stillen fridach bruwen.</zone>
+  <addSpan spanTo="#endDel" change="#L2"/>
+  <zone>Noch nymande over setten, se en sehin denne erst, dat uppe den bonen neyn
+  stro noch, huw noch flaß ligghe, by pine eyner halven roden, deme bruwere so
+  wol alse dem bruwheren to murende.</zone>
+  <anchor xml:id="endDel"/>
               </egXML>
             </div>
           </div>
@@ -446,31 +449,30 @@
             <div>
               <head>Pages de titre</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <titlePage xml:lang="fre">
-                  <!-- page de titre transcrite à l'identique -->
-                  <docTitle>
-                    <titlePart rend="capital"
-                      >Histoire <lb/>et <lb/>recherches
-                      <lb/>des <lb/>antiquités <lb/>de la ville
-                      <lb/>de <lb/>Paris.</titlePart>
-                    <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
-                      <persName rend="capital"
-                        >Henri Sauval</persName> Avocat
-                      <lb/>au Parlement.</titlePart>
-                    <titlePart>Tome premier.</titlePart>
-                  </docTitle>
-                  <metamark rend="culDeLampe"/>
-                  <docImprint>
-                    <pubPlace>À Paris,</pubPlace>
-                    <publisher>Chés Charles Moette, Libraire, rue de la Bouclerie à
-                      St Alexis, près le Pont <abbr>St</abbr> Michel.</publisher>
-                    <publisher>Chés Jacques Chardon, Imprimeur-Libraire, rue du
-                      Petit-Pont, au bas de la rue <abbr>St</abbr> Jacques à la
-                      Croix d'or.</publisher>
-                    <docDate when="1724">M. DCC XXIV.</docDate>
-                  </docImprint>
-                  <imprimatur rend="capital">Avec privilège du Roy</imprimatur>
-                </titlePage>
+<titlePage xml:lang="fr">
+  <!-- page de titre transcrite à l'identique -->
+  <docTitle>
+    <titlePart rend="capital"
+      >Histoire <lb/>et <lb/>recherches
+     <lb/>des <lb/>antiquités <lb/>de la ville
+      <lb/>de <lb/>Paris.</titlePart>
+    <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
+     <persName rend="capital">Henri Sauval</persName> Avocat
+      <lb/>au Parlement.</titlePart>
+    <titlePart>Tome premier.</titlePart>
+  </docTitle>
+  <metamark rend="culDeLampe"/>
+  <docImprint>
+    <pubPlace>À Paris,</pubPlace>
+    <publisher>Chés Charles Moette, Libraire, rue de la Bouclerie à
+    St Alexis, près le Pont <abbr>St</abbr> Michel.</publisher>
+    <publisher>Chés Jacques Chardon, Imprimeur-Libraire, rue du
+    Petit-Pont, au bas de la rue <abbr>St</abbr> Jacques à la
+    Croix d'or.</publisher>
+    <docDate when="1724">M. DCC XXIV.</docDate>
+  </docImprint>
+  <imprimatur rend="capital">Avec privilège du Roy</imprimatur>
+</titlePage>
               </egXML>
             </div>
           </div>
@@ -479,7 +481,7 @@
     <back>
       <div type="title" xml:lang="fr">
         <div>
-          <head>Maintenant, passons à <ref target="ex02-teiMacrostructure.html"
+          <head>Maintenant, passons à <ref target="ex02-teiMacrostructure.xml"
             >la pratique</ref> !</head>
           <note><ref target="#index">revenir au début</ref> | <ref target="00-programme.html">programme</ref></note>
         </div>
