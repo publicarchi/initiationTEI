@@ -43,7 +43,9 @@ name: part1
 
 # Composition d’un fichier TEI
 
-```xml<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+```xml
+
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
   <teiHeader>
     <!-- métadonnées décrivant le texte -->
   </teiHeader>
@@ -80,7 +82,9 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 
 # Macrostructures de texte composite
 
-```xml<text xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<text xmlns="http://www.tei-c.org/ns/Examples">
   <front><!-- ... --></front>
   <group>
     <text><!-- ... --></text>
@@ -98,7 +102,9 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 
 Dans le cas de corpus de textes hétérogènes, on utilisera des éléments `&lt;teiCorpus&gt;` comme élément racine comportant des éléments `&lt;TEI&gt;`
 
-```xml<teiCorpus xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<teiCorpus xmlns="http://www.tei-c.org/ns/Examples">
   <TEI><!-- ... --></TEI>
   <TEI><!-- ... --></TEI>
 </teiCorpus>
@@ -117,7 +123,9 @@ name: part2
 
 # teiHeader minimal
 
-```xml<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+```xml
+
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -149,7 +157,9 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
 
 # `&lt;teiHeader&gt;`, mentions de responsabilité
 
-```xml<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
   <fileDesc>
     <titleStmt>
       <title xml:lang="fr" type="main">Sauval 1724</title>
@@ -184,7 +194,9 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
 
 # Mentions de publications
 
-```xml<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
   <!-- ... -->
   <publicationStmt>
     <authority>
@@ -227,7 +239,9 @@ name: part3
 
 # Parties liminaires, postérieures
 
-```xml<TEI xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<TEI xmlns="http://www.tei-c.org/ns/Examples">
   <teiHeader>
     <!-- ... -->
   </teiHeader>
@@ -275,7 +289,9 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Macrostructure du texte
 
-```xml<text xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<text xmlns="http://www.tei-c.org/ns/Examples">
   <body>
     <div type="volume" xml:id="TS01">
       <div type="chapter" xml:id="TS0101">
@@ -304,7 +320,9 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures de listes
 
-```xml<list xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<list xmlns="http://www.tei-c.org/ns/Examples">
   <label><!-- étiquette --></label>
   <item><!-- item de liste --></item>
   <label><!-- étiquette --></label>
@@ -318,7 +336,9 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures de tableaux
 
-```xml<table xmlns="http://www.tei-c.org/ns/Examples">
+```xml
+
+<table xmlns="http://www.tei-c.org/ns/Examples">
   <head><!-- titre --></head>
   <!-- rangée -->
   <row>
@@ -339,7 +359,9 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 # Structures versifiées
 
-```xml<body xmlns="http://www.tei-c.org/ns/Examples" n="spleenEtIdeal">
+```xml
+
+<body xmlns="http://www.tei-c.org/ns/Examples" n="spleenEtIdeal">
   <div type="longPoem">
     <head>Les Phares</head>
     <lg type="stanza">
@@ -438,7 +460,9 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 
 * `&lt;anchor&gt;` ancre avec `@xml:id`
 
-```xml<delSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere 
+```xml
+
+<delSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere 
     des hilgen dages nicht over setten noch uppe den stillen 
     fridach bruwen.</zone><addSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L2"></addSpan><zone xmlns="http://www.tei-c.org/ns/Examples">Noch nymande over setten, se en sehin denne erst, dat 
     uppe den bonen neyn stro noch, huw noch flaß ligghe, by pine 
@@ -447,33 +471,315 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 ```
 
 ---
+template: inverse
+class: center middle
 
 
-# Pages de titre
+# L’inscription du texte sur le support
 
-```xml<titlePage xmlns="http://www.tei-c.org/ns/Examples" xml:lang="fr">
-  <!-- page de titre transcrite à l'identique -->
-  <docTitle>
-    <titlePart rend="capital">Histoire <lb></lb>et <lb></lb>recherches
-     <lb></lb>des <lb></lb>antiquités <lb></lb>de la ville
-      <lb></lb>de <lb></lb>Paris.</titlePart>
-    <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
-     <persName rend="capital">Henri Sauval</persName> Avocat
-      <lb></lb>au Parlement.</titlePart>
-    <titlePart>Tome premier.</titlePart>
-  </docTitle>
-  <metamark rend="culDeLampe"></metamark>
-  <docImprint>
-    <pubPlace>À Paris,</pubPlace>
-    <publisher>Chés Charles Moette, Libraire, rue de la Bouclerie à
-    St Alexis, près le Pont <abbr>St</abbr> Michel.</publisher>
-    <publisher>Chés Jacques Chardon, Imprimeur-Libraire, rue du
-    Petit-Pont, au bas de la rue <abbr>St</abbr> Jacques à la
-    Croix d'or.</publisher>
-    <docDate when="1724">M. DCC XXIV.</docDate>
-  </docImprint>
-  <imprimatur rend="capital">Avec privilège du Roy</imprimatur>
-</titlePage>
+---
+
+
+## Prise en charge des lacunes
+
+`&lt;gap&gt;` passage ne pouvant pas être restitué pour des raisons matérielles
+
+```xml
+
+<gap xmlns="http://www.tei-c.org/ns/Examples" reason="illegible" agent="ink-blot"></gap>
+```
+
+`&lt;unclear&gt;` passage en partie illisible
+
+```xml
+
+<unclear xmlns="http://www.tei-c.org/ns/Examples" agent="ink-blot" cert="low" resp="#EC"></unclear>
+```
+
+`&lt;supplied&gt;` restitution d’un passage manquant
+
+```xml
+
+<supplied xmlns="http://www.tei-c.org/ns/Examples" reason="hole" source="#autreEd">les</supplied>
+```
+
+???
+
+## Prise en charge des lacunes
+
+Lors de la transcription de sources primaires, on peut avoir besoin d’enregistrer des informations concernant la lecture du texte.
+
+Ne pas confondre `&lt;gap&gt;` et `&lt;space&gt;` qui sert à désigner un espace blanc jugé significatif
+
+Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de préciser le niveau de certitude des restitutions.
+
+```xml
+
+<space xmlns="http://www.tei-c.org/ns/Examples" quantity="1" unit="cm"></space>
+```
+
+---
+
+
+## Ajouts et surplus
+
+### `&lt;add&gt;` texte ajouté
+
+```xml
+
+<add xmlns="http://www.tei-c.org/ns/Examples" place="above">nous</add>
+```
+
+### `&lt;del&gt;` texte supprimé
+
+```xml
+
+<del xmlns="http://www.tei-c.org/ns/Examples" rend="overstrike">claustra</del>
+```
+
+???
+
+### `&lt;subst&gt;` substitutions (génétique textuelle)
+
+```xml
+
+<subst xmlns="http://www.tei-c.org/ns/Examples">
+  <del>claustra</del>
+  <add place="margin">fenêtre</add>
+</subst>
+```
+
+---
+template: inverse
+class: center middle
+
+
+# Les corrections éditoriales
+
+---
+
+
+## Passages fautifs
+
+* `&lt;sic&gt;` passage fautif, ou segment syntaxiquement incorrect
+
+* `&lt;orig&gt;` texte original
+
+* `&lt;corr&gt;` correction de l’éditeur
+
+* utilisation de `&lt;choice&gt;`
+
+```xml
+
+<choice xmlns="http://www.tei-c.org/ns/Examples">
+  <orig>colomne</orig>
+  <reg>colonne</reg>
+</choice>
+```
+
+???
+
+## Passages fautifs
+
+La même utilisation de `&lt;choice&gt;` est possible pour les segments syntaxiquement incorrects.
+
+```xml
+
+<choice xmlns="http://www.tei-c.org/ns/Examples">
+  <sic>charbone</sic>
+  <corr>charbon</corr>
+</choice>
+```
+
+Partout, les attributs `@cert`, `@resp` et `@source` peuvent s’avérer utile.
+
+---
+
+
+# Abréviations
+
+* `&lt;abbr&gt;` abréviation
+
+* `&lt;expan&gt;` abréviation développée
+
+```xml
+
+<abbr xmlns="http://www.tei-c.org/ns/Examples">Mtr.</abbr>
+```
+
+```xml
+
+<expan xmlns="http://www.tei-c.org/ns/Examples">Maître</expan>
+```
+
+```xml
+
+<choice xmlns="http://www.tei-c.org/ns/Examples"><abbr>Mtr.</abbr><expan>Maître</expan></choice>
+```
+
+???
+
+En soi, l’écriture manuscrite est souvent sujette à l’emploi d’abréviation pour abréger le travail scripteur. On y trouve communément des lettres ou groupes de lettres ou des phrases qui peuvent être représentés par des marques significatives. Ces phénomènes sont tellement répandus qu’elles sont difficiles à classifier. En fonction des besoins d’une édition, il est possible d’encoder ces abréviations de diverses manières afin de rendre compte plus ou moins finement de leur nature.
+
+La manière la plus simple de signaler la présence d’une abréviation dans le texte consiste à utiliser les éléments `&lt;abbr&gt;` et `&lt;expan&gt;` qui permettent tantôt de renseigner la forme abrégée ou la forme développée. Appariées avec `&lt;choice&gt;`, on peut fournir une alternative.
+
+---
+
+
+# Abréviations
+
+```xml
+
+<abbr xmlns="http://www.tei-c.org/ns/Examples">
+  <am>
+    <g ref="#b-per"></g>
+    </am>sone
+  </abbr>
+```
+
+```xml
+
+<expan xmlns="http://www.tei-c.org/ns/Examples">
+  <ex>per</ex>sone
+</expan>
+```
+
+```xml
+
+<choice xmlns="http://www.tei-c.org/ns/Examples">
+  <am>
+    <g ref="#b-per"></g>
+  </am>
+  <ex>per</ex>
+</choice>
+```
+
+---
+template: inverse
+class: center middle
+
+
+# Les variantes et les mains
+
+---
+
+
+## La description des mains
+
+* `@hand`
+
+* `@handDesc` et ses sous-éléments dans le `&lt;teiHeader&gt;`
+
+```xml
+
+<handDesc xmlns="http://www.tei-c.org/ns/Examples">
+  <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+  <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
+</handDesc>
+```
+
+handNote est répétable et peut contenir une localisation avec `@locus`.
+
+---
+
+
+## Trois approches pour l’enregistrement et l’.red[alignement] des variantes
+
+Les Guidelines proposent trois approches différentes pour aligner des passages textuels lorsque l’on établit une édition critique&nbsp;:
+
+* la .red[méthode de localisation référencée], où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+* la .red[méthode d’attachement à double point], où les entrées d’apparat critique sont liées à des points de départ et de fin identifiés dans un texte
+
+* la .red[méthode de segmentation parallèle], où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+???
+
+## Trois approches pour l’enregistrement et l’.red[alignement] des variantes
+
+Les Guidelines proposent trois approches différentes pour aligner des passages textuels lorsque l’on établit une édition critique&nbsp;:
+
+* la .red[méthode de localisation référencée], où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+* la .red[méthode d’attachement à double point], où les entrées d’apparat critique sont liées à des points de départ et de fin identifiés dans un texte
+
+* la .red[méthode de segmentation parallèle], où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+La méthode par segmentation parallèle est le plus couramment utilisée lors de l’encodage de sources en XML-TEI pour comparer des témoins. Cette méthode correspond également à une méthode de travail pour l’établissement du texte. Mais son emploi, qui présente une certain nombre de limites, est sujet à discussion.
+
+---
+
+
+## Segmentation parallèle
+
+* `&lt;app&gt;` entrée d’apparat critique
+
+* `&lt;lem&gt;` lemme ou leçon retenue du texte
+
+* `&lt;rdg&gt;` variante (lecture)
+
+```xml
+
+<app xmlns="http://www.tei-c.org/ns/Examples">
+  <lem>remener</lem>
+  <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
+  <rdg wit="#l-#-a">conduire dehors</rdg>
+</app>
+```
+
+---
+
+
+## Variantes
+
+* `&lt;rdgGrp&gt;` pour regrouper plusieurs variantes ayant un lien entre elles
+
+* `@type` pour catégoriser la variante
+
+* `@cause` pour expliciter la cause de la variante
+
+---
+
+
+## Tableau de tradition
+
+```xml
+
+<listWit xmlns="http://www.tei-c.org/ns/Examples">
+  <witness xml:id="A">
+    <msDesc>
+      <msIdentifier>
+        <country>France</country>
+        <settlement>Paris</settlement>
+        <repository>Archives nationales</repository>
+        <collection>Monuments ecclésiastiques</collection>
+        <idno>S 2364 n° 5</idno>
+      </msIdentifier>
+    </msDesc>
+  </witness>
+  <witness xml:id="B">
+    <msDesc><!-- ... --></msDesc>
+  </witness>
+  <!-- répéter l’élément witness autant de fois que de témoins -->
+</listWit>
+```
+
+---
+
+
+## Localisation référencée
+
+```xml
+
+<div xmlns="http://www.tei-c.org/ns/Examples" type="alignmentText" xml:id="cAlignmentText">
+  <linkGrp>
+    <link target="#c1Front #c2Front"></link>
+    <link target="#c1FrontFr #c2FrontFr02"></link>
+    <link target="#c1FrontFr01 #c2FrontFr01"></link>
+    <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
+    <!-- ... -->
+  </linkGrp>
+</div>
 ```
 
 ---

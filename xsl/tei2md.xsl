@@ -10,7 +10,8 @@
 
   <xsl:output method="html" version="5.0" indent="no"/>
 
-  <xsl:strip-space elements="egXML"/>
+  <!--<xsl:strip-space elements="egXML"/>-->
+  <xsl:preserve-space elements="egXML"/>
 
   <xsl:param name="language" select="fr"/>
 
@@ -144,10 +145,11 @@
     <xsl:text>)</xsl:text>
   </xsl:template>
 
-  <!-- fixed the namespace issue, I think the whitespace issue comes from the comments -->
-  <xsl:template match="teix:egXML" exclude-result-prefixes="#all">
+  <xsl:template match="teix:egXML"  exclude-result-prefixes="#all">
     <xsl:text>
-```xml</xsl:text>
+```xml
+
+</xsl:text>
     <xsl:copy-of select="./*" copy-namespaces="no" />
     <xsl:text>
 ```
