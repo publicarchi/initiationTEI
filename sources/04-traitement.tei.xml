@@ -1,0 +1,680 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Travailler avec TEI</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Atelier outillage XML (langages et logiciels), consortium Cahier 2015, Emmanuel Château, Maud Ingarao</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>new born</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>title: Travailler avec TEI</p>
+         <p>description: Atelier outillage XML (langages et logiciels), consortium Cahier 2015, Emmanuel Château, Maud Ingarao</p>
+         <p>theme: themes/remark-dark.css</p>
+         <p>name: inverse</p>
+         <p>layout: true</p>
+         <p>class: inverse</p>
+         <p>---</p>
+         <p>name: index</p>
+         <p>class: center middle</p>
+         <div>
+            <head>Travailler avec la TEI</head>
+            <div>
+               <div>
+                  <head>Initiation TEI | CRIHN, 10 mars 2017</head>
+                  <p>.footnote<ref target="https://github.com/publicarchitectura/initiationTEI">[Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref>]</p>
+                  <p>!<ref target="images/logo.svg">test</ref>
+                  </p>
+                  <p>---</p>
+                  <p>class: center middle</p>
+               </div>
+            </div>
+            <div>
+               <head>Introduction</head>
+               <p>???</p>
+            </div>
+            <div>
+               <head>Introduction</head>
+               <p>---</p>
+               <p>name: part1</p>
+               <p>template: inverse</p>
+               <p>class: center middle</p>
+            </div>
+         </div>
+         <div>
+            <head>Comment publier ses données ?</head>
+            <p>???</p>
+         </div>
+         <div>
+            <head>Comment publier ses données ?</head>
+            <p>En ayant recours à la Text Encoding Initiative (TEI), on adopte le principal standard informatique actuellement employé dans le domaine de l’édition critique numérique. La TEI fournit tout à la fois un cadre de travail pour traiter et analyser les sources, et enregistrer le résultat de l’activité scientifique qui aura été menée. Toutefois, les fichiers sources XML-TEI ne sont pas directement destinés à la consultation.</p>
+            <p>La TEI constitue plutôt un format pivot à partir duquel on produit diverses "manifestations" du texte en fonction des besoins et des contextes de lecture (pages xhtml, fichiers epub, pdf, api, etc.). Le manque d’outils adaptés, faciles d’emploi, pour le traitement, l’analyse et la publication de ces fichiers est souvent considéré comme un des principaux freins à l’utilisation de la TEI.</p>
+            <p>Du fait de l’utilisation courante de la TEI dans des projets de recherche, plusieurs solutions pour la publication d’édition critiques électroniques ont été développées ces dernières années, soit sous la forme de chaînes éditoriales propres soit sous la forme de logiciels libres ou open source.</p>
+            <p>Il convient de choisir une solution de publication adaptée à nos besoins mais qui puisse être également maintenue dans la durée.</p>
+            <p>Plusieurs solutions s’offrent à nous qui peuvent plus ou moins bien répondre aux besoins du projet, ou s’inscrire dans la politique générale de votre institution. Dans tous les cas, il n’y a pas de solution miracle, et le choix d’un outil résulte d’un arbitrage entre la complexité technique et l’étendue des fonctionnalités attendues.</p>
+            <p>---</p>
+            <p>layout: false</p>
+         </div>
+         <div>
+            <head>La TEI comme format pivot</head>
+            <div>
+               <div>
+                  <head>Sorties HTML</head>
+               </div>
+               <div>
+                  <head>Sorties EPub, Kindle, etc.</head>
+               </div>
+               <div>
+                  <head>Sorties papier (PDF, LateX, etc.)</head>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Le stockage des données</head>
+            <div>
+               <div>
+                  <head>Stockage des fichiers à plat (Flat File Storage)</head>
+               </div>
+               <div>
+                  <head>Bases de données relationnelles et orientées objet</head>
+               </div>
+               <div>
+                  <head>Le stockage natif des données XML</head>
+                  <p>???</p>
+               </div>
+               <div>
+                  <head>Le stockage des données</head>
+                  <p>Travailler avec des données XML nécessite de pouvoir effectuer trois types d’opérations distinctes :</p>
+                  <list type="unordered">
+                     <item>ajouter de l’information dans l’entrepôt,</item>
+                     <item>chercher et retrouver l’information dans l’entrepôt,</item>
+                     <item>et mettre à jour l’information contenue dans l’entrepôt.</item>
+                  </list>
+                  <p>Plusieurs solutions pour les bases de données XML ont été proposés parmi lesquelles :</p>
+                  <list type="unordered">
+                     <item>le stockage de fichiers à plat,</item>
+                     <item>l’utilisation de bases de données relationnelles,</item>
+                     <item>le stockage natif des données XML comme dans des bases de données XML natives ou d’autres systèmes de gestion.</item>
+                  </list>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Le Stockage des fichiers à plat</head>
+            <p>(Flat File Storage)</p>
+            <div>
+               <div>
+                  <head>Solution la plus simple</head>
+               </div>
+               <div>
+                  <head>L’entité principale est le document</head>
+               </div>
+               <div>
+                  <head>Simple système de fichier</head>
+               </div>
+               <div>
+                  <head>Efficace et peu coûteux</head>
+               </div>
+               <div>
+                  <head>Recherches dans le document prohibitives</head>
+                  <p>???</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Stockage des fichiers à plat (Flat File Storage)</head>
+            <p>C’est la solution la plus simple, le document complet constitue l’entité principale, les structures internes ne jouant aucun rôle. Cette solution peut être implémentée avec n’importe quel système de fichiers. Si le stockage est efficace et peu coûteux, d’autres opérations comme la recherche qui requièrent un accès à la structure interne du document peuvent devenir prohibitives.</p>
+            <p>Le stockage à plat n’est pas le plus approprié lorsque la recherche est fréquente car le niveau de granularité du stockage est le document entier et non pas son contenu.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Bases de données relationnelles et orientées objet</head>
+            <div>
+               <div>
+                  <head>Fonctionnalités d’indexation</head>
+               </div>
+               <div>
+                  <head>Nécessitent une conversion dans un modèle relationnel (jointures coûteuses)</head>
+               </div>
+               <div>
+                  <head>Proposition de bases de données orientées objet pour refléter les structures imbriquées</head>
+               </div>
+               <div>
+                  <head>Certains SGBDR proposent des APIs XML (XQuery, XPath)</head>
+                  <p>???</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Bases de données relationnelles et orientées objet</head>
+            <p>Les données XML peuvent être stockées dans des bases de données relationnelles. Elles peuvent ainsi bénéficier des fonctionnalités d’indexation, de transaction et d’optimisation des requêtes habituellement offertes par ces systèmes. Cependant, comme les données XML sont des données semi-structurées, elles nécessitent une conversion dans un modèle de données relationnelles. Compte-tenu des différences significatives inhérentes aux modèles relationnels et aux structures imbriquées des données semi-structurées, ces conversions impliquent généralement des jointures coûteuses pour le traitement des requêtes. L’utilisation de bases de données relationnelles orientées objet a été proposée pour refléter les structures imbriquées des données semi-structurées afin de réduire les redondances et ces jointures.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Le stockage natif des données XML</head>
+            <div>
+               <div>
+                  <head>Préservent la structure physique des documents XML (éléments, attributs, entités)</head>
+               </div>
+               <div>
+                  <head>Stockent des documents sans déclaration préalable du schéma</head>
+               </div>
+               <div>
+                  <head>Permettent d’accéder aux documents à partir des API spécifiques à XML (XPath, XQuery)</head>
+                  <p>cf. <ref target="http://www.rpbourret.com/xml/ProdsNative.htm">http://www.rpbourret.com/xml/ProdsNative.htm</ref>
+                  </p>
+                  <p>???</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Le stockage natif des données XML</head>
+            <div>
+               <div>
+                  <head>Préservent la structure physique des documents XML (éléments, attributs, entités)</head>
+               </div>
+               <div>
+                  <head>Stockent des documents sans déclaration préalable du schéma</head>
+               </div>
+               <div>
+                  <head>Permettent d’accéder aux documents à partir des API spécifiques à XML (XPath, XQuery)</head>
+                  <p>cf. <ref target="http://www.rpbourret.com/xml/ProdsNative.htm">http://www.rpbourret.com/xml/ProdsNative.htm</ref>
+                  </p>
+                  <p>Conçus spécialement pour gérer des données XML, les systèmes natifs ont l’avantage de ne pas nécessiter d’opérations de conversion. Les techniques de stockage et de traitement des requêtes adoptées par les bases de données XML sont habituellement plus efficientes que celles basées sur le stockage de fichiers à plats et les bases de données relationnelles.</p>
+                  <p>Plusieurs langages de requêtes ont été proposés pour manipuler des données XML (XML-QL, XML-GL, Quilt, XPath et XQuery). Le principal langage de requête pour XML qui ait été standardisé est XQuery. Il repose sur l’utilisation d’expressions de chemins XPath qui adressent des ensembles des parties spécifiques des documents XML.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Arguments en faveur de l’utilisation d’une base de données XML</head>
+            <div>
+               <div>
+                  <head>Orientation document qui facilite le développement d’application</head>
+               </div>
+               <div>
+                  <head>Accès à la structure et aux données facilité</head>
+               </div>
+               <div>
+                  <head>Fonctionnalités qui s’inscrivent dans le respect des normes et l’implémentation des standards XML (XSL, XProc, XForms, XLink, etc.)</head>
+                  <p>---</p>
+                  <p>name: part2</p>
+                  <p>template: inverse</p>
+                  <p>class: center middle</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Stratégies de publication</head>
+            <p>---</p>
+         </div>
+         <div>
+            <head>La transformation de XML</head>
+            <div>
+               <head>des langages de transformation de XML (XSLT, XSL-FO)</head>
+               <div>
+                  <head>capables de générer d’autres formats à partir du document source</head>
+               </div>
+            </div>
+            <div>
+               <head>des langages de requêtes (XQuery)</head>
+               <p>???</p>
+               <div>
+                  <head>La transformation</head>
+                  <p>L’utilisation de XML comme format pivot en vue d’une publication de sources textuelles dans un autre format est un cas typique d’utilisation de cette technologie. Plusieurs langages de transformation de segments XML ont été proposés, notamment XSLT et XSL-FO qui reposent tous deux sur le langage XPath.</p>
+                  <p>Si XSLT constitue une solution très efficace pour passer d’un format XML donné à un autre, comme par exemple XHTML, les processeurs disponibles pour réaliser cette transformation sont limités à la version 1.0 du langage dans l’environnement courant LAMP (Linux Apache PHP). Les processeurs XSLT 2.0 et XQuery sont généralement incompatibles avec cet environnement, c’est une des raisons pour lesquelles la plupart des applications pour travailler avec des sources XML sont développées en Java pour pleinement tirer parti des possibilités de ces langages et du modèle de données.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Transformation XSLT</head>
+            <p>!<ref target="../images/xsltProcessing.svg">xsltProcessing</ref>
+            </p>
+            <p>???</p>
+            <p>Ce schéma présente le processus à l’œuvre lorsque l’on associe une feuille de style et un document source.</p>
+            <p>Un programme XSLT spécifie une sortie à produire à partir d’un segment ou d’un fichier XML, si ce segment existe dans le document fourni en entrée et répond à certains critères.</p>
+            <p>Le résultat est une fonction de l’entrée.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Utilisation de bases de données XML natives</head>
+            <div>
+               <div>
+                  <head>production d’un site web dynamique</head>
+                  <list type="unordered">
+                     <item>BaseX <ref target="http://basex.org">http://basex.org</ref>
+                     </item>
+                     <item>eXist DB http://exist-db.org</item>
+                     <item>MarkLogic <ref target="http://www.marklogic.com">http://www.marklogic.com</ref>
+                     </item>
+                     <item>Sedna http://www.modis.ispras.ru/sedna/</item>
+                     <item>...</item>
+                  </list>
+               </div>
+               <div>
+                  <head>XQuery (Standard W3C)</head>
+                  <p>SynopsX <ref target="https://github.com/ahn">https://github.com/ahn</ref>-ens-lyon/synopsx</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>L’hébergement des données TEI</head>
+            <div>
+               <div>
+                  <head>Le problème de l’environnement</head>
+               </div>
+               <div>
+                  <head>La grille de service de la TGIR Huma-Num</head>
+                  <p>http://www.huma-num.fr/service/grille-de-services</p>
+                  <p>???</p>
+                  <p>Comment les créateurs de données en TEI dans des petites institutions peuvent-ils publier et archiver leurs données, et disposer d’un support technique pour leurs projets ?</p>
+                  <p>Une question d’échelle</p>
+                  <p>Intérêt de la publication de regroupement de textes</p>
+                  <p>Mutualisation et économie.</p>
+                  <p>Question de la vulnérabilité des ressources produites.</p>
+                  <p>Choix de technologies libres et ouvertes pour la publication qui garantissent l’indépendance à l’égard d’une infrastructure commerciale.</p>
+                  <p>Le médium numérique requiert néanmoins une attention particulière à sa conservation. La production d’une édition électronique nécessite d’envisager sa maintenance dans le temps sans quoi elle risque de devenir obsolète ou de ne plus être disponible.</p>
+                  <p>Grille de service du TGIR HumaNum offre un hébergement web adapté pour accueillir des servlets java. Environnement sécurisé et robuste fournit dans le cadre d’un partenariat avec le centre de calcul xxxx à Lyon. Solution semble-t-il favorisée par le CNRS pour les projets en Digital Humanities car elle permet une mutualisation au niveau de l’infrastructure serveur, virtualisation, maintenance, montée en charge, performance, évolutivité en fonction des besoins, etc. Cette solution a en outre l’avantage de la gratuité pour les projets ANR et réalisés dans le cadre de Labex.</p>
+                  <p>Outre l’hébergement web, l’offre de la TGIR HumaNum un ensemble de services qui peuvent s’avérer nécessaires. Pérennisation des données, et archivage à long terme réalisé en partenariat avec le XXXX de Montpellier. Serveur de document, accès SSH, etc.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Sources et orientations bibliographiques</head>
+            <list type="unordered">
+               <item>Boot, Peter. "Some Digital Editions and Some Remaining Challenges." Janus, Estudios sobre el siglo de oro , no. 1 (2012). http://www.janusdigital.es/articulo.htm?id=7 (accessed December 28, 2013).</item>
+               <item>Pape, Sebastian, Christof Schöch, and Lutz Wegner. "TEICHI and the Tools Paradox." Journal of the Text Encoding Initiative , no. 2, Selected Papers from the 2010 TEI Conference (2012). <ref target="http://jtei.revues.org/432">http://jtei.revues.org/432</ref> (accessed December 28, 2013).</item>
+               <item>Stapelfeldt, Kirsta, and Donald Moses. "Islandora and TEI: Current and Emerging Applications/Approaches." Journal of the Text Encoding Initiative , no. 5 (2013). <ref target="http://jtei.revues.org/790">http://jtei.revues.org/790</ref> (accessed December 28, 2013).</item>
+               <item>Beaulieu, Anne, Karina van Dalen-Oskam, and Joris van Zundert. "Between Tradition and Web 2.0 : ELaborate As a Social Experiment in Humanities Scholarship." In Social Software and the Evolution of User Expertise. Edited by Tatjana Takševa. 2013.</item>
+            </list>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Sources et orientations bibliographiques (suite)</head>
+            <list type="unordered">
+               <item>Flanders, Julia, and Scott Hamlin. "TAPAS: Building a TEI Publishing and Repository Service." Journal of the Text Encoding Initiative 5 (2013). <ref target="http://jtei.revues.org/788">http://jtei.revues.org/788</ref> (accessed December 30, 2013).</item>
+               <item>Roberto Rosselli Del Turco, Giancarlo Buomprisco, Chiara Di Pietro, Julia Kenny, Raffaele Masotti, and Jacopo Pugliese, « Edition Visualization Technology: A Simple Tool to Visualize TEI-based Digital Editions », Journal of the Text Encoding Initiative [Online], Issue 8 - PREVIEW | 2014-2015, Online since 28 December 2014, connection on 28 June 2015. URL : <ref target="http://jtei.revues.org/1077">http://jtei.revues.org/1077</ref> ; DOI : 10.4000/jtei.1077</item>
+            </list>
+            <p>---</p>
+            <p>name: part2</p>
+            <p>template: inverse</p>
+            <p>class: center middle</p>
+         </div>
+         <div>
+            <head>Quelques outils pour travailler avec ses données</head>
+            <p>---</p>
+         </div>
+         <div>
+            <head>TEI Boilerplate</head>
+            <p>
+               <ref target="http://dcl.slis.indiana.edu/teibp/">http://dcl.slis.indiana.edu/teibp/</ref>
+            </p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>TEI stylesheets</head>
+            <p>Framework de transformations XML-TEI</p>
+            <p>Sebastian Rhatz (Oxford)</p>
+            <p>
+               <ref target="https://github.com/TEIC/Stylesheets">https://github.com/TEIC/Stylesheets</ref>
+            </p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>OxGarage</head>
+            <p>WebService (REST) pour transformer des documents</p>
+            <p>Basé sur les TEI Stylesheets</p>
+            <p>http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/</p>
+            <p>???</p>
+            <p>OxGarage is a web, and RESTful, service to manage the transformation of documents between a variety of formats. The majority of transformations use the Text Encoding Initiative format as a pivot format. It is a good tool for conversion from TEI to Word (.docx), or Word (.docx) to TEI, but also does many other formats.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>CollateX et Juxta</head>
+            <p>
+               <ref target="http://collatex.net">http://collatex.net</ref>
+            </p>
+            <p>
+               <ref target="http://www.juxtasoftware.org">http://www.juxtasoftware.org</ref>
+            </p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>TXM Textométrie</head>
+            <p>http://textometrie.ens-lyon.fr</p>
+            <p>???</p>
+            <p>Née en France dans les années 80, la Textométrie a développé des techniques puissantes et originales pour l’analyse de grands corpus de textes.</p>
+            <p>Reprenant les acquis de la lexicométrie et de la statistique textuelle, elle propose des outils et des méthodes éprouvés dans de multiples branches des SHS et statistiquement solidement fondés.</p>
+            <p>TreeTagger pour l’étiquetage morphosyntaxique et la lemmatisation</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Orientations</head>
+            <p>TEI Tools, site de la Text Encoding Initiative, http://www.tei-c.org/Tools/</p>
+            <p>http://wiki.tei-c.org/index.php/Category:Tools</p>
+            <list type="unordered">
+               <item>The UVic Image Markup Tool Project http://tapor.uvic.ca/~mholmes/image_markup/index.php</item>
+               <item>Tile, Text-image linking environment, <ref target="http://mith.umd.edu/tile/">http://mith.umd.edu/tile/</ref>
+               </item>
+               <item>Philologic, <ref target="https://sites.google.com/site/philologic3/">https://sites.google.com/site/philologic3/</ref>
+               </item>
+               <item>Ediarum, http://www.bbaw.de/en/telota/software/ediarum</item>
+               <item>Virtual Machine, http://v-machine.org/samples.php</item>
+               <item>The Canadian Writing Research Collaboratory, http://www.cwrc.ca</item>
+               <item>TextGrid, http://www.textgrid.de/en/</item>
+            </list>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Orientations (suite)</head>
+            <list type="unordered">
+               <item>Concordance, http://www.concordancesoftware.co.uk</item>
+               <item>
+                  <ref target="http://interedition">http://interedition</ref>-tools.appspot.com</item>
+               <item>Brat rapid annotation tool, <ref target="http://brat.nlplab.org">http://brat.nlplab.org</ref>
+               </item>
+               <item>The Digital Classicist, <ref target="http://www.digitalclassicist.org">http://www.digitalclassicist.org</ref> et <ref target="https://wiki.digitalclassicist.org/Category">https://wiki.digitalclassicist.org/Category</ref>:Tools</item>
+               <item>Digital Classics Association, <ref target="http://dca.drupalgardens.com">http://dca.drupalgardens.com</ref>
+               </item>
+               <item>Philologie à venir, <ref target="http://philologia.hypotheses.org">http://philologia.hypotheses.org</ref>
+               </item>
+               <item>http://textvis.lnu.se</item>
+               <item>http://www.tapor.ca</item>
+            </list>
+            <p>---</p>
+            <p>name: part3</p>
+            <p>template: inverse</p>
+            <p>class: center middle</p>
+         </div>
+         <div>
+            <head>Diverses solutions de publication pour la TEI</head>
+            <p>---</p>
+            <p>class: middle center</p>
+         </div>
+         <div>
+            <head>Solutions de publications en environnement LAMP</head>
+            <p>???</p>
+            <p>Il n’existe pour le moment pas de CMS (Content Manager System) véritablement dédié à la publication de fichiers XML-TEI. Cela s’explique notamment par le fait que la TEI n’est pas à proprement parler un standard mais qu’elle constitue plutôt un cadre de travail personnalisable en fonctions des besoins particuliers d’un projet de recherche. Les spécificités dans l’encodage des fichiers compliquent, voire rendent impossible, la production de transformations génériques.</p>
+            <p>Un certain nombre de solutions pour la publication de fichiers TEI sur le web ont cependant été développées dans l’environnement le plus courant, LAMP (Linux, Apache HTTP, MySql, PHP). Compte-tenu de la très large utilisation des CMS (Content Manager System) pour la publication web, plusieurs tentatives ont été mises en place pour faciliter la publication de fichiers TEI à l’aide de ces logiciels.</p>
+            <p>---</p>
+            <p>layout: false</p>
+         </div>
+         <div>
+            <head>Omeka + TeiDisplay</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://omeka.org/">Omeka</ref>
+                  </head>
+                  <p>
+                     <ref target="http://omeka.org/">Omeka</ref> est un CMS libre et open source développé par le <ref target="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</ref>. Spécialement destiné au secteur patrimonial et culturel, cette solution de publication adopte un grand nombre de standards pour gérer des collections de ressources avec leurs métadonnées (EAD, Dublin Core, utilisation de vocabulaires, etc.). Plusieurs modules qui étendent les fonctionnalités du CMS offrent des outils adaptés au domaine historique et universitaire (frises chronologiques, entrepôt OAI-PMH, etc.).</p>
+                  <p>
+                     <ref target="http://omeka.org/codex/Plugins/TeiDisplay">TeiDisplay</ref> est une extension (plugin) créée pour publier des fichiers TEI associés à un item Omeka en utilisant une transformation XSLT. La transformation par défaut propose un rendu intégral du texte ou par segment, génère une table des matières, et des métadonnées Dublin Core à partir de l’en-tête TEI du fichier. Plusieurs options de configuration de la transformation sont disponibles par le biais d’une interface d’administration.</p>
+                  <p>???</p>
+               </div>
+            </div>
+            <div>
+               <head>Avantages/Inconvénients</head>
+               <p>S’agissant d’une solution relativement légère et prête à l’emploi, l’utilisation de ce module peut intéresser des projets modestes disposant d’un encodage XML-TEI assez sommaire compatible avec la transformation proposée par défaut. Le contexte d’utilisation est plutôt celui de la publication de collections de ressources patrimoniales et culturelles parmi lesquelles on voudrait facilement publier des sources textuelles. Le programme XSLT peut au besoin être adapté, mais Omeka étant une application PHP, l’utilisation de XSLT est limitée à la version 1.0, ce qui peut considérablement limiter les traitements.</p>
+               <p>---</p>
+            </div>
+         </div>
+         <div>
+            <head>TEICHI (Text Encoding Initiative Computer-Human Interaction) Framework</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://www.teichi.org">Framework TEICHI</ref>
+                  </head>
+                  <p>Le <ref target="http://www.teichi.org">Framework TEICHI</ref> est un outil modulaire destiné à présenter des documents encodés avec la <ref target="http://www.tei-c.org/Guidelines/Customization/Lite/">TEI Lite</ref> (une personnalisation restreinte de la TEI) comme des pages sur un site fonctionnant avec le CMS (Content Manager System) libre et open source <ref target="https://drupal.org">Drupal</ref>. Il se compose de quatre modules (TEI Content, TEI Download, TEI Imageviewer, et TEI Search) qui servent ensemble à présenter facilement sur le web des documents encodés en TEI.</p>
+                  <p>C’est une solution bien adaptée pour des projets éditoriaux relativement simples (il ne prend pas en charge le module de critique textuelle de la TEI). Les documents XML-TEI sont gérés dans la base de données de Drupal. Comme ce CMS, le module a été conçu pour des créateurs de contenus sans connaissances techniques particulières. Il est complètement intégré à Drupal.</p>
+                  <p>???</p>
+                  <p>D’autres solutions d’intégration avec Drupal sont brièvement présentées sur le <ref target="http://wiki.tei-c.org/index.php/Drupal">wiki de la TEI</ref>.</p>
+                  <p>Plus généralement, sur l’utilisation de Drupal pour les humanités, voir <ref target="http://drupal.forhumanists.org/book/when-not-use-drupal">"When Not to Use Drupal", _Drupal for Humanists_</ref>
+                  </p>
+                  <p>Voir également sur la <ref target="http://tei-l.970651.n3.nabble.com/TEI-amp-Drupal-revisited-td4022207.html">liste de discussion TEI</ref>
+                  </p>
+                  <p>et <ref target="http://listserv.brown.edu/archives/cgi-bin/wa?A2=tei-l;5685b681.1310">ici</ref>
+                  </p>
+                  <p>Le projet <ref target="http://dare.uni-koeln.de/">DARE project</ref> annonçait il y a quelques mois son intention de publier des modules pour Drupal.</p>
+                  <p>Il est possible d’utiliser le module feeds de Drupal afin de rendre du contenu en XML. Celui-ci permet l’utilisation d’expressions XPath relativement élémentaires. Ici encore, il ne s’agit pas à proprement parler d’utiliser Drupal comme un gestionnaire de contenu mais plutôt comme une simple plate-forme de publication.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Diple</head>
+            <p>L’École des chartes avait développé pour ses propres besoin une solution logicielle PHP libre et open source pour la publication de documents XML-TEI. Un certain nombre des publications actuelles de l’École sont publiées au moyen de Diple.</p>
+            <p>Après le départ des deux ingénieurs en charge des développements, le logiciel n’est plus maintenu. L’École des chartes s’oriente actuellement vers un partenariat avec la chaîne éditoriale des Presses universitaires de Caen. Cependant, il est probable que l’application continue d’être développée dans un autre contexte sous un autre nom.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Versionning Machine</head>
+            <p>http://v-machine.org</p>
+            <p>Cette solution de publication légère est d’abord destinée à des contenus courts qui disposent de plusieurs témoins. La transformation a lieu côté navigateur ou est réalisée avant la publication.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>
+               <ref target="Digital Workspace">Getty</ref>
+            </head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://blogs.getty.edu/iris/creating">http://blogs.getty.edu/iris/creating</ref>-getty-scholars-workspace-lessons-from-the-digital-humanities-trenches/</head>
+               </div>
+               <div>
+                  <head>Espace de travail numérique</head>
+                  <p>Le Getty développe actuellement un projet d’espace de travail numérique dans le cadre du projet Digital Mellini + Montagny.</p>
+                  <p>La plate-forme d’édition paraît relativement rudimentaire et paraît plutôt orientée sur la collaboration entre chercheurs.</p>
+                  <p>---</p>
+                  <p>template: inverse</p>
+                  <p>class: middle center</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Solutions en environnement Java (ou mixte)</head>
+            <p>???</p>
+            <p>La plupart des applications XML natives ont été développées en environnement Java. Cela tient notamment au fait que, jusqu’à présent, les processeurs XSLT et XQuery les plus efficaces sont développés en Java. Du point de vue de l’hébergement d’application web, cela peut présenter un certain nombre d’inconvénients car leur déploiement nécessite un conteneur de servlets Java. Un tel environnement de développement web ne correspond pas à l’offre classique LAMP (Linux, Apache HTTP, MySql, PHP ) des hébergeurs de site web. Comme elle peut être coûteuse en ressources elle présente souvent un surcoût non négligeable, par ailleurs, elle peut poser des problèmes de sécurité. En France, la TGIR HumaNum met cependant à disposition des hébergements de ce type dans le cadre de sa grille de service.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Islandora</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://islandora.ca/">Islandora</ref>
+                  </head>
+                  <p>Développé par la Bibliothèque de Robertson de l’université Prince Edward Island, <ref target="http://islandora.ca/">Islandora</ref> est un système de gestion de contenu pour le domaine universitaire. C’est une combinaison de Drupal et de Fedora.</p>
+                  <p>Pour la TEI le dispositif permet de traiter des livres avec un certain nombre d’automatisation. Le logiciel dispose d’un module WYSIWYG (What You See Is What You Get) d’édition des fichiers TEI qui permet la validation contre un schéma RelaxNG. Ce module rédigé en Javascript est configurable.</p>
+                  <p>De nouveaux développements doivent, dans un avenir proche, permettre d’étendre considérablement les fonctionnalités de cet éditeur à la fois pour la TEI et pour l’annotation sémantique avec des balisages externes tant en WYSIWYG qu’en édition directe du code.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>CWRC-Writer</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="https://sites.google.com/site/cwrcwriterhelp/">CWRC-Writer</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>outil de balisage WYSIWYG</head>
+                  <p>Ce dispositif est plutôt dédié à des projets de grande ampleur. Néanmoins, l’outil WYSIWYG de balisage peut s’avérer intéressant pour ouvrir l’encodage à des contributions de non spécialistes.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Fedora Commons Repository Software</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://www.fedora-commons.org">Fedora</ref>
+                  </head>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Kiln</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="https://github.com/kcl-ddh/kiln">Kiln</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>
+                     <ref target="http://kiln.readthedocs.org/en/latest/">Kiln documentation</ref>
+                  </head>
+                  <p>Cette solution développée pour la publication des sources du KingsCollege est mise à disposition en open source. Elle est adossée à une base de données XML native et à l’utilisation d’un moteur de recherche Solr. Il n’y a semble-t-il pas vraiment de communauté d’utilisateurs.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>TextGrid</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://www.textgrid.de/">TextGrid</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>Framework de publication</head>
+               </div>
+               <div>
+                  <head>Mutualisation</head>
+                  <p>TextGrid est un important framework de publication de sources textuelles développée avec des financements européens. La solution ne semble pas d’une très grande légèreté pour des projets de petite échelle.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Text Text Link Editor</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="https://dev2.dariah.eu/wiki/display/TextGrid/Text+Text+Link+Editor">Text Text Link Editor</ref>
+                  </head>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Muruca</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://muruca.netseven.it/">Muruca</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>Solution commerciale</head>
+               </div>
+               <div>
+                  <head>Module d’annotation sémantique (the Pund It)</head>
+                  <p>Muruca est une solution commerciale de publication de sources XML-TEI développée par la Société Seven. Cette suite logicielle est actuellement employée dans le cadre de nombreux projets universitaires, mais elle est assez coûteuse.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Scalable architecture for Digital Editions SADE</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://www.bbaw.de/telota/software/sade/">Sade</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>Basé sur eXist-db</head>
+                  <p>Basé sur la base de données XML native eXist-db, cette suite logicielle suppose un environnement Java. Elle permet une présentation flexible de divers contenus.</p>
+                  <p>Adapté à plus de contextes éditoriaux que TEICHI, mais pas de fonctionnalités "out-of-the-box". Le logiciel propose un environnement d’annotation et de transcription proche d’un CMS.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>TAPAS</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://tapasproject.org">TAPAS (TEI Archiving Publishing and Access Service)</ref>
+                  </head>
+                  <p>
+                     <ref target="http://tapasproject.org">TAPAS (TEI Archiving Publishing and Access Service)</ref> est un projet de plateforme de publication et d’archivage pour la TEI. Il s’adresse à des projets ne disposant pas de ressources institutionnelles suffisantes pour publier leurs documents TEI. C’est un projet collaboratif et ouvert en cours de réalisation. Le lancement du service est annoncé pour mars 2014 avec une ouverture au public au cours de l’été. Il est possible de faire acte de candidature pour la version bêta (le service étant financés sur fonds américains, est-il ouvert à l’étranger ?), des négociations sont en cours avec la TEI pour que le service soit accessibles aux membres.</p>
+                  <p>L’architecture du service est adossée à Fedora pour l’archivage. L’API semble construire avec la base de données XML native eXist. Le service proposera des bacs à sable pour pouvoir immédiatement publier et visualiser ses données sur le web. Une interface standard de publication sera proposée mais les utilisateurs avancés disposeront de possibilités pour développer leur propres XSLT et leurs CSS.</p>
+                  <p>---</p>
+                  <p>template: inverse</p>
+                  <p>class: middle center</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Dispositifs d’édition collaborative</head>
+            <p>---</p>
+            <p>layout: false</p>
+         </div>
+         <div>
+            <head>eLaborate (Hygens ING)</head>
+            <div>
+               <div>
+                  <head>
+                     <ref target="http://www.e-laborate.nl/en/">eLaborate</ref>
+                  </head>
+               </div>
+               <div>
+                  <head>Visualisation en panneaux reconfigurables</head>
+                  <p>
+                     <ref target="http://www.e-laborate.nl/en/">eLaborate</ref> est une plate-forme web collaborative pour l’édition de manuscrits. Elle propose aux éditeurs une visualisation par panneaux reconfigurables pour visualiser les fac-simili en regard de la transcription, etc. Le même dispositif est utilisé pour la transcription et la publication. L’outil permet la publication simultanée des modifications et des annotations à l’ensemble des utilisateurs.</p>
+                  <p>Le projet devait être déployée sur <ref target="http://www.clarin.nl">Clarin</ref> en 2012.</p>
+                  <p>L’accès à la plate-forme est pour le moment réservée aux chercheurs de l’Huygens ING.</p>
+                  <p>Un exemple d’édition réalisée à l’aide de cet outil est disponible <ref target="http://martianus.huygensinstituut.knaw.nl/path">ici</ref>.</p>
+                  <p>---</p>
+               </div>
+            </div>
+         </div>
+         <div>
+            <head>Wikisource</head>
+            <p>Wikisource propose un cadre d’édition collaboratif basé sur le logiciel wikimédia, mais ses fonctionnalités sont relativement limitées en matière de balisage du texte.</p>
+            <p>---</p>
+         </div>
+         <div>
+            <head>Conclusion</head>
+            <p>???</p>
+            <p>Les solutions de publications en environnement LAMP se caractérisent généralement par leur limitation. Celles-ci sont d’abord contraintes par des questions techniques. Les autres suites logicielles développées pour la publication de sources XML-TEI ont le plus généralement été développées en environnement Java. Elles ont le plus souvent été développée dans le cadre de bibliothèques numériques ou d’initiatives d’ampleur nationale. Ces sont habituellement des solutions lourdes qui articulent des composants logiciels nombreux autour d’une base de données XML-native.</p>
+            <p>Il peut certainement exister une voie médiane entre d’une part les solutions de publication légères en environnement LAMP et ces grandes suites logicielles pour la publication. Il y a quelques années, le framework Cocoon a beaucoup servi à construire de telles applications conçues sur des filières de traitement XSLT. Ce projet est depuis en perte de vitesse et a beaucoup été supplanté par les bases de données XML-natives. Ces bases de données proposent depuis plusieurs années des solutions simples pour construire des applications web à partir de sources XML. Au cours de la conférence Prague XML 2012, Adam Retter a présenté une proposition de normalisation pour des applications REST exprimées au moyen d’annotations XQuery. Ce projet de spécification a depuis été implémenté chez la plupart des fabriquants de base de données XML natives et permet d’envisager des applications portables entre les différents systèmes de base de données.</p>
+            <p>[au besoin : produire un tableau récapitulatif les promoteurs et les financeurs, et des rubriques comme les licence, le développement actif, l’ouverture à des collaborations.]</p>
+            <p>---</p>
+            <p>name: last-page</p>
+            <p>template: inverse</p>
+            <p>class: center middle</p>
+            <div>
+               <head>
+                  <ref target="xml01.html">XML</ref>
+               </head>
+               <p>.footnote<ref target="#index">[revenir au début</ref> | <ref target="00-programme.html">programme</ref>]</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
