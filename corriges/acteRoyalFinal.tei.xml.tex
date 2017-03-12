@@ -1,0 +1,405 @@
+\documentclass[11pt,twoside]{article}\makeatletter
+
+\IfFileExists{xcolor.sty}%
+  {\RequirePackage{xcolor}}%
+  {\RequirePackage{color}}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+  \catcode`⃥=\active \def⃥{\textbackslash}
+  \catcode`❴=\active \def❴{\{}
+  \catcode`❵=\active \def❵{\}}
+  \def\textJapanese{\fontspec{IPAMincho}}
+  \def\textChinese{\fontspec{HAN NOM A}\XeTeXlinebreaklocale "zh"\XeTeXlinebreakskip = 0pt plus 1pt }
+  \def\textKorean{\fontspec{Baekmuk Gulim} }
+  \setmonofont{DejaVu Sans Mono}
+  
+\else
+  \IfFileExists{utf8x.def}%
+   {\usepackage[utf8x]{inputenc}
+      \PrerenderUnicode{–}
+    }%
+   {\usepackage[utf8]{inputenc}}
+  \usepackage[english]{babel}
+  \usepackage[T1]{fontenc}
+  \usepackage{float}
+  \usepackage[]{ucs}
+  \uc@dclc{8421}{default}{\textbackslash }
+  \uc@dclc{10100}{default}{\{}
+  \uc@dclc{10101}{default}{\}}
+  \uc@dclc{8491}{default}{\AA{}}
+  \uc@dclc{8239}{default}{\,}
+  \uc@dclc{20154}{default}{ }
+  \uc@dclc{10148}{default}{>}
+  \def\textschwa{\rotatebox{-90}{e}}
+  \def\textJapanese{}
+  \def\textChinese{}
+  \IfFileExists{tipa.sty}{\usepackage{tipa}}{}
+  \usepackage{times}
+\fi
+\def\exampleFont{\ttfamily\small}
+\DeclareTextSymbol{\textpi}{OML}{25}
+\usepackage{relsize}
+\RequirePackage{array}
+\def\@testpach{\@chclass
+ \ifnum \@lastchclass=6 \@ne \@chnum \@ne \else
+  \ifnum \@lastchclass=7 5 \else
+   \ifnum \@lastchclass=8 \tw@ \else
+    \ifnum \@lastchclass=9 \thr@@
+   \else \z@
+   \ifnum \@lastchclass = 10 \else
+   \edef\@nextchar{\expandafter\string\@nextchar}%
+   \@chnum
+   \if \@nextchar c\z@ \else
+    \if \@nextchar l\@ne \else
+     \if \@nextchar r\tw@ \else
+   \z@ \@chclass
+   \if\@nextchar |\@ne \else
+    \if \@nextchar !6 \else
+     \if \@nextchar @7 \else
+      \if \@nextchar (8 \else
+       \if \@nextchar )9 \else
+  10
+  \@chnum
+  \if \@nextchar m\thr@@\else
+   \if \@nextchar p4 \else
+    \if \@nextchar b5 \else
+   \z@ \@chclass \z@ \@preamerr \z@ \fi \fi \fi \fi
+   \fi \fi  \fi  \fi  \fi  \fi  \fi \fi \fi \fi \fi \fi}
+\gdef\arraybackslash{\let\\=\@arraycr}
+\def\@textsubscript#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
+\def\Panel#1#2#3#4{\multicolumn{#3}{){\columncolor{#2}}#4}{#1}}
+\def\abbr{}
+\def\corr{}
+\def\expan{}
+\def\gap{}
+\def\orig{}
+\def\reg{}
+\def\ref{}
+\def\sic{}
+\def\persName{}\def\name{}
+\def\placeName{}
+\def\orgName{}
+\def\textcal#1{{\fontspec{Lucida Calligraphy}#1}}
+\def\textgothic#1{{\fontspec{Lucida Blackletter}#1}}
+\def\textlarge#1{{\large #1}}
+\def\textoverbar#1{\ensuremath{\overline{#1}}}
+\def\textquoted#1{‘#1’}
+\def\textsmall#1{{\small #1}}
+\def\textsubscript#1{\@textsubscript{\selectfont#1}}
+\def\textxi{\ensuremath{\xi}}
+\def\titlem{\itshape}
+\newenvironment{biblfree}{}{\ifvmode\par\fi }
+\newenvironment{bibl}{}{}
+\newenvironment{byline}{\vskip6pt\itshape\fontsize{16pt}{18pt}\selectfont}{\par }
+\newenvironment{citbibl}{}{\ifvmode\par\fi }
+\newenvironment{docAuthor}{\ifvmode\vskip4pt\fontsize{16pt}{18pt}\selectfont\fi\itshape}{\ifvmode\par\fi }
+\newenvironment{docDate}{}{\ifvmode\par\fi }
+\newenvironment{docImprint}{\vskip 6pt}{\ifvmode\par\fi }
+\newenvironment{docTitle}{\vskip6pt\bfseries\fontsize{18pt}{22pt}\selectfont}{\par }
+\newenvironment{msHead}{\vskip 6pt}{\par}
+\newenvironment{msItem}{\vskip 6pt}{\par}
+\newenvironment{rubric}{}{}
+\newenvironment{titlePart}{}{\par }
+
+\newcolumntype{L}[1]{){\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{){\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{){\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{P}[1]{){\arraybackslash}p{#1}}
+\newcolumntype{B}[1]{){\arraybackslash}b{#1}}
+\newcolumntype{M}[1]{){\arraybackslash}m{#1}}
+\definecolor{label}{gray}{0.75}
+\def\unusedattribute#1{\sout{\textcolor{label}{#1}}}
+\DeclareRobustCommand*{\xref}{\hyper@normalise\xref@}
+\def\xref@#1#2{\hyper@linkurl{#2}{#1}}
+\begingroup
+\catcode`\_=\active
+\gdef_#1{\ensuremath{\sb{\mathrm{#1}}}}
+\endgroup
+\mathcode`\_=\string"8000
+\catcode`\_=12\relax
+
+\usepackage[a4paper,twoside,lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in,marginparwidth=0.75in]{geometry}
+\usepackage{framed}
+
+\definecolor{shadecolor}{gray}{0.95}
+\usepackage{longtable}
+\usepackage[normalem]{ulem}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{marginnote}
+
+
+\renewcommand*{\marginfont}{\itshape\footnotesize}
+
+\def\Gin@extensions{.pdf,.png,.jpg,.mps,.tif}
+
+  \pagestyle{fancy}
+
+\usepackage[pdftitle={Le confort du courtisan : ordres royaux pour le logement à Marly},
+ pdfauthor={}]{hyperref}
+\hyperbaseurl{}
+
+	 \paperwidth210mm
+	 \paperheight297mm
+              
+\def\@pnumwidth{1.55em}
+\def\@tocrmarg {2.55em}
+\def\@dotsep{4.5}
+\setcounter{tocdepth}{3}
+\clubpenalty=8000
+\emergencystretch 3em
+\hbadness=4000
+\hyphenpenalty=400
+\pretolerance=750
+\tolerance=2000
+\vbadness=4000
+\widowpenalty=10000
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+     {-1.75ex \@plus -0.5ex \@minus -.2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\Large\bfseries\sffamily}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+     {-1.75ex\@plus -0.5ex \@minus- .2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\Large\sffamily}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+     {-1.5ex\@plus -0.35ex \@minus -.2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\large\sffamily}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+     {-1ex \@plus-0.35ex \@minus -0.2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\normalsize\sffamily}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+     {1.5ex \@plus1ex \@minus .2ex}%
+     {-1em}%
+     {\reset@font\normalsize\bfseries}}
+
+
+\def\l@section#1#2{\addpenalty{\@secpenalty} \addvspace{1.0em plus 1pt}
+ \@tempdima 1.5em \begingroup
+ \parindent \z@ \rightskip \@pnumwidth 
+ \parfillskip -\@pnumwidth 
+ \bfseries \leavevmode #1\hfil \hbox to\@pnumwidth{\hss #2}\par
+ \endgroup}
+\def\l@subsection{\@dottedtocline{2}{1.5em}{2.3em}}
+\def\l@subsubsection{\@dottedtocline{3}{3.8em}{3.2em}}
+\def\l@paragraph{\@dottedtocline{4}{7.0em}{4.1em}}
+\def\l@subparagraph{\@dottedtocline{5}{10em}{5em}}
+\@ifundefined{c@section}{\newcounter{section}}{}
+\@ifundefined{c@chapter}{\newcounter{chapter}}{}
+\newif\if@mainmatter 
+\@mainmattertrue
+\def\chaptername{Chapter}
+\def\frontmatter{%
+  \pagenumbering{roman}
+  \def\thechapter{\@roman\c@chapter}
+  \def\theHchapter{\roman{chapter}}
+  \def\thesection{\@roman\c@section}
+  \def\theHsection{\roman{section}}
+  \def\@chapapp{}%
+}
+\def\mainmatter{%
+  \cleardoublepage
+  \def\thechapter{\@arabic\c@chapter}
+  \setcounter{chapter}{0}
+  \setcounter{section}{0}
+  \pagenumbering{arabic}
+  \setcounter{secnumdepth}{6}
+  \def\@chapapp{\chaptername}%
+  \def\theHchapter{\arabic{chapter}}
+  \def\thesection{\@arabic\c@section}
+  \def\theHsection{\arabic{section}}
+}
+\def\backmatter{%
+  \cleardoublepage
+  \setcounter{chapter}{0}
+  \setcounter{section}{0}
+  \setcounter{secnumdepth}{2}
+  \def\@chapapp{\appendixname}%
+  \def\thechapter{\@Alph\c@chapter}
+  \def\theHchapter{\Alph{chapter}}
+  \appendix
+}
+\newenvironment{bibitemlist}[1]{%
+   \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}%
+	}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty \clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}%
+  {\def\@noitemerr
+    {\@latex@warning{Empty `bibitemlist' environment}}%
+    \endlist}
+
+\def\tableofcontents{\section*{\contentsname}\@starttoc{toc}}
+\parskip0pt
+\parindent1em
+\def\Panel#1#2#3#4{\multicolumn{#3}{){\columncolor{#2}}#4}{#1}}
+\newenvironment{reflist}{%
+  \begin{raggedright}\begin{list}{}
+  {%
+   \setlength{\topsep}{0pt}%
+   \setlength{\rightmargin}{0.25in}%
+   \setlength{\itemsep}{0pt}%
+   \setlength{\itemindent}{0pt}%
+   \setlength{\parskip}{0pt}%
+   \setlength{\parsep}{2pt}%
+   \def\makelabel##1{\itshape ##1}}%
+  }
+  {\end{list}\end{raggedright}}
+\newenvironment{sansreflist}{%
+  \begin{raggedright}\begin{list}{}
+  {%
+   \setlength{\topsep}{0pt}%
+   \setlength{\rightmargin}{0.25in}%
+   \setlength{\itemindent}{0pt}%
+   \setlength{\parskip}{0pt}%
+   \setlength{\itemsep}{0pt}%
+   \setlength{\parsep}{2pt}%
+   \def\makelabel##1{\upshape\sffamily ##1}}%
+  }
+  {\end{list}\end{raggedright}}
+\newenvironment{specHead}[2]%
+ {\vspace{20pt}\hrule\vspace{10pt}%
+  \label{#1}\markright{#2}%
+
+  \pdfbookmark[2]{#2}{#1}%
+  \hspace{-0.75in}{\bfseries\fontsize{16pt}{18pt}\selectfont#2}%
+  }{}
+      \def\TheFullDate{2011-03 (revised: mars 2011 1763, mai)}
+\def\TheID{\makeatother }
+\def\TheDate{2011-03}
+\title{Le confort du courtisan : ordres royaux pour le logement à Marly}
+\author{}\makeatletter 
+\makeatletter
+\newcommand*{\cleartoleftpage}{%
+  \clearpage
+    \if@twoside
+    \ifodd\c@page
+      \hbox{}\newpage
+      \if@twocolumn
+        \hbox{}\newpage
+      \fi
+    \fi
+  \fi
+}
+\makeatother
+\makeatletter
+\thispagestyle{empty}
+\markright{\@title}\markboth{\@title}{\@author}
+\renewcommand\small{\@setfontsize\small{9pt}{11pt}\abovedisplayskip 8.5\p@ plus3\p@ minus4\p@
+\belowdisplayskip \abovedisplayskip
+\abovedisplayshortskip \z@ plus2\p@
+\belowdisplayshortskip 4\p@ plus2\p@ minus2\p@
+\def\@listi{\leftmargin\leftmargini
+               \topsep 2\p@ plus1\p@ minus1\p@
+               \parsep 2\p@ plus\p@ minus\p@
+               \itemsep 1pt}
+}
+\makeatother
+\fvset{frame=single,numberblanklines=false,xleftmargin=5mm,xrightmargin=5mm}
+\fancyhf{} 
+\setlength{\headheight}{14pt}
+\fancyhead[LE]{\bfseries\leftmark} 
+\fancyhead[RO]{\bfseries\rightmark} 
+\fancyfoot[RO]{}
+\fancyfoot[CO]{\thepage}
+\fancyfoot[LO]{\TheID}
+\fancyfoot[LE]{}
+\fancyfoot[CE]{\thepage}
+\fancyfoot[RE]{\TheID}
+\hypersetup{linkbordercolor=0.75 0.75 0.75,urlbordercolor=0.75 0.75 0.75,bookmarksnumbered=true}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}\makeatother 
+\begin{document}
+
+\makeatletter
+\noindent\parbox[b]{.75\textwidth}{\fontsize{14pt}{16pt}\bfseries\raggedright\sffamily\selectfont \@title}
+\vskip20pt
+\par\noindent{\fontsize{11pt}{13pt}\sffamily\itshape\raggedright\selectfont\@author\hfill\TheDate}
+\vspace{18pt}
+\makeatother
+\let\tabcellsep& \par
+⟨\textit{Mai 1763}⟩\par
+⟨\textit{Ordre du roy}⟩\par
+Le  {\expan s( {\ex ieur})} ( {\abbr s.}) Luthier\hyperref[n-001]{} demande si l’on éclairera{\hskip1pt}\\{} et chauffera le  {\placeName château de Marly}\hyperref[n-002]{} le {\hskip1pt}\\{} voyage prochain comme dans les voyages{\hskip1pt}\\{} ordinaires.\par
+⟨\textit{Le pavillon du royroi comme à l’ordinaire, mais l’on ne donnera de bois d’arrivée à personne.}⟩\par
+Si le concierge, les garçons du garde-meuble\hyperref[n-003]{},{\hskip1pt}\\{} les  {\expan s( {\ex ieur})s} ( {\abbr s.s}) Boucheman\hyperref[n-004]{} et Lemoine\hyperref[n-005]{}, les{\hskip1pt}\\{} garçons du château, l’ {\reg horloger}, le garçon des chiens\hyperref[n-006]{} {\hskip1pt}\\{}et les porteurs seront chauffés et éclairés.\par
+⟨\textit{Le voyage étant comme celui de Versailles, l’on n’est obligé à rien, mais on peut leur donner quelque secours en bois et lumières ; messieursmrs Bouchement et Lemoine, oui sûrement.}⟩\par
+Si on éclairera les salles des gardes {\hskip1pt}\\{}de Votre Majesté, des gardes de {\hskip1pt}\\{}la Porte\hyperref[n-007]{} et des Cent Suisses\hyperref[n-008]{}.\par
+⟨\textit{Oui, sans doute.}⟩\par
+Si les femmes de chambre de mesdames {\hskip1pt}\\{}qui logent hors du château seront chauffées {\hskip1pt}\\{}et éclairées.\par
+⟨\textit{Oui, en observant la règle la plus exacte}⟩\par
+Si on donnera une bougie blanche par {\hskip1pt}\\{}jour au supérieur des cordeliers de {\hskip1pt}\\{}Noisy\hyperref[n-009]{}.\par
+⟨\textit{OuiNon, une demie}⟩\par
+Et si on donnera une bougie par {\hskip1pt}\\{}jour au vicaire de la  {\reg paroisse} qui dessert {\hskip1pt}\\{}la chapelle du commun\hyperref[n-010]{}.\par
+⟨\textit{Non, mais la valeur en argent.}⟩\par
+⟨\textit{Le roy chauffe et éclaire les conseillers d’État à leur pied-à-terre qui est au 5 au commun.}⟩\par
+⟨\textit{Noailles}⟩
+\subsection[{Commentaire diplomatique}]{Commentaire diplomatique}\par
+L’acte désigné ici comme un « ordre du roi », qu’il n’est pas vraiment puisqu’il ne porte pas de notation écrite du souverain, est un type documentaire devenu fréquent à la fin de l’Ancien Régime. Il est issu de la catégorie diplomatique des bons du roi. Le souverain appose, sur une requête qu’on lui présente, son accord (signifiée par le terme « bon » écrit de sa main) ou son refus : ici la seule signature du gouverneur manifeste que la volonté royale s’est exprimée. L’usage en est devenu systématique dans l’administration de Versailles pour tout ce qui regarde les projets de dépenses ou l’affectation de logements. Ces ordres tiennent lieu de décharge au gouverneur – des mandats de paiement en quelque sorte – qui bénéficie d’un travail particulier et régulier avec le monarque. Il lui soumet sous forme de questions des demandes émanant directement de lui-même ou de ses subordonnés et écrites de la main d’un secrétaire. Le gouverneur note ensuite, dans la marge prévue à cet effet dans la partie gauche de la feuille, le résultat concret de ce travail – la réponse donnée par le roi. Le paraphe du gouverneur porté à la fin de chaque réponse, comparable aux usages notariés en cas de corrections marginales, confère un caractère officiel au document auquel il appose de surcroît sa signature.
+\subsection[{Commentaire historique}]{Commentaire historique}\par
+Louis XV séjourne régulièrement au cours du mois de mai au château de Marly. Créé par Louis XIV qui a acheté la baronnie en 1676, il est intégré au domaine de Versailles et érigé en administration particulière en 1693 sous la direction d’un gouverneur. Ce dernier est chargé en particulier de répartir les logements des châteaux (tout particulièrement à Versailles) entre les différents demandeurs (courtisans, personnel de service), de payer les divers employés (concierges, gardes, etc.) et d’assurer la fourniture de la pourvoierie (bois de chauffage, éclairage, charbon). \par
+Ce document règle des problèmes de détail liés aux fournitures de bois pour l’éclairage et le chauffage et de bougies en prévision d’un séjour à Marly, à la demande de l’employé chargé de les distribuer. Outre les questions de protocole et de respect des hiérarchies, le contexte de la fin de la guerre de Sept Ans, conclue par le traité de Paris du 10 février 1763, incite la monarchie à restreindre ses dépenses : ses dettes montent à 1,8 milliards de livres. La pourvoierie représente d’ailleurs le plus gros poste de dépenses du gouvernement de Versailles, environ 430 000 livres sur 2 millions à la veille de la Révolution. Il s’agit donc de déterminer précisément ce que le roi prend à sa charge et ce que sa suite et ses serviteurs devront payer eux-mêmes. Les deux valets de chambre de quartier qui accompagnent le roi sont entièrement défrayés, les autres doivent se prendre en charge. Enfin le roi emmène avec lui, en plus des courtisans triés sur le volet, un certain nombre de membres du Conseil pour pouvoir continuer à travailler. Leurs bureaux (des logements collectifs) sont installés dans les communs du château. Les conseillers d’État bénéficient normalement à la cour du même traitement que les secrétaires d’État, les deux groupes étant réputés « commensaux pour l’honneur de première classe » (\textit{Sophie de Laverny, Les domestiques commensaux des rois de France au XVIIe siècle, p.27}).
+\subsection[{Bibliographie complémentaire}]{Bibliographie complémentaire}\begin{bibitemlist}{1}
+ \bibitem {bibitem-2}Da Vinha, \textit{Les valets de chambre de Louis XIV}, Paris, Perrin, 2004, 520 p.
+ \bibitem {laverny}\label{laverny}Laverny, \textit{Les domestiques commensaux des rois de France au XVIIe siècle}, Paris, Presses de l’Université Paris-Sorbonne, 2002, 557 p.
+ \bibitem {bibitem-4}Marotaux, « Une curiosité institutionnelle : l’administration du domaine de Versailles sous l’Ancien Régime », dans \textit{Bibliothèque de l’École des chartes}, t. 143, 1985, p. 275-312.
+ \bibitem {bibitem-5}Newton, \textit{L’espace du roi. Le cour de France au château de Versailles, 1682-1789}, Paris, Fayard, 2000, 588 p.
+ \bibitem {bibitem-6}Newton, \textit{La Petite cour. Service et serviteurs à la cour de Versailles au xviiie siècle}, Paris, Fayard, 2006, 662 p.
+
+\end{bibitemlist}
+\backmatter 
+\begin{quote}
+Louis-François Luthier était employé pour le bois et la bougie du château de Marly avec 1 000 l. de gages en 1759 (Arch. nat., O1 3913 bis, n° 2, état pour servir de certificat de service).\end{quote}
+
+\begin{quote}
+Le château de Marly (aujourd’hui Marly-le-Roi) a été bâti sur les plan de Jules Hardouin-Mansart pour Louis XIV entre 1679 et 1685. Au XVIIIe siècle, il fait partie du domaine royal de Versailles.\end{quote}
+
+\begin{quote}
+Le garde-meuble de la couronne est une administration chargée de la gestion du mobilier et des objets d'art destinés à l'ornement des appartements royaux.\end{quote}
+
+\begin{quote}
+Louis-Marie de Boucheman, valet de chambre ordinaire du roi depuis 1727 à la suite de son père et concierge du château de Versailles à partir d’octobre 1768.\end{quote}
+
+\begin{quote}
+Probablement de Louis-Henry Lemoine, valet de chambre ordinaire (Arch. nat., Z1a 481, état de la maison du roi pour 1759).\end{quote}
+
+\begin{quote}
+Le roi disposait à Marly même d’un chenil particulier depuis 1702.\end{quote}
+
+\begin{quote}
+Les gardes de la Porte : compagnie de cinquante hommes d’armes chargée de veiller de jour sur les portes intérieures du palais royal.\end{quote}
+
+\begin{quote}
+Les Cent Suisses : compagnie de cent militaires venus de cantons suisses créée en 1496 pour assurer la garde personnel du roi dans les palais royaux\end{quote}
+
+\begin{quote}
+Un couvent de religieux franciscains (cordeliers) est fondé à Noisy en 1599. Parmi les aumônes royales versées aux paroisses et religieux des environs du domaine apparaissent les écoles paroissiales de Noisy (aujourd’hui Noisy-le-Roi). Les cordeliers desservent régulièrement le château (Arch. nat., O1 3913A, liasse 1, certificat attestant qu’ils ont rempli leur service au château de Marly en 1761 suivant les intentions du roi).\end{quote}
+
+\begin{quote}
+La chapelle du commun du château, prévue pour les domestiques, par opposition à la chapelle du château lui-même. Le curé de la paroisse de Marly dit normalement la messe dans cette dernière qui compte néanmoins un chapelain en titre. C’est sans doute son vicaire qui la célèbre dans celle du commun.\end{quote}
+
+\begin{quote}
+Philippe de Noailles (1715-1794) comte de Noailles puis maréchal et duc de Mouchy, intendant et gouverneur du château et domaine de Versailles en survivance (1720-1729) puis en titre (1729-1778).\end{quote}
+
+    \begin{enumerate}
+      
+    \item Mouchy, Philippe de Noailles (1715-1794 ; duc de),   Philippe Noailles  {\roleName duc de Mouchy}masculin17151794Comte de Noailles puis maréchal et duc de Mouchy, intendant et gouverneur du château et domaine de Versailles en survivance (1720-1729) puis en titre (1729-1778). {\small\itshape [Note: Voir la notice d’autorité BnF \xref{http://catalogue.bnf.fr/ark:/12148/cb14955974j/PUBLIC}{http://catalogue.bnf.fr/ark:/12148/cb14955974j/PUBLIC}, et la \textit{page relative à Ph. de Noailles dans Wikipédia}.]} 
+      \end{enumerate}
+   {\placeName Marly, château de}Marly-le-RoiYvelinesIle-de-FranceFrance48,85 -2,023Le château de Marly (aujourd’hui Marly-le-Roi) a été bâti sur les plans de Jules Hardouin-Mansart pour Louis XIV entre 1679 et 1685. Au XVIIIe siècle, il fait partie du domaine royal de Versailles.\begin{biblfree} Voir la \xref{http://fr.wikipedia.org/wiki/Ch\%C3\%A2teau_de_Marly}{page relative au château dans Wikipédia}\end{biblfree} \begin{biblfree}  \end{biblfree}
+\end{document}
