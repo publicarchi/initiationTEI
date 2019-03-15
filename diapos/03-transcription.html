@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
 title: Rudiments d’encodage
-description: , 2017
+description: Emmanuel Château-Dutier et Nicolas Sauret, mars 2019
 theme: theme/remark-dark-em.css
 name: inverse
 layout: true
@@ -14,7 +14,7 @@ class: center middle
 
 # 03 – Rudiments d’encodage
 
-### Initiation TEI | CRIHN, 10 mars 2017
+### EDN6101 - Édition critique avec la TEI&nbsp;| 17 mars 2019
 
 .footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html)]
 ![test](images/logo.svg)
@@ -59,7 +59,7 @@ name: part1
 
 * tous les éléments sont placés dans l’espace de nom de la TEI avec `xmlns`
 
-* le document se compose d’au moins deux parties&nbsp;: 
+* le document se compose d’au moins deux parties&nbsp;:
 * `&lt;teiHeader&gt;`
 
 * `&lt;text&gt;`
@@ -129,7 +129,7 @@ name: part2
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>The life and opinions of Tristram Shandy, 
+        <title>The life and opinions of Tristram Shandy,
         Gentleman: TEI edition</title>
       </titleStmt>
       <publicationStmt>
@@ -220,7 +220,7 @@ On y trouvera notamment un élément `&lt;sourceDesc&gt;` obligatoire qui décri
     </availability>
   </publicationStmt>
   <revisionDesc>
-    <change when="2014-04-15">Remaniement de l’entête et 
+    <change when="2014-04-15">Remaniement de l’entête et
       de la structure</change>
   </revisionDesc>
 </teiHeader>
@@ -462,11 +462,11 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 
 ```xml
 
-<delSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere 
-    des hilgen dages nicht over setten noch uppe den stillen 
-    fridach bruwen.</zone><addSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L2"></addSpan><zone xmlns="http://www.tei-c.org/ns/Examples">Noch nymande over setten, se en sehin denne erst, dat 
-    uppe den bonen neyn stro noch, huw noch flaß ligghe, by pine 
-    eyner halven roden, deme bruwere so wol alse dem bruwheren 
+<delSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L3"></delSpan><metamark xmlns="http://www.tei-c.org/ns/Examples" function="flag" target="#zone-1" change="#L2">lege</metamark><zone xmlns="http://www.tei-c.org/ns/Examples" xml:id="zone-1" change="#L1">Ock en schullen de bruwere
+    des hilgen dages nicht over setten noch uppe den stillen
+    fridach bruwen.</zone><addSpan xmlns="http://www.tei-c.org/ns/Examples" spanTo="#endDel" change="#L2"></addSpan><zone xmlns="http://www.tei-c.org/ns/Examples">Noch nymande over setten, se en sehin denne erst, dat
+    uppe den bonen neyn stro noch, huw noch flaß ligghe, by pine
+    eyner halven roden, deme bruwere so wol alse dem bruwheren
     to murende.</zone><anchor xmlns="http://www.tei-c.org/ns/Examples" xml:id="endDel"></anchor>
 ```
 
