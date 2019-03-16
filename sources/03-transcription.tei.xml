@@ -725,6 +725,17 @@
         </div>
     </body>
     <back>
+      <div type="title">
+        <head>Ressources utiles</head>
+      </div>
+      <div type="slide">
+        <head>Ressources utiles</head>
+        <list>
+          <item>http://dixit.uni-koeln.de/programme/materials/</item>
+          <item>https://digital.humanities.ox.ac.uk</item>
+          <item>http://teibyexample.org</item>
+        </list>
+      </div>
       <div type="title" xml:lang="fr">
         <div>
           <head>Maintenant, passons à <ref target="ex02-teiMacrostructure.tei.xml"

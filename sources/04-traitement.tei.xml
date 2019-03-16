@@ -359,6 +359,12 @@
             </div>
             <div type="slide">
                <div>
+                  <head></head>
+                  <p><ref target="http://ciham-digital.huma-num.fr/teitoolbox/">TEI ToolBox</ref></p>
+               </div>
+            </div>
+            <div type="slide">
+               <div>
                   <head>TXM Textométrie</head>
                   <p>http://textometrie.ens-lyon.fr</p>
                </div>
@@ -424,6 +430,13 @@
             </div>
             <div type="slide">
                <div>
+                  <head></head>
+                  <p><ref target="https://github.com/TEIC/CETEIcean">CETEIcean</ref></p>
+                  <p>CEITEIcean est une bibliothèque JavaScript (ES6) qui permet le rendu direct de documents TEI dans le navigateur en utilisant les web components de HTML5.</p>
+               </div>
+            </div>
+            <div type="slide">
+               <div>
                   <head>Omeka + TeiDisplay</head>
                   <div>
                      <div>
@@ -479,6 +492,7 @@
                   <head>Diple</head>
                   <p>L’École des chartes avait développé pour ses propres besoin une solution logicielle PHP libre et open source pour la publication de documents XML-TEI. Un certain nombre des publications actuelles de l’École sont publiées au moyen de Diple.</p>
                   <p>Après le départ des deux ingénieurs en charge des développements, le logiciel n’est plus maintenu. L’École des chartes s’oriente actuellement vers un partenariat avec la chaîne éditoriale des Presses universitaires de Caen. Cependant, il est probable que l’application continue d’être développée dans un autre contexte sous un autre nom.</p>
+                  <p><ref target="http://oeuvres.github.io/Teinte/">http://oeuvres.github.io/Teinte/</ref></p>
                </div>
             </div>
             <div type="slide">
@@ -626,7 +640,6 @@
                         <head>Basé sur eXist-db</head>
                         <p>Basé sur la base de données XML native eXist-db, cette suite logicielle suppose un environnement Java. Elle permet une présentation flexible de divers contenus.</p>
                         <p>Adapté à plus de contextes éditoriaux que TEICHI, mais pas de fonctionnalités "out-of-the-box". Le logiciel propose un environnement d’annotation et de transcription proche d’un CMS.</p>
-                        <p>---</p>
                      </div>
                   </div>
                </div>
@@ -644,6 +657,36 @@
                         <p>---</p>
                         <p>template: inverse</p>
                         <p>class: middle center</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div type="slide">
+               <div>
+                  <head>TEI publisher</head>
+                  <div>
+                     <div>
+                        <head> <ref target="http://teipublisher.com">http://teipublisher.com</ref>
+                        </head>
+                     </div>
+                     <div>
+                        <head>TEI Publisher</head>
+                        <p>Basé sur la base de données XML native eXist-db, cette solution logicielle repose sur des XSLT qui implémentent le nouveau TEI Processing model. Il a été notamment développé pour accompagner la publication des ouvrages d’EBSCO libérés récemment.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div type="slide">
+               <div>
+                  <head>Edition Visualization Technology (EVT)</head>
+                  <div>
+                     <div>
+                        <head> <ref target="https://visualizationtechnology.wordpress.com">https://visualizationtechnology.wordpress.com</ref>
+                        </head>
+                     </div>
+                     <div>
+                        <head>EVT</head>
+                        <p>EVT est une solution légère pour la publication d’éditions hyperdiplomatiques.</p>
                      </div>
                   </div>
                </div>
