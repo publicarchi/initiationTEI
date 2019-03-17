@@ -8,7 +8,7 @@
       <!-- titleStmt : la mention de titre et de responsabilité (une des zones dans la norme de description bibliographique ISBD)-->
       <titleStmt>
         <!-- le titre du document TEI ; les Guidelines recommandent d’y spécifier le caractère spécifique de l’édition réalisée : elle est électronique, se différencie ainsi d’autres éditions -->
-        <title>Le confort du courtisan : ordres royaux pour le logement à Marly</title>
+        <title>Le confort du courtisan : ordres royaux pour le logement à Marly</title>
         <title type="complement">une édition électronique</title>
         <!-- title est répétable ; on pourrait donc ici ajouter d’autres éléments title, pour entrer des sous-titres, titres parallèles dans d’autres langues, etc. Dans ce cas on utiliserait les attributs type et xml:lang -->
         <!-- encodage des différentes mentions de responsabilité. Ici la source primaire n’est pas une oeuvre, c’est un document d'archives. On ne peut donc pas dire qu’il y a un ou des auteurs. Par contre il y a un éditeur scientifique, qui a transcrit et critiqué le texte, et préparé des commentaires, etc. Il y a aussi des responsables secondaires, qui ont aidé à ce travail. On utilise principal et respStmt. On peut si besoin est affecter un identifiant à chacune des personnes responsables -->
@@ -55,7 +55,7 @@
               <date when="1763-05"
                 >1763, mai</date> [<placeName>Versailles</placeName>]. En prévision d’un voyage de la cour à <placeName
                 ref="#marly">Marly</placeName>, le <rs ref="#noailles"
-              >gouverneur de Versailles</rs> soumet au roi des questions relatives au logement d’un certain nombre de courtisans et de serviteurs royaux qui accompagnent le souverain. Le château sera éclairé comme à l’ordinaire et le roi fournira du bois de chauffage à certains domestiques seulement, ainsi qu’une demi bougie et de l’argent au personnel ecclésiastique.</summary>
+              >gouverneur de Versailles</rs> soumet au roi des questions relatives au logement d’un certain nombre de courtisans et de serviteurs royaux qui accompagnent le souverain. Le château sera éclairé comme à l’ordinaire et le roi fournira du bois de chauffage à certains domestiques seulement, ainsi qu’une demi bougie et de l’argent au personnel ecclésiastique.</summary>
             <textLang mainLang="fre">en français</textLang>
           </msContents>
           <!-- On pourrait décrire ici tout le manuscrit, beaucoup plus finement, mais on ne dispose pas des informations nécessaires. -->
@@ -203,7 +203,7 @@
             </choice>, le garçon des chiens<ref type="note" target="#n-006"/>
             <lb/>et les porteurs seront chauffés et éclairés.</p>
           <p ana="#ord">
-            <add hand="#PDN" place="margin-left">Le voyage étant comme <lb/>celui de Versailles, l’on n’est<lb/> obligé à rien, mais on peut <lb/>leur donner quelque secours en <lb/>bois et lumières ; <choice>
+            <add hand="#PDN" place="margin-left">Le voyage étant comme <lb/>celui de Versailles, l’on n’est<lb/> obligé à rien, mais on peut <lb/>leur donner quelque secours en <lb/>bois et lumières ; <choice>
                 <expan>m<ex>essieu</ex>rs</expan>
                 <abbr>m<am>rs</am></abbr>
               </choice> Bouchement<lb/> et Lemoine, oui sûrement. <seg type="paraphe"><g ref="#paraphe"/></seg></add>
@@ -267,7 +267,7 @@
       <div type="commentaires">
         <div type="diplo">
           <head>Commentaire diplomatique</head>
-          <p>L’acte désigné ici comme un « ordre du roi », qu’il n’est pas vraiment puisqu’il ne porte pas de notation écrite du souverain, est un type documentaire devenu fréquent à la fin de l’Ancien Régime. Il est issu de la catégorie diplomatique des bons du roi. Le souverain appose, sur une requête qu’on lui présente, son accord (signifiée par le terme « bon » écrit de sa main) ou son refus : ici la seule signature du gouverneur manifeste que la volonté royale s’est exprimée. L’usage en est devenu systématique dans l’administration de Versailles pour tout ce qui regarde les projets de dépenses ou l’affectation de logements. Ces ordres tiennent lieu de décharge au gouverneur – des mandats de paiement en quelque sorte – qui bénéficie d’un travail particulier et régulier avec le monarque. Il lui soumet sous forme de questions des demandes émanant directement de lui-même ou de ses subordonnés et écrites de la main d’un secrétaire. Le gouverneur note ensuite, dans la marge prévue à cet effet dans la partie gauche de la feuille, le résultat concret de ce travail – la réponse donnée par le roi. Le paraphe du gouverneur porté à la fin de chaque réponse, comparable aux usages notariés en cas de corrections marginales, confère un caractère officiel au document auquel il appose de surcroît sa signature.</p>
+          <p>L’acte désigné ici comme un « ordre du roi », qu’il n’est pas vraiment puisqu’il ne porte pas de notation écrite du souverain, est un type documentaire devenu fréquent à la fin de l’Ancien Régime. Il est issu de la catégorie diplomatique des bons du roi. Le souverain appose, sur une requête qu’on lui présente, son accord (signifiée par le terme « bon » écrit de sa main) ou son refus : ici la seule signature du gouverneur manifeste que la volonté royale s’est exprimée. L’usage en est devenu systématique dans l’administration de Versailles pour tout ce qui regarde les projets de dépenses ou l’affectation de logements. Ces ordres tiennent lieu de décharge au gouverneur – des mandats de paiement en quelque sorte – qui bénéficie d’un travail particulier et régulier avec le monarque. Il lui soumet sous forme de questions des demandes émanant directement de lui-même ou de ses subordonnés et écrites de la main d’un secrétaire. Le gouverneur note ensuite, dans la marge prévue à cet effet dans la partie gauche de la feuille, le résultat concret de ce travail – la réponse donnée par le roi. Le paraphe du gouverneur porté à la fin de chaque réponse, comparable aux usages notariés en cas de corrections marginales, confère un caractère officiel au document auquel il appose de surcroît sa signature.</p>
         </div>
         <div type="histo">
           <head>Commentaire historique</head>
