@@ -41,7 +41,7 @@ layout: false
 
 * [Comment traiter ses données&nbsp;?](#part2)
 
-* [Tirer parti de l’outillage XML&nbsp;?](#part3)
+* [Tirer parti de l’outillage TEI&nbsp;?](#part3)
 
 ---
 template: inverse
@@ -200,15 +200,6 @@ Conçus spécialement pour gérer des données XML, les systèmes natifs ont l�
 Plusieurs langages de requêtes ont été proposés pour manipuler des données XML (XML-QL, XML-GL, Quilt, XPath et XQuery). Le principal langage de requête pour XML qui ait été standardisé est XQuery. Il repose sur l’utilisation d’expressions de chemins XPath qui adressent des ensembles des parties spécifiques des documents XML.
 
 ---
-template: inverse
-class: center middle
-name: part3
-
-
-# Tirer parti de l’outillage XML
-
----
-
 
 # La transformation de XML
 
@@ -275,7 +266,6 @@ Synops.red[X] [http://synopsx.github.io](http://synopsx.github.io)
 
 ---
 
-
 # Stratégies de publication
 
 ## Produire un site statique avec des transformations XSL
@@ -325,38 +315,143 @@ Grille de service du TGIR HumaNum offre un hébergement web adapté pour accueil
 Outre l’hébergement web, l’offre de la TGIR HumaNum un ensemble de services qui peuvent s’avérer nécessaires. Pérennisation des données, et archivage à long terme réalisé en partenariat avec le XXXX de Montpellier. Serveur de document, accès SSH, etc.
 
 ---
+name: part3
 template: inverse
 class: center middle
 
-# Orientations bibliographiques
+# Tirer parti de l’outilage TEI
+
+???
+
+Lorsque des documents sont encodés en XML, il devient relativement aisé de les manipuler et de les transformer en utilisant différents langages informatiques tels que XSLT ou XQuery. Tout en étant extrêmement puissants, ces langages peuvent apparaître complexes et difficiles à maîtriser. Aussi, la Text Encoding Initiative met à disposition plusieurs outils pour faciliter la transformer des documents TEI en différents formats, sans nécessairement avoir besoin de connaissances approfondies en programmation dans ces langages.
+
+Les XSL Stylesheets développées par Sebastian Rahtz, sont un ensemble de transformations XSLT qui sert notamment à produire les Guidelines et le site web de la TEI. Celles-ci sont également présentes au sein du Framework TEI offert par l’éditeur XML oXygen. Nous vous proposons ici une rapide introduction pour apprendre à les utiliser afin de pouvoir produire des sorties dans différents formats (xhtml, LateX, pdf, docx, etc.) à partir de vos documents TEI.
 
 ---
 
+# .red[CSS] Cascading stylesheets
 
-# Orientations bibliographiques
-
-* Boot, Peter. "Some Digital Editions and Some Remaining Challenges." Janus, Estudios sobre el siglo de oro , no. 1 (2012). [http://www.janusdigital.es/articulo.htm?id=7](http://www.janusdigital.es/articulo.htm?id=7)
-
-* Pape, Sebastian, Christof Schöch, and Lutz Wegner. "TEICHI and the Tools Paradox." Journal of the Text Encoding Initiative , no. 2, Selected Papers from the 2010 TEI Conference (2012). [http://jtei.revues.org/432](http://jtei.revues.org/432)
-
-* Stapelfeldt, Kirsta, and Donald Moses. "Islandora and TEI: Current and Emerging Applications/Approaches." Journal of the Text Encoding Initiative , no. 5 (2013). [http://jtei.revues.org/790](http://jtei.revues.org/790)
+[https://www.w3.org/Style/CSS/Overview.en.html](https://www.w3.org/Style/CSS/Overview.en.html)
 
 ---
 
-# Sources et orientations bibliographiques (suite)
+# TEI stylesheets
 
-* Beaulieu, Anne, Karina van Dalen-Oskam, and Joris van Zundert. "Between Tradition and Web 2.0 : ELaborate As a Social Experiment in Humanities Scholarship." In Social Software and the Evolution of User Expertise. Edited by Tatjana Takševa. 2013.
+Framework de transformations XML-TEI
 
-* Flanders, Julia, and Scott Hamlin. "TAPAS: Building a TEI Publishing and Repository Service." Journal of the Text Encoding Initiative 5 (2013). [http://jtei.revues.org/788](http://jtei.revues.org/788)
+Sebastian Rhatz (Oxford)
 
-* Roberto Rosselli Del Turco, Giancarlo Buomprisco, Chiara Di Pietro, Julia Kenny, Raffaele Masotti, and Jacopo Pugliese, « Edition Visualization Technology: A Simple Tool to Visualize TEI-based Digital Editions », Journal of the Text Encoding Initiative, n° 8, 2014-2015. http://jtei.revues.org/1077
+[https://github.com/TEIC/Stylesheets](https://github.com/TEIC/Stylesheets)
+
+---
+
+# Les XSL Stylesheets
+
+.red[XSLT Stylesheets] = une bibliothèque de XSL (XSLT et XSL-FO) pour transformer des documents TEI vers toute sorte de formats
+* conçues pour les besoins du TEI Consortium
+
+* traitement de documents ODD pour Roma
+
+* génération des Guidelines en XHTML
+
+* transformations vers LaTeX, MsWord (.docx), OpenOffice (.odt), epub, etc.
+
+* et bien d’autres choses encore…
+
+---
+
+# Pourquoi utiliser les XSL Stylesheets&nbsp;?
+
+En dehors du fait d’être faignants…
+
+* elles résolvent divers problèmes plus ou moins courants
+
+* elles couvrent une grande variété de formats
+
+* collaboration possible à un projet open-source
+
+* largement distribuées sous diverses formes
+
+???
+
+# Pourquoi utiliser les XSL Stylesheets&nbsp;?
+
+En dehors du fait que nous soyons faignants…
+
+* elles résolvent divers problèmes, plus ou moins courants, auxquels vous n’aurez pas besoin de penser
+
+* elles couvrent une grande variété de formats dont vous pourriez un jour avoir besoin
+
+* puisqu’il s’agit d’un projet open-source, il est possible d’y contribuer
+
+* enfin, les XSL Stylesheets ont beaucoup d’utilisateurs et sont déjà largement distribuées sous diverses formes
+
+---
+
+# Limitations
+
+* ne fournissent pas nécessairement des rendus pour tous les éléments de la TEI
+
+* toutes les valeurs possibles d’attribut ne sont pas prises en compte (ex. `@rend`, `@type`)
+
+* les différents formats de sortie peuvent être incomplets
+
+En revanche elles permettent de régler de nombreux problèmes courants
+
+???
+
+# Limitations
+
+Il est important de comprendre d’emblée que si les XSLT Stylesheets offrent un ensemble de traitements génériques pour la TEI, elles ne traitent pas tous les cas de figure ou tous les éléments ou valeurs d’attribut de la TEI.
+
+Elles ne prétendent pas non plus constituer un modèle de traitement ou de rendu standard pour la TEI. En revanche, elles offrent une très riche bibliothèque de transformations qui devrait dans bien des cas vous faciliter le travail.
+
+Les transformations pour la P5 sont seulement développées en XSLT&nbsp;2.0, leur utilisation nécessite donc un processeur adapté.
+
+---
+
+# Sebastian Patrick Quintus Rahtz [(13 February 1955 – 15 March 2016)]()
+![](../images/sebastian.jpg)
+???
+
+La TEI est une communauté, elle est largement redevable des personnes qui ont contribué à son fonctionnement. Sebastian Rahtz a été l’initiateur des XSL Stylesheets dont il a longtemps assuré la maintenance. Pour beaucoup d’entre nous, il était un modèle d’engagement, de désintéressement et de rigueur dans le travail. Sa contribution à la TEI fut considérable, et son décès est une grande perte pour la communauté.
+
+---
+
+# Distribution des XSL Stylesheets
+
+* Sources&nbsp;: [https://github.com/TEIC/Stylesheets](https://github.com/TEIC/Stylesheets)
+* Documentation&nbsp;: [http://www.tei-c.org/release/doc/tei-xsl/](http://www.tei-c.org/release/doc/tei-xsl/)
+* Téléchargeables sous forme de packet Debian/Ubuntu&nbsp;: [http://tei.oucs.ox.ac.uk/teideb/](http://tei.oucs.ox.ac.uk/teideb/)
+* Au cœur du convertisseur OxGarage&nbsp;: [http://www.tei-c.org/oxgarage/](http://www.tei-c.org/oxgarage/)
+* Distribuées comme framework d’oXygen&nbsp;: Pré-installé dans la distribution d’oXygen
+
+???
+
+À l’instar du code source de la TEI, les XSL Stylesheets sont distribuées par l’intermédiaire de la page GitHub du Consortium.
+
+La bibliothèque peut donc être installée localement pour être exécutée en ligne de commandes avec un processeur compatible avec XSLT&nbsp;2.0 (le répertoire `bin/` contient plusieurs fichiers exécutables).
+
+Elle est également distribuée sous forme de packet Debian/Ubuntu pour les utilisateurs Linux. Ce sont elles qui sont aussi au cœur des transformations du convertisseur OxGarage.
+
+Enfin, les stylesheets sont également distribuées parmi les Framework offerts par oXygen et peuvent être exécutées directement depuis l’éditeur oXygen Editor.
+
+---
+
+# Plusieurs manières de personnaliser les XSL Stylesheets
+
+* en spécifiant des .red[valeurs de paramètres] avec oXygen
+
+* en fournissant ces paramètres .red[en ligne de commande]
+
+* en construisant des .red[feuilles de styles embarquant celles de la librairie] en les surchargeant.
 
 ---
 template: inverse
 class: center middle
 
 
-# [XSLT pour les nuls](12-xsltNuls.html)
+#
 
 .footnote[[revenir au début](#index)]
 
