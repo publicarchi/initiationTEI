@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="../remarks/themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Programme</title><link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
 title: L’entête TEI et la description des manuscrits
-description: ,
+description: Emmanuel Château-Dutier et Nicolas Sauret, mars 2019
 theme: theme/remark-dark-em.css
 name: inverse
 layout: true
@@ -15,7 +15,7 @@ name: index
 
 ### EDN6101 - Édition critique avec la TEI&nbsp;| 17 mars 2019
 
-.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html)]
+.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html#6)]
 ![test](images/logo.svg)
 
 ---
@@ -100,7 +100,7 @@ http://weboai.cahier.huma-num.fr
 # Macrostructure d’un document TEI
 
 ```xml
-<TEI >
+<TEI>
   <teiHeader>
     <!-- ... métadonnées ... -->
   </teiHeader>
@@ -132,7 +132,7 @@ Le `&lt;teiHeader&gt;` comporte un élément obligatoire `&lt;fileDesc&gt;` et t
 # Exemple d’en-tête minimale
 
 ```xml
-<teiHeader >
+<teiHeader>
   <fileDesc>
     <titleStmt>
       <title><!-- titre du document --></title>
@@ -183,7 +183,7 @@ name: part2
 # Exemple d’en-tête minimale
 
 ```xml
-<teiHeader >
+<teiHeader>
   <fileDesc>
     <titleStmt>
       <title><!-- titre du document --></title>
@@ -217,8 +217,7 @@ name: part2
 # Exemple de mentions de titre et de responsabilité (`&lt;titleStmt&gt;`)
 
 ```xml
-
-<titleStmt >
+<titleStmt>
   <title xml:lang="fre" type="main">Sauval 1724</title>
   <principal>
     <persName ref="#MCL">
@@ -317,15 +316,13 @@ name: part2
 `&lt;sourceDesc&gt;` est un élément obligatoire, il est destiné à accueillir une description de la source du document soit en texte libre soit de manière structurée avec les éléments `&lt;bibl&gt;`, `&lt;msDesc&gt;`, etc.
 
 ```xml
-
-<sourceDesc >
+<sourceDesc>
     <p>Fichier nativement numérique</p>
   </sourceDesc>
 ```
 
 ```xml
-
-<bibl >Henri Sauval. <title>Histoire et recherches des antiquités
+<bibl>Henri Sauval. <title>Histoire et recherches des antiquités
   de la ville de Paris </title>. Paris&nbsp;: Charles Moette et Jacques
   Chardon, 1724</bibl>
 ```
@@ -350,9 +347,9 @@ name: part3
 # Après la description de fichier…
 
 Après `&lt;fileDesc&gt;`, l’entête peut contenir trois éléments optionnels
-* encodingDesc&nbsp;: description des convention d’encodage
-* profileDesc&nbsp;: informations classificatoires
-* revisionDesc&nbsp;: description des révisions
+* `&lt;encodingDesc&gt;`&nbsp;: description des convention d’encodage
+* `&lt;profileDesc&gt;`&nbsp;: informations classificatoires
+* `&lt;revisionDesc&gt;`&nbsp;: description des révisions
 
 ---
 
@@ -383,7 +380,7 @@ Après `&lt;fileDesc&gt;`, l’entête peut contenir trois éléments optionnels
 # exemple d’`&lt;encodingDesc&gt;`
 
 ```xml
-<encodingDesc >
+<encodingDesc>
   <charDecl>
     <glyph xml:id="uut">
       <glyphName>two latin small letter u with macron and vertical
@@ -410,8 +407,7 @@ Après `&lt;fileDesc&gt;`, l’entête peut contenir trois éléments optionnels
 # Par exemple, pour les ouvrages imprimés
 
 ```xml
-
-<hyphenation >
+<hyphenation>
     <p>Pour les ouvrages imprimés, il n’a pas été tenu compte
     de l’hyphénation.</p>
   </hyphenation>
@@ -431,8 +427,7 @@ Après `&lt;fileDesc&gt;`, l’entête peut contenir trois éléments optionnels
 * `&lt;textClass&gt;` nature du texte d’après un thesaurus interne ou externe
 
 ```xml
-
-<profileDesc >
+<profileDesc>
   <creation><date when="2009-04-20">20 avril
   2009</date></creation>
   <langUsage>
@@ -450,8 +445,7 @@ Après `&lt;fileDesc&gt;`, l’entête peut contenir trois éléments optionnels
 Enregistre les révisions et modifications du fichier
 
 ```xml
-
-<revisionDesc >
+<revisionDesc>
   <change when="2009-11" who="#VJ">Deuxième édition
   électronique</change>
   <change when="2009-10" who="#FG">Schéma et
@@ -504,9 +498,8 @@ Avoir le beurre et l’argent du beurre&nbsp;?
 Un `&lt;msDesc&gt;` peut apparaître dans les mêmes contextes qu’un `&lt;p&gt;` paragraphe
 
 ```xml
-
-<div >
-  <head>Bibliotheque virtuel des humanistes</head>
+<div>
+  <head>Bibliothèque virtuel des humanistes</head>
   <p>Le BVH se situe à l’Universite Francois Rabelais de Tours. Parmi ses fonds sont à regarder quelques manuscrits remarquables du 16e siecle …</p>
   <p>Ce manuscrit par exemple. </p>
   <msDesc xml:id="BVH-0101" xml:lang="fr"><!-- …--></msDesc>
@@ -525,8 +518,7 @@ Dans ce cas, la description aura une tendance belle-lettriste
 Un `&lt;msDesc&gt;` peut apparaître aussi au sein du `&lt;teiHeader&gt;` attaché à une édition numérique d’un ou plusieurs manuscrits.
 
 ```xml
-
-<TEI >
+<TEI>
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -563,12 +555,8 @@ Facultativement il est completé par une séléction d’ éléments plus spéci
 
 ---
 
-
-# Exemple
-
 ```xml
-
-<sourceDesc >
+<sourceDesc>
   <msDesc>
     <msIdentifier>
       <country>France</country>
@@ -612,8 +600,7 @@ Une spécification classique est divisée en trois:
 * identifiant (`&lt;collection&gt;`, `&lt;idno&gt;`)
 
 ```xml
-
-<msIdentifier >
+<msIdentifier>
   <country>France</country>
   <settlement>Troyes</settlement>
   <repository>Bibliothèque Municipale</repository>
@@ -628,9 +615,9 @@ Une spécification classique est divisée en trois:
 # Identification (2)
 
 L’élément `&lt;msName&gt;` fournit un nom ou une appellation familière (surnom)&nbsp;:
-```xml
 
-<msIdentifier >
+```xml
+<msIdentifier>
   <country>Danmark</country>
   <settlement>København</settlement>
   <repository> Det ArnamagnæanskeInstitut </repository>
@@ -653,16 +640,17 @@ L’élément `&lt;msName&gt;` fournit un nom ou une appellation familière (sur
 * … précedée d’une sommaire facultative
 
 On peut décrire le contenu à un niveau general&nbsp;:
-```xml
 
-<msContents >
+```xml
+<msContents>
     <p>Receuil des comptes fiscales de l’Abbeye de Nimportou.</p>
   </msContents>
 ```
- Ou bien, on peut distinguer et détailler chaque item (ou quelques un)&nbsp;:
-```xml
 
-<msContents >
+Ou bien, on peut distinguer et détailler chaque item (ou quelques un)&nbsp;:
+
+```xml
+<msContents>
   <summary>Receuil des comptes fiscales de l’Abbeye de Nimportou..</summary>
     <msItem>
         <!-- compte 1 -->
@@ -700,8 +688,7 @@ Un manuscrit contient plusieurs .red[items] distincts, chacun en principe locali
 
 
 ```xml
-
-<msContents >
+<msContents>
     <msItem n="1">
       <locus from="5r" to="7v">fols. 5r-7v</locus>
       <incipit>Pater noster qui es in celis</incipit>
@@ -745,8 +732,7 @@ Comme ailleurs, ces éléments généralement fournissent un choix entre des él
 # `&lt;physDesc&gt;` exemple simple
 
 ```xml
-
-<physDesc >
+<physDesc>
   <objectDesc>
     <supportDesc>
       <condition>
@@ -770,7 +756,6 @@ Comme ailleurs, ces éléments généralement fournissent un choix entre des él
 
 Pour distinguer l’objet inscrit de la manière où il est inscrit, `&lt;objectDesc&gt;` peut etre structuré en `&lt;supportDesc&gt;` et `&lt;layoutDesc&gt;`
 ```xml
-
 <objectDesc  form="codex">
   <supportDesc material="mixed">
     <p><material>parchemin</material>
@@ -790,8 +775,9 @@ Pour distinguer l’objet inscrit de la manière où il est inscrit, `&lt;object
 
 D’autres éléments structurants sont disponibles pour la description détaillée du support matériel&nbsp;: `&lt;support&gt;`, `&lt;extent&gt;`, `&lt;foliation&gt;`, `&lt;collation&gt;`, `&lt;condition&gt;` .
 
+Exemple&nbsp;:
 ```xml
-<supportDesc >
+<supportDesc>
   <support> Rouleau de parchemin avec des rubans de
   <material>soie</material>.</support>
   <extent>
@@ -804,8 +790,13 @@ D’autres éléments structurants sont disponibles pour la description détaill
 </supportDesc>
 ```
 
+---
+# Le support (3)
+
+Exemple&nbsp;:
+
 ```xml
-<supportDesc >
+<supportDesc>
   <support>parchemin</support>
   <foliation>Foliotation du 18eme en encre rouge au centre de la marge
   exterieure des premiers pages de chaque cahier.</foliation>
@@ -818,10 +809,9 @@ D’autres éléments structurants sont disponibles pour la description détaill
 
 # Layout(s)
 
-Plusiers mise-en-forme (layout)s peuvent être spécifiées&nbsp;:
+Plusiers mises-en-forme (layout) peuvent être spécifiées&nbsp;:
 ```xml
-
-<layoutDesc >
+<layoutDesc>
   <layout ruledLines="25" columns="1">
     <p><locus from="1r" to="202v"></locus>
     <locus from="210r" to="212v"></locus> 25 lignes réglées.</p>
@@ -845,7 +835,7 @@ Ces éléments décrivent respectivement les mains (écritures) distinguées dan
 
 ---
 
-# `&lt;handDesc&gt;` example (1)
+# `&lt;handDesc&gt;` exemple (1)
 
 ```xml
 <handDesc  hands="2">
@@ -864,17 +854,17 @@ Ces éléments décrivent respectivement les mains (écritures) distinguées dan
 # `&lt;handDesc&gt;` exemple (2)
 
 ```xml
-
-<physDesc >
+<physDesc>
   <handDesc>
-    <handNote xml:id="secretaire" scope="major">Un secrétaire a couché
-    par écrit une liste de questions.</handNote>
-    <handNote xml:id="PDN" scope="minor">Philippe de Noailles (1715-1794),
-    intendant et gouverneur du château et domaine de Versailles, a porté
-    dans la marge de gauche les réponses du roi, en paraphant ces réponses.
-    Il a également signé le document.</handNote>
-    <handNote xml:id="anonyme" scope="minor">une autre main à noté la
-    date du document en haut de la page.</handNote>
+    <handNote xml:id="secretaire" scope="major">Un secrétaire
+    a couché par écrit une liste de questions.</handNote>
+    <handNote xml:id="PDN" scope="minor">Philippe de Noailles
+    (1715-1794), intendant et gouverneur du château et domaine
+    de Versailles, a porté dans la marge de gauche les réponses
+    du roi, en paraphant ces réponses. Il a également signé le
+    document.</handNote>
+    <handNote xml:id="anonyme" scope="minor">une autre main à
+    noté la date du document en haut de la page.</handNote>
   </handDesc>
 </physDesc>
 ```
@@ -887,7 +877,7 @@ L’élément `&lt;additions&gt;` contient une description des ajouts significat
 
 
 ```xml
-<additions >
+<additions>
   <p>The text of this manuscript is not interpolated
   with sentences from Royal decrees promulgated
   in 1294, 1305 and 1314. In the margins, however,
@@ -911,10 +901,9 @@ L’élément `&lt;additions&gt;` contient une description des ajouts significat
 
 
 ```xml
-
-<accMat >Un formulaire des impôts datée 1947 était collé
+<accMat>Un formulaire des impôts datée 1947 était collé
   sur la derniere page; elle n’a pas été cataloguée
-  séparamment. </accMat>
+  séparémment. </accMat>
 ```
 
 
@@ -938,7 +927,7 @@ L’élément `&lt;history&gt;` rassemble les éléments servant à donner un hi
 # Exemple
 
 ```xml
-<history >
+<history>
     <origin notBefore="1750-01-01" notAfter="1750-12-31">
       <p>Reliure exécutée par Louis-François Le Monnier
       (signature), Paris, vers 1750 d’après <ref target="#bib01">Michon, 1956 (n° 38 (120)</ref> .</p>
@@ -969,16 +958,12 @@ L’élément `&lt;additional&gt;` regroupe&nbsp;:
 
 L’élément `&lt;admininfo&gt;` regroupe&nbsp;:
 * `&lt;recordHist&gt;`&nbsp;: historique du record
-
 * `&lt;availability&gt;`&nbsp;: disponibilité du manuscrit
-
 * `&lt;custHist&gt;`&nbsp;: historique du manuscrit apres son acquisition
-
 * `&lt;note&gt;`&nbsp;: d’autres remarques pertinentes
 
 ```xml
-
-<adminInfo >
+<adminInfo>
   <recordHist>
     <source>Record created <date>1 Aug 2004</date></source>
   </recordHist>
@@ -1004,8 +989,7 @@ L’élément `&lt;admininfo&gt;` regroupe&nbsp;:
 Un `&lt;msDesc&gt;` peut en contenir un autre, balisé comme `&lt;msPart&gt;`, dans le cas où des manuscrits d’origine distincts ont été combiné pour faire un manuscrit composé.
 
 ```xml
-
-<msDesc >
+<msDesc>
     <msIdentifier>
       <settlement>Amiens</settlement>
       <repository>Bibliothèque Municipale</repository>
@@ -1067,7 +1051,6 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 * `&lt;rdg&gt;` variante (lecture)
 
 ```xml
-
 <app xmlns="http://www.tei-c.org/ns/Examples">
   <lem>remener</lem>
   <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
@@ -1155,10 +1138,10 @@ template: inverse
 class: center middle
 
 
-# La [description des manuscrits](06-msdesc.html)
+# TP03 [Mise en pratique](00-programme.html#6)
 
-.footnote[[revenir au début](#index) | [Programme](00-programme.html)]
-</textarea><script src="../remarks/js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+.footnote[[revenir au début](#index) | [Programme](00-programme.html#6)]
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
         var slideshow = remark.create({

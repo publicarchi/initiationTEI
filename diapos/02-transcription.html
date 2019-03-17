@@ -15,7 +15,7 @@ name: index
 
 ### EDN6101 - Édition critique avec la TEI&nbsp;| 17 mars 2019
 
-.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html)]
+.footnote[[Répertoire GitHub](https://github.com/publicarchitectura/initiationTEI) | [Programme](00-programme.html#6)]
 ![test](images/logo.svg)
 
 ---
@@ -55,7 +55,6 @@ layout: false
 # Composition d’un fichier TEI
 
 ```xml
-
 <TEI xmlns="http://www.tei-c.org/​ns/​1.0">
   <teiHeader>
     <!-- métadonnées décrivant le texte -->
@@ -93,7 +92,6 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 # Macrostructures de texte composite
 
 ```xml
-
 <text>
   <front><!-- ... --></front>
   <group>
@@ -112,7 +110,6 @@ Un document TEI se compose d’au moins deux parties&nbsp;:
 Dans le cas de corpus de textes hétérogènes, on utilisera des éléments `&lt;teiCorpus&gt;` comme élément racine comportant des éléments `&lt;TEI&gt;`
 
 ```xml
-
 <teiCorpus xmlns="http://www.tei-c.org/​ns/​1.0">
   <TEI><!-- ... --></TEI>
   <TEI><!-- ... --></TEI>
@@ -233,7 +230,6 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 # Structures de listes
 
 ```xml
-
 <list>
   <label><!-- étiquette --></label>
   <item><!-- item de liste --></item>
@@ -375,7 +371,6 @@ Désignent un point dans le flux textuel. Des éléments XML vides.
 * `<anchor>` ancre avec `@xml:id`
 
 ```xml
-
 <delSpan spanTo="#endDel" change="#L3"></delSpan>
 <metamark function="flag" target="#zone-1" change="#L2">lege
 </metamark><zone xml:id="zone-1" change="#L1">Ock en schullen
@@ -416,7 +411,6 @@ name: part2
 `<supplied>` restitution d’un passage manquant
 
 ```xml
-
 <supplied reason="hole" source="#autreEd">les</supplied>
 ```
 
@@ -455,7 +449,6 @@ Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de pr
 ### `&lt;subst&gt;` substitutions (génétique textuelle)
 
 ```xml
-
 <subst xmlns="http://www.tei-c.org/ns/Examples">
   <del>claustra</del>
   <add place="margin">fenêtre</add>
@@ -471,7 +464,6 @@ Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de pr
 * `@handDesc` et ses sous-éléments dans le `&lt;teiHeader&gt;`
 
 ```xml
-
 <handDesc xmlns="http://www.tei-c.org/ns/Examples">
   <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
   <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
@@ -504,7 +496,6 @@ name: part3
 * utilisation de `&lt;choice&gt;`
 
 ```xml
-
 <choice xmlns="http://www.tei-c.org/ns/Examples">
   <orig>colomne</orig>
   <reg>colonne</reg>
@@ -543,8 +534,10 @@ Partout, les attributs `@cert`, `@resp` et `@source` peuvent s’avérer utile.
 ```
 
 ```xml
-
-<choice xmlns="http://www.tei-c.org/ns/Examples"><abbr>Mtr.</abbr><expan>Maître</expan></choice>
+<choice xmlns="http://www.tei-c.org/ns/Examples">
+  <abbr>Mtr.</abbr>
+  <expan>Maître</expan>
+</choice>
 ```
 
 ???
@@ -586,9 +579,9 @@ template: inverse
 class: center middle
 
 
-# Maintenant, passons à [la pratique](ex02-teiMacrostructure.html)&nbsp;!
+# Maintenant, passons à [la pratique](00-programme.html#6)&nbsp;!
 
-.footnote[[revenir au début](#index) | [programme](00-programme.html)]
+.footnote[[revenir au début](#index) | [programme](00-programme.html#6)]
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
