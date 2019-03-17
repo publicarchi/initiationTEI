@@ -53,13 +53,13 @@ Roma est une application en ligne qui offre une interface graphique (un peu dat�
 
 Plusieurs approches sont possibles
 
-- Build up : ajouter ce qu’il vous faut à un schéma minimal
-- Reduce : prenez tout ce qui existe et  enlever ce qui ne vous interesse pas
-- Create : création d’un schéma à partir d’un schéma existant
-- Use : on se sert d’une personnalisation proposée par la TEI
-- Upload : Retravailler une personalisation déjà existante
+- _Build up_ : ajouter ce qu’il vous faut à un schéma minimal
+- _Reduce_ : prenez tout ce qui existe et  enlever ce qui ne vous interesse pas
+- _Create_ : création d’un schéma à partir d’un schéma existant
+- _Use_ : on se sert d’une personnalisation proposée par la TEI
+- _Upload_ : Retravailler une personalisation déjà existante
 
-Choisissez Create et selectionnez TEI Bare, puis cliquez sur le bouton rouge start
+Choisissez _Create_ et selectionnez _TEI Bare_, puis cliquez sur le bouton rouge .red[[start]]
 
 ???
 
@@ -69,9 +69,152 @@ On va expérimenter la personnalisation
 
 ---
 
-# Sélection des modulesTEI
+# Réglage des paramètres
 
-Plusieurs
+- _Title_ : Changez _TEI absolutely bare_ en _TEI pour les manuscrits_ (par exemple).
+- _Filename_ : Change _tei_bare_ en _teiTranscr_ (par exemple) (c’est un identifiant, et donc ne devrait pas inclure de blancs)
+- _Language_ : On choisit français.
+- _Author name_ : Entrez votre nom
+- Modifiez la description si vous le souhaitez.
+
+Cliquez sur le bouton rouge .red[Save] en bas de page. Vos changements ont été pris en compte&nbsp;: l’interface est maintenant en français, et en haut à droite, le nom de la personnalisation sur laquelle vous travaillez est affiché.
+
+---
+
+# Sélection des modules TEI
+
+Un module est un regroupement d’éléments TEI. Tout élément TEI est déclaré dans un module spécifique. Par exemple, pour encoder un dictionnaire vous aurez besoin des éléments spécialisés pour les dicos. Mais ces éléments ne sont pas forcément intéressants pour l’encodage d’autres types de documents.
+
+- Cliquez sur l’onglet Modules pour vérifier quels modules constitueront votre schéma
+- Nous avons commencé avec une schéma très minimaliste. Donc, la liste des modules sélectionnés, affichée à droite, ne contient que trois modules.
+- Nous souhaitons disposer des balises pour traiter la transcription des manuscrits. Nous aurons besoin donc d’ajouter au moins deux modules supplémentaires.
+- Cliquez sur le mot _ajouter_ devant la mention du module _transcr_ dans la liste à gauche. Ce module va apparaitre tout de suite dans la liste à droite.
+- Répétez ce manoeuvre pour ajouter le module _figures_.
+- Vous avez maintenant un schéma construit à partir des modules : _tei_ (Roma ne vous permet pas d’enlever ce module infrastructurel), _core_, _header_, _figures_, _transcr_ et _textstructure_.
+
+---
+# Inclusion et exclusion des éléments
+
+Dans ce petit ensemble de modules, il reste quand même plusieurs éléments sans intérêt pour notre projet.
+
+- Cliquez sur le mot _core_ à droite (nota : non pas sur le mot supprimer mais sur le nom du module). Une liste de tous les éléments du module _core_ s’affiche.
+- Chaque ligne de cette table contient :
+  - le nom canonique d’un élément
+  - une indication de son Inclusion ou Exclusion
+  - le nom de cet élément dans le schéma actuel (normalement c’est le nom canonique i.e. anglais)
+  - un point d’interrogation fournissant un lien vers la page de référence pour cet élément
+  - une description brève des fonctions de cet élément
+  - un lien qui permet de modifier les attributs de cet élément
+- Cette interface vous permet d’explorer la fonction et l’usage de tous les éléments TEI. Il vous permet également de sélectionner ceux que vous souhaitez intégrer dans votre schéma.
+- Vous pouvez Inclure ou Exclure tous les éléments d’un module. Cliquez sur le mot _Exclure_ dans le titre de la table, et tous les éléments sont exclus par défaut. Pareille pour le mot _Inclure_ bien sur. Cliquer le bouton à côté d’un élément pour changer son in/ex-clusion!
+
+---
+# Inclusion et exclusion des éléments (2)
+
+- Pour cet exercice vous êtes invité à sélectionner que les éléments suivants&nbsp;:
+  - Du module _core_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<add>`, `<author>`, `<choice>`, `<corr>`, `<del>`, `<graphic>`, `<head>`, `<hi>`, `<lb>`, `<p>`, `<pb>`, `<reg>`, `<sic>`, `<title>` et `<unclear>`.
+  - Du module _header_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<fileDesc>`, `<publicationStmt>`, `<sourceDesc>`, `<teiHeader>` et `<titleStmt>`.
+  - Du module _textstructure_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<TEI>`, `<body>`, `<closer>`, `<div>`,`<opener>`, `<salute>`, `<signed>` , `<text>`, et `<trailer>`
+  - Du module _figures_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<figure>` et `<figDesc>` set.
+  - Et du module _transcr_ vous devez inclure : `<facsimile>`, `<surface>`, et `<zone>`.
+- N’oubliez pas de cliquer sur le bouton rouge .red[Save] en bas de page !
+
+---
+# Création d'un schéma
+
+Roma vous permet de créer directement un nouveau schéma à partir des spécifications que vous venez d'élaborer.
+
+Dans l'onglet Schéma, vous pouvez ainsi choisir entre plusieurs langages de schéma&nbsp;: la TEI se définit indépendamment de toute langue, afin de pouvoir générer tous ces formats.
+
+En général, nous vous conseillons de générer un schéma en Relax NG Compact Syntax, ou en Relax NG XML Syntax.
+
+Mais pour notre exercice, nous allons procéder autrement :
+
+- Plutôt que sur l'onglet _Schema_, cliquez sur l'onglet _Save Customization_ et enregistrez le fichier XML dans votre ordinateur.
+- Ouvrez ce fichier dans oXygen, puis dans le menu _Outils_, choisissez _Générer/Convertir le schéma_, et choisissez le format Relax NG.
+
+---
+# Association du schéma personnalisé
+
+- dans oXygen et ouvrez votre fichier d'encodage.
+- Dans le menu _Document_ ouvrir le menu _Schéma_ et sélectionnez _Associer un schéma_. (Notez l’icone bleue et rouge pour cette action qui devrait également apparaitre sur la barre à outils)
+- Dans la boîte de dialogue qui s’affiche, cliquez sur la petite icone de dossier à côté de URL pour naviguer vers le fichier RNG que vous venez de créer avec Roma. Cliquez sur OK.
+- Dans votre fichier XML-TEI, vous devrez maintenant voir une ligne qui ressemble à ceci&nbsp;:
+
+ ```xml
+<?xml-model href="teiTranscr.rnc"
+  type="application/relaxng-compact-syntax"
+  ns="http://relaxng.org/ns/structure/1.0"?>
+```
+- S’il y a d’autres lignes du même type, enlevez-les pour être sûr !
+
+---
+# Utilisation du schéma personnalisé
+
+---
+## Comment limiter les valeurs de l’attribut @type de l’élément `<div>`&nbsp;?
+
+Nous avons vu qu’il est très utile de supprimer tel ou tel élément de notre schéma. Que peut-on faire pour limiter les valeurs légales de ses attributs ?
+
+(Notez qu’en général les attributs TEI sont définis d’une manière très permissive : vous pouvez taper n’importe quoi). Supposons que nous désirons limiter les valeurs possibles pour l’attribut @type sur `<div>`.
+
+---
+# Restreindre encore le schéma
+
+- Revenez dans Roma
+- Cliquez sur l’onglet _Modules_
+- Cliquez sur le module _textstructure_
+- Trouvez le rang ou est défini l’élément `<div>` et cliquez sur `Changer les Attributs`.
+- Une table des attributs disponibles pour cet élément s’affiche. Vous pouvez inclure ou exclure des attributs. Pour le moment essayons autre chose.
+
+---
+# Restreindre encore le schéma (2)
+
+- Descendez jusqu’à _@type_ et cliquez sur l’attribut. Une page s’affiche, qui vous permet de vérifier plusieurs options pour cet attribut&nbsp;:
+  - _Facultatif ?_ faut-il fournir une valeur pour cet attribut ou est-il facultatif ? Supposons que nous désirons un schéma dans lequel la présence d’une valeur de @type sur `<div>` soit obligatoire&nbsp;: dans ce cas, sélectionnez ‘no’.
+  - _Contenu_: Combien de valeurs (une ou plusieurs) sont permises pour cet attribut, et de quelle type (texte, numéro, date...) ? Choisissons une seule valeur de type ‘text’.
+  - _Valeur par défaut_: définit une valeur par défaut pour l’attribut, dans le cas où aucune valeur n’est fournie dans le document. Laissez cela vide, puisque nous avons déjà décidé de rendre obligatoire la présence d’une valeur.
+  - _Liste fermée_: nous permet de préciser si la liste de valeurs proposées est une liste fixe. Dans notre schéma, c’est une liste fermée, donc répondez ‘Yes’ !
+  - _Liste de valeurs_: nous permet de spécifier les valeurs permises pour cet attribut dans notre schéma. Les valeurs sont proposées sous la forme d’une seule ligne, chaque valeur séparée par une virgule&nbsp;: `prose,vers,drama,chapitre,volume,autre,inconnu`.
+  - _Description_: modifit la description de cet attribut.
+- Cliquez sur le bouton _Save_ en bas de la page !
+
+Vous pouvez maintenant générer ce nouveau schéma puis tester son utilisation.
+
+---
+# Génération de documentation
+
+Tout projet aura besoin de sa documentation interne, qui ne sera pas forcément optimale si elle est en RelaxNG ! Roma vous permet de générer automatiquement des spécifications compréhensibles, ressemblant à la doc de référence de la TEI.
+
+- Retournez dans votre navigateur et cliquez sur l’onglet Documentation.
+- Choisissez _HTML web page_ et cliquez sur _Générer_.
+- Après un bref délai, votre navigateur va recevoir un fichier HTML que vous pouvez lire avec le navigateur. Au début il y a une table des matières, avec un lien pour chaque élément de votre schéma. Scrollez jusqu’au lien pour `<div>` et cliquez dessus.
+- Notez que la description de son attribut `@type` est modifiée selon vos propositions. (Mais notez aussi que d’autres détails, notamment les exemples d’usage, ne sont pas modifiés) .
+- Si vous le préférez, vous pouvez également générer ce document en format PDF.
+
+---
+# Pour poursuivre une spécification
+
+Le fichier de personnalisation sauvegardé en XML peut être réimporté dans Roma, afin d'adapter et d'améliorer un schéma déjà personnalisé.
+
+Il suffit de choisir la quatrième option _Open existing customization_ sur la page d’accueil de Roma.
+
+---
+# Pour en savoir plus
+
+Voici quelques lectures intéressantes (mais en anglais) à ce sujet :
+
+### Documentation de référence (dans les Guidelines)
+
+- Description complète du langage ODD : http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html.
+- Description du traitement des fichiers ODD : http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#IM
+
+### Autres documents tutoriels
+
+- Getting started with P5 ODDs http://tbe.kantl.be/TBE/modules/TBED08v00.htm
+- http://www.tei-c.org/Guidelines/Customization/odds.xml
+
+
 ---
 template: inverse
 class: center middle
@@ -79,7 +222,7 @@ class: center middle
 
 ##
 
-.footnote[[Revenir au début](#index) | [Programme](00-programme.html)]
+.footnote[[Revenir au début](#index) | [Programme](00-programme.html#6)]
 
 </textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
