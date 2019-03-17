@@ -37,6 +37,74 @@ Ceci n’est pas une formation complète! son objectif est de ...
 
 * aborder les concepts fondamentaux et les usages les plus répandus du norme XSLT
 
+Lorsque l’on veut appliquer des traitements à des documents XML (transformation de documents p.e. pour produire une page web, création de liens hypertextes, extraction sélective d’informations p.e. dans une base de données XML native), il est souvent nécessaire de pouvoir localiser des fragments précis au sein de documents XML.
+
+Une des caractéristiques essentielles du langage XPath, est qu’il s’appuie sur un modèle de données (XPath/XQuery pour la version 2.0) dont la connaissance est essentielle pour une bonne compréhension du langage.
+
+Il s’agit d’un véritable langage fonctionnel typé. Ainsi, l’utilisateur manipule des expressions et non des instructions, et l’évaluation de ces expressions produit des valeurs appartenant à des types définis dans un système de types. La version 2.0 langage intègre le riche système de types de XML Schema.
+
+Au cours de cette première présentation, nous commencerons par examiner le modèle de données XML, puis nous aborderons les diverses expressions XPath et de leur types, avant de nous concentrer sur des expressions servant à décrire des chemins pour sélectionner des ensembles de nœuds dans un arbre XML.
+
+---
+
+layout: false
+
+### "XPath is a language for addressing parts of an XML document, designed to be used by both XSLT and XPointer"
+
+### "The primary purpose of XPath is to address parts of an XML document."
+.footnote[[XML Path Language 2.0, 2003](http://www.w3.org/TR/xpath20/)]
+
+???
+
+C’est précisément la vocation du langage XPath développé par le W3C :
+- "XPath is a language for addressing parts of an XML document, designed to be used by both XSLT and XPointer"
+- "The primary purpose of XPath is to address parts of an XML document."
+
+Comme le suggère cette première citation, XPath a d’abord été conçu pour être utilisé au sein de langages dits hôtes ayant besoin d’identifier des portions précises dans un document. On utilise ainsi XPath avec XSLT pour sélectionner des nœuds, extraire des informations, ou encore effectuer des tests.
+
+Les expressions XPath peuvent aussi être utiles pour naviguer précisément dans des documents XML en créant des pointeurs hypertextes sophistiqués dans le contexte du langage XPointer.
+
+Plusieurs utilisations de XPath sont donc possibles
+- pour désigner des ensembles de nœuds dans une transformation XSLT
+- pour contrôler la qualité d’un document XML (exploration, analyse, vérification)
+- pour paralléliser des textes
+
+---
+
+layout: false
+.left-column[
+  ## Historique
+]
+.right-column[
+
+- première version du langage publiée en 1999
+
+- immédiatement utilisée par **XSLT 1.0**
+
+- premier langage de la famille XML à opérer sur un modèle de données
+
+- seconde version du langage spécifiée en 2007
+
+- support aux langages **XSLT 2.0** et **XQuery 1.0**
+
+- s’appuie sur **XML Data Model** publié la même année[*]
+
+
+.footnote[.red[**] [XML Path Language (XPath) 2.0](http://www.w3.org/TR/xpath20/), [XQuery 1.0 and XPath 2.0 Data Model (XDM)](http://www.w3.org/TR/xpath-datamodel/), [XSL Transformations (XSLT) Version 2.0](http://www.w3.org/TR/xslt20/)]
+]
+
+???
+
+### Historique
+La première version du langage a été publiée en 1999 et fut immédiatement utilisée par XSLT 1.0.
+
+XPath est le premier langage de la famille XML à avoir opéré sur un **modèle de données** au sens d’un cadre formel permettant la représentation et la manipulation de données. La description de la version 1.0 de ce langage, publiée en 1999, contient en effet la description d’un modèle de données très simple où un document XML est représenté comme un arbre pouvant être composé de **sept types de nœuds**.
+
+La seconde version du langage, XPath 2.0, a été spécifiée en 2007 et a servi de support aux langages XSLT 2.0 et XQuery 1.0.
+
+La seconde version de XPath, s’appuie sur XML Data Model publié en même temps que la spécification XPath 2.0.
+
+
 ---
 
 ## Qu’est-ce que XSLT ?
