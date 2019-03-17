@@ -6,7 +6,7 @@
       <link href="themes/remark-dark.css" rel="stylesheet" media="all" type="text/css">
    </head>
    <body><textarea id="source">
-title: Initiation ODDAn ODD Initiation
+title: Initiation ODD
 description: Lou Burnard Consulting,
 theme: theme/remark-dark-em.css
 name: inverse
@@ -47,7 +47,7 @@ Pour ce faire, nous allons utiliser l’outil [Roma](http://www.tei-c.org/Roma/)
 
 # Roma
 
-http://www.tei-c.org/Roma/
+https://roma2.tei-c.org
 
 Roma est une application en ligne qui offre une interface graphique (un peu datée) qui permet de sélectionner les modules de la TEI, des éléments ou des attributs afin de personnaliser un schéma.
 
@@ -55,7 +55,7 @@ Plusieurs approches sont possibles
 
 - _Build up_ : ajouter ce qu’il vous faut à un schéma minimal
 - _Reduce_ : prenez tout ce qui existe et  enlever ce qui ne vous interesse pas
-- _Create_ : création d’un schéma à partir d’un schéma existant
+- _Create_ : création d’un schéma à partir d’un modèle
 - _Use_ : on se sert d’une personnalisation proposée par la TEI
 - _Upload_ : Retravailler une personalisation déjà existante
 
@@ -87,15 +87,24 @@ Un module est un regroupement d’éléments TEI. Tout élément TEI est déclar
 
 - Cliquez sur l’onglet Modules pour vérifier quels modules constitueront votre schéma
 - Nous avons commencé avec une schéma très minimaliste. Donc, la liste des modules sélectionnés, affichée à droite, ne contient que trois modules.
-- Nous souhaitons disposer des balises pour traiter la transcription des manuscrits. Nous aurons besoin donc d’ajouter au moins deux modules supplémentaires.
+- Nous souhaitons disposer des balises pour traiter la transcription des manuscrits. Nous aurons besoin donc d’ajouter au moins deux modules supplémentaires. **Lesquels ?**
+
+---
+
+# Sélection des modules TEI (suite)
+
 - Cliquez sur le mot _ajouter_ devant la mention du module _transcr_ dans la liste à gauche. Ce module va apparaitre tout de suite dans la liste à droite.
+- Répétez ce manoeuvre pour ajouter le module _msdescription_.
+- Répétez ce manoeuvre pour ajouter le module _namesdates_.
+- Répétez ce manoeuvre pour ajouter le module _gaiji_.
 - Répétez ce manoeuvre pour ajouter le module _figures_.
-- Vous avez maintenant un schéma construit à partir des modules : _tei_ (Roma ne vous permet pas d’enlever ce module infrastructurel), _core_, _header_, _figures_, _transcr_ et _textstructure_.
+
+Vous avez maintenant un schéma construit à partir de plusieurs modules de la TEI
 
 ---
 # Inclusion et exclusion des éléments
 
-Dans ce petit ensemble de modules, il reste quand même plusieurs éléments sans intérêt pour notre projet.
+Dans cet ensemble restreint de modules, il reste tout de même de nombreux éléments sans intérêt pour notre projet.
 
 - Cliquez sur le mot _core_ à droite (nota : non pas sur le mot supprimer mais sur le nom du module). Une liste de tous les éléments du module _core_ s’affiche.
 - Chaque ligne de cette table contient :
@@ -105,44 +114,44 @@ Dans ce petit ensemble de modules, il reste quand même plusieurs éléments san
   - un point d’interrogation fournissant un lien vers la page de référence pour cet élément
   - une description brève des fonctions de cet élément
   - un lien qui permet de modifier les attributs de cet élément
-- Cette interface vous permet d’explorer la fonction et l’usage de tous les éléments TEI. Il vous permet également de sélectionner ceux que vous souhaitez intégrer dans votre schéma.
-- Vous pouvez Inclure ou Exclure tous les éléments d’un module. Cliquez sur le mot _Exclure_ dans le titre de la table, et tous les éléments sont exclus par défaut. Pareille pour le mot _Inclure_ bien sur. Cliquer le bouton à côté d’un élément pour changer son in/ex-clusion!
+- Cette interface vous permet d’explorer la fonction et l’usage de tous les éléments TEI. Elle vous permet également de sélectionner ceux que vous souhaitez intégrer dans votre schéma.
+- Vous pouvez Inclure ou Exclure tous les éléments d’un module. Cliquez sur le mot _Exclure_ dans le titre de la table, et tous les éléments sont exclus par défaut et inversement avec _Inclure_.
 
 ---
 # Inclusion et exclusion des éléments (2)
 
-- Pour cet exercice vous êtes invité à sélectionner que les éléments suivants&nbsp;:
-  - Du module _core_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<add>`, `<author>`, `<choice>`, `<corr>`, `<del>`, `<graphic>`, `<head>`, `<hi>`, `<lb>`, `<p>`, `<pb>`, `<reg>`, `<sic>`, `<title>` et `<unclear>`.
-  - Du module _header_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<fileDesc>`, `<publicationStmt>`, `<sourceDesc>`, `<teiHeader>` et `<titleStmt>`.
-  - Du module _textstructure_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<TEI>`, `<body>`, `<closer>`, `<div>`,`<opener>`, `<salute>`, `<signed>` , `<text>`, et `<trailer>`
-  - Du module _figures_ vous devez exclure tous sauf les éléments suivants&nbsp;: `<figure>` et `<figDesc>` set.
-  - Et du module _transcr_ vous devez inclure : `<facsimile>`, `<surface>`, et `<zone>`.
-- N’oubliez pas de cliquer sur le bouton rouge .red[Save] en bas de page !
+* ouvrir `corrige/acteRoyalFinal.tei.xml` dans oXygen
+
+* étudiez le balisage mis en œuvre
+
+* pour chacun des modules, sélectionner seulement les éléments nécessaires
 
 ---
 # Création d'un schéma
 
-Roma vous permet de créer directement un nouveau schéma à partir des spécifications que vous venez d'élaborer.
+Roma vous permet de créer directement un nouveau schéma à partir des spécifications que vous venez d’élaborer.
 
-Dans l'onglet Schéma, vous pouvez ainsi choisir entre plusieurs langages de schéma&nbsp;: la TEI se définit indépendamment de toute langue, afin de pouvoir générer tous ces formats.
+Dans l’onglet Schéma, vous pouvez choisir entre différents langages de schéma&nbsp;: la TEI se définit indépendamment de toute langue, afin de pouvoir générer tous ces formats.
 
 En général, nous vous conseillons de générer un schéma en Relax NG Compact Syntax, ou en Relax NG XML Syntax.
 
 Mais pour notre exercice, nous allons procéder autrement :
 
-- Plutôt que sur l'onglet _Schema_, cliquez sur l'onglet _Save Customization_ et enregistrez le fichier XML dans votre ordinateur.
-- Ouvrez ce fichier dans oXygen, puis dans le menu _Outils_, choisissez _Générer/Convertir le schéma_, et choisissez le format Relax NG.
+- Plutôt que sur l'onglet _Schema_, cliquez sur l'onglet _Save Customization_ et enregistrez le fichier XML sur votre ordinateur.
+
+- Ouvrez ce fichier dans oXygen, puis dans le menu _Document>Transformation>appliquez les scénario de transformation_, choisissez TEI ODD to RelaxNG XML. (attention à bien choisir XML)
+- Enregistrez le fichier dans `exercices/` sous le nom `teiTranscr.rng`
 
 ---
 # Association du schéma personnalisé
 
-- dans oXygen et ouvrez votre fichier d'encodage.
+- dans oXygen et ouvrez votre fichier encodé.
 - Dans le menu _Document_ ouvrir le menu _Schéma_ et sélectionnez _Associer un schéma_. (Notez l’icone bleue et rouge pour cette action qui devrait également apparaitre sur la barre à outils)
 - Dans la boîte de dialogue qui s’affiche, cliquez sur la petite icone de dossier à côté de URL pour naviguer vers le fichier RNG que vous venez de créer avec Roma. Cliquez sur OK.
 - Dans votre fichier XML-TEI, vous devrez maintenant voir une ligne qui ressemble à ceci&nbsp;:
 
  ```xml
-<?xml-model href="teiTranscr.rnc"
+<?xml-model href="teiTranscr.rng"
   type="application/relaxng-compact-syntax"
   ns="http://relaxng.org/ns/structure/1.0"?>
 ```
