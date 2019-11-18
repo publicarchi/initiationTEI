@@ -44,8 +44,7 @@ ul, ol {
 }
 
 .red {
-    /* color: #fa0000; */
-    color: rgb(249, 38, 114);
+    color: #fa0000;
 }
 
 .large {
@@ -147,10 +146,4 @@ code {
     float: right;
     padding-top: 15px;
 }
-
-/* personnalisation */
-
-pre {
-  border-left: 0.4em solid #d7d7d7;
-  padding: 1em !important;
-}
+ 
