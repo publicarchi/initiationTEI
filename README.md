@@ -24,5 +24,9 @@ Afin de travailler dans leur environnement habituel, les participants travaillen
 
 ## Pour accéder aux ressources : 
 
-Les diapositives sont dans le dossier [/diapos/](./diapos) : ouvrez chacun des fichiers dans votre navigateur.
-Les sources des travaux pratiques sont accessibles dans le dossier [/exercices/](./exercices).
+Téléchargez ce répertoire sur votre ordinateur en cliquant sur le lien [master.zip](https://github.com/publicarchitectura/initiationTEI/archive/master.zip), puis dézippez l'archive ZIP.
+
+Dans le dossier nouvellement créé, vous trouverez toutes les ressources dont :
+
+1. Les diapositives, dans le dossier [/diapos/](./diapos) (ouvrez chacun des fichiers HTML dans votre navigateur).
+2. Les sources des travaux pratiques, dans le dossier [/exercices/](./exercices).
