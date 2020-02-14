@@ -1,5 +1,6 @@
-# initiationTEI
-Répertoire pour l’initiation à la Text Encoding Initiative (TEI) donnée au CRIHN
+# EDN6101 - Édition critique avec la TEI
+
+Répertoire pour l’initiation à la Text Encoding Initiative (TEI)
 
 ## Présentation
 
@@ -17,8 +18,11 @@ Objectifs de la formation : 
 
 ## Pré-requis
 
-Une connaissance minimale de la syntaxe XML facilitera l’apprentissage mais n’est pas nécessaire. Le CRIHN propose une première formation à XML le 17 mars 2017.
+Une connaissance minimale de la syntaxe XML facilitera l’apprentissage mais n’est pas nécessaire. 
 
 Afin de travailler dans leur environnement habituel, les participants travaillent sur leur propre ordinateur. Des instructions détaillées pour l’installation du logiciel utilisé au cours de la formation (oXygen) vous seront envoyées avant la session.
 
-## 
+## Pour accéder aux ressources : 
+
+Les diapositives sont dans le dossier [/diapos/](./diapos) : ouvrez chacun des fichiers dans votre navigateur.
+Les sources des travaux pratiques sont accessibles dans le dossier [/exercices/](./exercices).
