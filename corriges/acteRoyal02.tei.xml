@@ -17,8 +17,8 @@
   <text>
     <body>
       <div>
-        <head><date when="1763-05">Mai 1763</date>.</head>
-        <head>Ordre du roi.</head>
+        <div><p><date when="1763-05">Mai 1763</date>.</p></div>
+        <div><p>Ordre du roi.</p></div>
         <div>
           <p>Le S. <persName>Luthier</persName> demande si l’on éclairera 
             <lb/>et chauffera le <placeName>château de Marly</placeName> le 
