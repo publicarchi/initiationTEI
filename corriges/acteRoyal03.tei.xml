@@ -40,6 +40,9 @@
                   ref="#marly">Marly</placeName>, le <rs ref="#noailles"
                     >gouverneur de Versailles</rs> soumet au roi des questions relatives au logement d’un certain nombre de courtisans et de serviteurs royaux qui accompagnent le souverain. Le château sera éclairé comme à l’ordinaire et le roi fournira du bois de chauffage à certains domestiques seulement, ainsi qu’une demi bougie et de l’argent au personnel ecclésiastique.</summary>
             <textLang mainLang="fre">en français</textLang>
+            <msItem>
+              <author></author>
+            </msItem>
           </msContents>
           <physDesc>
             <objectDesc form="feuillet">
@@ -136,14 +139,14 @@
         <head><date when="1763-05">Mai 1763</date>.</head>
         <head>Ordre du roi.</head>
         <div>
-          <p>Le S. <persName>Luthier</persName> demande si l’on éclairera 
+          <div ana="#req"><p>Le S. <persName>Luthier</persName> demande si l’on éclairera 
             <lb/>et chauffera le <placeName>château de Marly</placeName> le 
             <lb/>voyage prochain comme dans les voyages 
-            <lb/>ordinaires.</p>
-          <p>Le <placeName>pavillon du roy</placeName> comme
+            <lb/>ordinaires.</p></div>
+          <div ana="#ord"><p>Le <placeName>pavillon du roy</placeName> comme
           <lb/>à l’ordinaire, mais l’on ne 
           <lb/>donnera de bois d’arrivée à 
-          <lb/>personne.</p>
+          <lb/>personne.</p></div>
         </div>
         <div>
           <p>Si le concierge, les garçons du garde-meuble, 
